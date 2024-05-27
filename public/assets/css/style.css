@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
     --blue1: #25a0d8;
-    --blue2: #254379;
+    --blue2: #0693e3;
     --blue3: #376387;
     --blue-trans: #259fd81c;
     --txt-white1: white;
     --txt-white2: rgba(255, 255, 255, 0.61);
     --grid1: #eee;
+}
+
+.ttl-1{
+    font-size: 25px;
 }
 
 .banner {
@@ -23,10 +28,12 @@
 }
 
 .banner .capt h1 {
-    font-size: 20px;
+    font-size: 30px !important;
+    text-transform: uppercase;
     color: white;
     text-align: center;
     max-width: 1024px;
+    font-family: "Poppins", sans-serif;
 }
 
 .banner .capt {
@@ -93,7 +100,7 @@
 }
 
 .sec-secteur {
-    background: linear-gradient(#152644ea, #152644ea);
+    background: var(--blue2);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -166,37 +173,20 @@
     padding: 15px;
 }
 
-.objectifMaj button.active::after {
-    content: "";
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    margin-left: 12px;
-    margin-top: 5px;
-    background-color: var(--blue2);
-    position: absolute;
-}
-
 .nav-pills {
     justify-content: center;
     border-right: solid 2px var(--grid1);
-    max-width: 300px;
-    min-height: 250px;
-    margin-left: 150px;
-    margin-right: 20px;
+
 }
 
 .nav-pad.active {
     background-color: var(--blue-trans) !important;
-    margin-left: -250px;
     color: var(--blue2) !important;
     z-index: 1;
 }
 
 .nav-pad {
-    width: 500px;
     font-size: 12px;
-    margin-left: -250px;
     text-align: right;
 }
 
@@ -206,19 +196,18 @@
 }
 
 .fade .img-obj {
-
-    width: 250px;
-    height: 282px;
-    position: absolute;
+    aspect-ratio: 1;
+    position: relative;
 }
 
 .fade .img-obj img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .fade .text-obj {
-    width: 550px;
-    margin-left: 260px;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -256,7 +245,9 @@
 
 .video-title {
     text-align: center;
-    color: var(--blue2);
+    color: #333;
+    font-weight: 500;
+    margin-top: 8px;
 }
 
 .sld-video .slick-track {
@@ -285,16 +276,6 @@
 .cible .cible-title {
     color: var(--blue2);
 }
-
-.cible .cible-title::after {
-    content: '';
-    height: 2px;
-    width: 100px;
-    background-color: var(--blue2);
-    position: absolute;
-    margin-top: -10px;
-}
-
 html,
 body {
     /* width: 100%;
@@ -342,9 +323,10 @@ a {
 }
 
 p {
-    line-height: 30px;
+    line-height: 25px;
+    font-weight: 500;
     font-size: 14px;
-    color: #444;
+    color: #666;
 }
 
 .txt-center {
@@ -1321,8 +1303,7 @@ section#program p {
 }
 
 #reportage .top h1 {
-    color: var(--blue3);
-    font-size: 28px;
+    color: var(--blue2);
     font-weight: 600;
 }
 
@@ -1332,7 +1313,6 @@ section#program p {
 
 #reportage .top p {
     columns: #444;
-    font-weight: 500;
 }
 
 .reportage-slider {
@@ -1385,7 +1365,7 @@ section#program p {
 
 /* ====================== guest ================ */
 #guest {
-    padding: 50px 0;
+    padding: 0 0 50px 0;
 }
 
 #guest .top {
@@ -1398,7 +1378,6 @@ section#program p {
 
 #guest .top h1 {
     font-size: 28px;
-    font-weight: 600;
 }
 
 #guest p {
@@ -1476,7 +1455,7 @@ section#program p {
 
 /* ====================== pavillon ============= */
 #pavillon {
-    background: linear-gradient(#152644ea, #152644ea);
+    background: var(--blue2);
     color: white;
     
     /* background-attachment: fixed;
@@ -1520,6 +1499,7 @@ section#program p {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--blue2);
     /* background: linear-gradient(#152644ea, #152644ea), url(../img/fondmarin.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -1542,7 +1522,7 @@ section#program p {
 footer {
     position: relative;
     width: 100%;
-    background: var(--blue2);
+    background: var(--blue3);
 }
 
 footer .container {
