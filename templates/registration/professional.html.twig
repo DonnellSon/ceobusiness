@@ -1,0 +1,120 @@
+{% extends 'registration/base.html.twig' %}
+
+{% block pgTitle %}Information Personnels - CEO BUSINESS FORUM IO{% endblock %}
+
+{% block content %}
+<form class="user-registration-form">
+    <div class="p-5">
+        <div class="top d-flex align-items-center justify-content-center px-2">
+            <h2>Informations professionnelles</h2>
+        </div>
+        <div class="body mt-5">
+            <div class="left">
+                <div class="flex">
+                    <div class="form-floating mb-3 col-md-6 px-1">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Votre nom">
+                        <label for="floatingInput">Nom de votre entreprise</label>
+                    </div>
+                    <div class="form-floating  mb-3 col-md-6 px-1">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Votre prénom">
+                        <label for="floatingInput">Titre dans l'entreprise</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                          <option selected>1 - 10</option>
+                          <option value="1">10 - 30</option>
+                          <option value="2">30 - 50</option>
+                          <option value="3">5 - 100</option>
+                          <option value="3">100 - 500</option>
+                          <option value="3">Plus de 500</option>
+                        </select>
+                        <label for="floatingSelect">Nombre d'employeés dans votre entreprise</label>
+                      </div>
+                </div>
+                <div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                          <option selected>1 - 10</option>
+                          <option value="1">10 - 30</option>
+                          <option value="2">30 - 50</option>
+                          <option value="3">5 - 100</option>
+                          <option value="3">100 - 500</option>
+                          <option value="3">Plus de 500</option>
+                        </select>
+                        <label for="floatingSelect">Activités de votre entreprise</label>
+                      </div>
+                </div>
+                
+                <div class="flex">
+                    <div class="form-floating  mb-3 col-md-6 px-1">
+                        <input type="text" class="form-control" id="floatingInput"
+                            placeholder="Votre téléphone personnel">
+                        <label for="floatingInput">Région</label>
+                    </div>
+                    <div class="form-floating  mb-3 col-md-6 px-1">
+                        <input type="text" class="form-control" id="floatingInput"
+                            placeholder="Votre télephone professionnel">
+                        <label for="floatingInput">Ville</label>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <div class="p-5">
+        <h2 class="txt-blue2 mb-3">Quels sont les de votre entreprise <br>en vous inscrivant au CEO BUSINESS FORUM - INDIAN OCEAN ?</h2>
+        <h5 class="mb-5" style="color:#444">Vos avantages "personnelles" en vous inscrivant au CEO BUSINESS FORUM -
+            INDIAN OCEAN :</h5>
+        <ul class="advantages-list">
+            <li>
+                <h6>Networking :</h6>
+                <p> Les forums économiques réunissent des dirigeants d'entreprises, des experts de l'industrie et des décideurs politiques, offrant une opportunité unique de créer et de renforcer des relations professionnelles.</p>
+            </li>
+            <li>
+                <h6>Visibilité et Notoriété :</h6>
+                <p>La participation à un tel événement permet à l'entreprise de se positionner comme un acteur clé dans son secteur, augmentant ainsi sa visibilité et sa reconnaissance.</p>
+            </li>
+            <li>
+                <h6>Accès à des Informations et des Tendances :</h6>
+                <p>Les forums économiques présentent souvent des analyses de marché, des prévisions économiques et des discussions sur les tendances émergentes, offrant aux participants des informations précieuses pour leur stratégie d'affaires.</p>
+            </li>
+            <li>
+                <h6>Opportunités de Partenariats et d’Investissements :</h6>
+                <p>Les entreprises peuvent identifier de nouvelles opportunités de partenariat ou d'investissement grâce aux interactions avec d'autres participants, y compris des investisseurs potentiels.</p>
+            </li>
+            <li>
+                <h6>Amélioration de l’Image de Marque : </h6>
+                <p>Participer à des forums économiques prestigieux renforce l'image de marque de l'entreprise en la positionnant comme engagée et proactive dans le développement économique.</p>
+            </li>
+            <li>
+                <h6>Développement des Compétences et des Connaissances :</h6>
+                <p>Les conférences, ateliers et discussions proposés lors de ces forums permettent aux employés de l'entreprise d'acquérir de nouvelles compétences et connaissances.</p>
+            </li>
+            <li>
+                <h6>Influence sur les Politiques:</h6>
+                <p>Les forums économiques sont souvent l'occasion de discuter de régulations et de politiques économiques. Les entreprises peuvent influencer ces discussions et les décisions politiques en partageant leurs perspectives et en plaidant pour leurs intérêts.</p>
+            </li>
+            <li>
+                <h6>Découverte de Nouveaux Marchés :</h6>
+                <p>Ces événements peuvent révéler des opportunités dans de nouveaux marchés géographiques ou sectoriels, facilitant ainsi l'expansion de l'entreprise.</p>
+            </li>
+            <li>
+                <h6>Benchmarking :</h6>
+                <p>En assistant aux présentations et en échangeant avec d’autres leaders du secteur, une entreprise peut comparer ses pratiques et performances avec celles de ses pairs, identifiant ainsi des domaines d'amélioration.</p>
+            </li>
+        </ul>
+        <p>En résumé, la participation à un forum économique peut apporter une multitude de bénéfices stratégiques et opérationnels, aidant une entreprise à se développer, à innover et à se positionner favorablement dans un marché concurrentiel.</p>
+    </div>
+    <div class="p-5">
+        <h1>Voyage</h1>
+    </div>
+    <div class="p-5 d-flex align-items-center justify-content-end">
+        <button class="registration-btn"><span>Enregistrer et quitter</span> &nbsp;<i
+                class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</form>
+
+{% endblock %}

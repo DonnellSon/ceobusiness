@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sedan:ital@0;1&display=swap');
+:root {
+    --blue1: #25a0d8;
+    --blue2: #254379;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair', sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, var(--blue2), var(--blue1));
+    background: linear-gradient(#fffffff1, #fffffff3), url(/img/ceo2.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*=================== header ========================== */
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    background-color:  var(--blue2);
+    padding: 15px 100px;
+    height: 50px;
+}
+header.sticky{
+    background-color:  var(--blue2);
+    padding: 15px 100px;
+    height: 50px;
+}
+header .topbar-logo img{
+    height: auto;
+    width: 70px;
+    background-color: #fff;
+}
+header .brand{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+header .brand img{
+    width: 70px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 2px;
+}
+header .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .menu .nav-btn{
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 20px;
+    padding: 0 10px;
+    border-radius: 20px;
+    color: #fff;
+    transition: 0.3s;
+    transition-property: color, background-color;
+}
+header .menu .nav-btn:hover{
+    color: #000;
+    background: #fff;
+}
+header .reg-btn{
+    margin-top: -17px;
+}
+
+header .btn{
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+/* ========================== form ================ */
+.reg-container{
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    border: 1px solid var(--blue2);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5);
+}
+.reg-container .reg-title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.reg-container .reg-title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 150px;
+    background: linear-gradient(135deg, var(--blue1), var(--blue2));
+}
+.reg-container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.user-details .input-box input, .input-box select{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid var(--blue2);
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid
+{
+    border-color: var(--blue1);
+}
+.user-details .input-box .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+.user-details button{
+    margin-top: 15px;
+    text-transform: uppercase;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px -0px 0px 0px var(--blue2), 0px 0px 0px 0px var(--blue1);
+    transition: all .2s;
+    z-index: 100;
+}
+.user-details button::after{
+    content: "";
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(225deg, #25a0d8 0%, #2c4f8aea 50%, #152644 100% );
+    position: absolute;
+    top: -80px;
+    margin-left: -250px;
+    z-index: -1;
+    transition: all .5s;
+}
+.user-details button:hover::after{
+    transform: rotate(150deg);
+}
+.user-details button:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0px var(--blue2), -10px 10px 25px 0px var(--blue1);
+}
+.user-details button a{
+    text-decoration: none;
+    color: #fff;
+    z-index: 101;
+
+}

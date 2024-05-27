@@ -1,0 +1,251 @@
+.banner {
+    margin-top: -460px;
+    padding-top: 170px;
+    height: 570px;
+    background: linear-gradient(#14244175, #152644ab), url(../3.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .capt h1 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    max-width: 1024px;
+}
+
+.banner .capt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.banner .capt span {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.banner .capt .logo {
+    justify-content: center;
+}
+
+.banner .capt .logo span {
+    text-align: center;
+}
+
+
+.banner .logo img {
+    height: 150px;
+}
+
+.secteur-content {
+    width: 50px !important;
+    height: 50px;
+    text-align: center;
+}
+
+.secteur .content {
+    width: 50px;
+    height: 50px;
+    border: solid 2px #fff;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.secteur .secteur-content .content span {
+    text-align: center;
+    color: #fff !important;
+    font-size: 10px;
+}
+
+.sec-secteur {
+    background: linear-gradient(#152644ea, #152644ea), url(../img/fondmarin.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.sec-secteur h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.slick-prev::before,
+.slick-next::before {
+    background: transparent !important;
+    font-size: 30px;
+    margin-top: -50px;
+    margin-left: -100px;
+    position: absolute;
+}
+
+.slick-prev::before {
+    content: '<';
+    margin-left: -30px;
+}
+
+.slick-next::before {
+    content: '>';
+    margin-left: -20px;
+}
+
+.organisme,
+.parrain {
+    color: #fff;
+    position: absolute;
+    margin: 0;
+    margin-top: -24%;
+}
+
+.organisme {
+    margin-left: 80%;
+
+}
+
+.parrain {
+    margin-right: 80%;
+}
+
+.objectifMaj h2 {
+    color: var(--blue2);
+    text-align: center;
+}
+
+.objectifMaj {
+    padding: 15px;
+}
+
+.objectifMaj button.active::after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-top: 5px;
+    background-color: var(--blue2);
+    position: absolute;
+}
+
+.nav-pills {
+    justify-content: center;
+    border-right: solid 2px var(--grid1);
+    max-width: 300px;
+    min-height: 250px;
+    margin-left: 150px;
+}
+
+.nav-pad.active {
+    background-color: var(--blue3) !important;
+    margin-left: -250px;
+    color: var(--blue2) !important;
+    z-index: 1;
+}
+
+.nav-pad {
+    width: 500px;
+    font-size: 12px;
+    margin-left: -250px;
+    text-align: right;
+}
+
+.fade img {
+    width: 100%;
+    height: 100%;
+}
+
+.fade .img-obj {
+
+    width: 250px;
+    height: 282px;
+    position: absolute;
+}
+
+.fade .text-obj {
+    width: 550px;
+    margin-left: 260px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 282px;
+}
+
+.visualiser .content .header h1 {
+    color: var(--blue2);
+    font-size: 25px;
+}
+
+.visualiser .content .header button {
+    background-color: var(--blue3);
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 5px;
+}
+
+.visualiser .content .header::after {
+    content: "";
+    position: absolute;
+    background-color: #eee;
+    width: 700px;
+    height: 2px;
+    z-index: 100;
+    margin-top: 20px;
+    margin-left: 300px;
+}
+
+.video-title {
+    text-align: center;
+    color: var(--blue2);
+    width: 300px;
+}
+
+.cible .map img{
+    width: 550px;
+    border: solid 1px var(--blue3);
+    border-radius: 8px;
+    height: 300px;
+    margin-right: 30px;
+}
+.cible-content{
+    width: 600px;
+}
+.cible .cible-title{
+    color: var(--blue2);
+}
+.cible .cible-title::after{
+    content: '';
+    height: 2px;
+    width: 100px;
+    background-color: var(--blue2);
+    position: absolute;
+    margin-top: -10px;
+}
+:root {
+    --blue1: #25a0d8;
+    --blue2: #254379;
+    --blue3:#376387;
+    --txt-white1:white;
+    --txt-white2:rgba(255, 255, 255, 0.61);
+    --blue3: #259fd8a6;
+    --grid1: #eee;
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

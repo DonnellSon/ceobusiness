@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block title %}CEO BUSINESS FORUM OF INDIAN OCEAN
+		{% endblock %}
+	</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link rel="icon" href="{{ asset('assets/css/img/ceo2.png')}}" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+		integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+	{#
+	<link rel="stylesheet" href="{{ asset('assets/css/media.css') }}"> #}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% block links %}
+	{% endblock %}
+	{% block head %}{% endblock %}
+</head>
+
+<body>
+	<header>
+		<div class="d-flex align-items-center justify-content-between">
+			<div class="left">
+				<a href="{{ path('home') }}" class="topbar-logo">
+					<img src="{{ asset('assets/img/png/ceo2.png') }}" alt="">
+				</a>
+			</div>
+			<div class="menu">
+				<div class="btn">
+					<i class="fas fa-times close-btn"></i>
+				</div>
+				<a class="nav-btn" href="{{ path('home') }}#acceuil">Acceuil</a>
+				<a class="nav-btn" href="{{ path('home') }}#secteur">Secteurs</a>
+				<a class="nav-btn" href="{{ path('home') }}#objectif">Objectifs</a>
+				<a class="nav-btn" href="{{ path('home') }}#cibles">Nos Cibles</a>
+				<a class="nav-btn" href="{{ path('home') }}#reportages">Reportages</a>
+				<a class="nav-btn" href="{{ path('home') }}#guest">Guest Speaker</a>
+				<a class="nav-btn" href="{{ path('home') }}#hote">Hôte</a>
+				<a class="nav-btn" href="{{ path('home') }}#pavillon">Pavillon</a>
+				<a href="{{ path('register') }}" class="register-btn">
+					<i class="fa-solid fa-pen-nib"></i>
+					S'inscrire</a>
+				<div class="dropdown">
+					<button class="nav-btn dropdown-toggle lang" type="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<img src="{{ asset('assets/img/flag/french.png') }}" style="width:20px; height:20px" alt="">
+						fr
+					</button>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="nav-btn dropdown-item" href="{{ path('home') }}#program">
+								<img src="{{ asset('assets/img/flag/united.png') }}" style="width:20px; height:20px"
+									alt="">
+								EN</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="btn">
+				<i class="fa fa-bars menu-btn"></i>
+			</div>
+		</div>
+	</header>
+	{% block body %}{% endblock %}
+	<footer>
+		<div class="container top">
+			<div class="sec newsletter">
+				<h2>NewsLetter</h2>
+				<p class="text-white">Restez au jour avec notre newsletter, exclusive et personnalisée pour vous!
+					Profitez des dernières actualités et des offres exclusives dès maintenant.</p>
+				<div class="news-letter-form d-flex align-items-center">
+					<input type="email" placeholder="Votre email" class="form-control" name="news_letter_email">
+					<button class="btn btn-primary">Go</button>
+				</div>
+			</div>
+			<div class="sec latest">
+				<h2>Latest News</h2>
+				<ul>
+					<li>
+						<div class="latest-news-link-preview d-flex">
+							<div class="img position-relative">
+								<img class="position-absolute" src="{{ asset('assets/img/png/ceo2.png') }}" alt="">
+							</div>
+							<div class="capt">
+								<h4 class="ttl">Titre de l'article</h4>
+								<small>Voici notre article concernant le ceobusiness forum</small>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="latest-news-link-preview d-flex">
+							<div class="img position-relative">
+								<img class="position-absolute" src="{{ asset('assets/img/png/ceo2.png') }}" alt="">
+							</div>
+							<div class="capt">
+								<h4 class="ttl">Titre de l'article</h4>
+								<small>Voici notre article concernant le ceobusiness forum</small>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="latest-news-link-preview d-flex">
+							<div class="img position-relative">
+								<img class="position-absolute" src="{{ asset('assets/img/png/ceo2.png') }}" alt="">
+							</div>
+							<div class="capt">
+								<h4 class="ttl">Titre de l'article</h4>
+								<small>Voici notre article concernant le ceobusiness forum</small>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="sec quicklinks">
+				<h2>Tags</h2>
+				<ul class="tags-ul">
+					<li>
+						<a href="#">#CEO</a>
+					</li>
+					<li>
+						<a href="#">#BusinessForum</a>
+					</li>
+					<li>
+						<a href="#">#IndianOcean</a>
+					</li>
+					<li>
+						<a href="#">#CeoBusinessForumIndianOcean</a>
+					</li>
+					<li>
+						<a href="#">#Investment</a>
+					</li>
+					<li>
+						<a href="#">#Opportunity</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sec contact">
+				<h2>Nous contacter</h2>
+				<ul class="info">
+					<li class="mb-2">
+						<h6>Informations</h6>
+						<p class="m-0">
+							<a href="#">info@ceobusinessforum.io</a>
+						</p>
+					</li>
+					<li class="mb-2">
+						<h6 class="m-0">Télephone</h6>
+						<p>
+							<a href="#">+261 37 07 777 07 | +261 38 38 777 72</a>
+						</p>
+					</li>
+					<li class="mb-2">
+						<h6 class="m-0">Presse</h6>
+						<p class="m-0">
+							<a href="#">press@ceobusinessforum.io</a>
+						</p>
+					</li>
+					<li class="mb-2">
+						<h6 class="m-0">Nous Sonsoriser</h6>
+						<p class="m-0">
+							<a href="#">sponsor@ceobusinessforum.io</a>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<div class="container d-flex align-items-center justify-content-center">
+			<div class="copyright">
+				<p class="text-align-center">Copyright &copy; 2024 CEO Business Forum and GateNews. All Rights Reserved
+				</p>
+			</div>
+		</div>
+	</footer>
+	<script src="{{ asset('assets/js/countdown.js')}}"></script>
+	<script src="{{ asset('assets/js/parallax.js')}}"></script>
+	<script src="{{ asset('assets/js/navbar.js')}}"></script>
+	<script src="{{ asset('assets/js/slider.js')}}"></script>
+	<script src="{{ asset('assets/js/slick-slider.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+		integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+		integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	{% block scripts %}{% endblock %}
+	{% block basefoot %}{% endblock %}
+</body>
+
+</html>

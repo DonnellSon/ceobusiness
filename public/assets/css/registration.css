@@ -1,0 +1,206 @@
+:root {
+    --blue1: #25a0d8;
+    --blue2: #254379;
+    --blue3: #376387;
+}
+
+#form-banner {
+    height: 280px;
+    background: linear-gradient(#152644ea, #152644ea), url(../img/fondmarin.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+p{
+    font-size: 15px;
+}
+
+.registration-form-container {
+    margin-top: -200px;
+}
+
+.user-registration-form>div {
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin-bottom: 20px;
+}
+
+/* .user-registration-form>div:nth-child(even){
+    padding-top: 100px !important;
+    border-radius:  0 0 5px 5px;
+}
+.user-registration-form>div:nth-child(odd){
+    padding-bottom: 100px !important;
+    border-radius: 5px 5px 0 0;
+} */
+
+/* .user-registration-form>div:not(:last-child):after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: url(../img/cla.png);
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    bottom: -48px;
+    left: 0;
+    z-index: 10;
+} */
+
+.user-registration-form .top h2 {
+    font-size: 25px;
+}
+
+.user-registration-form .top {
+    height: 40px;
+}
+
+.form-floating input {
+    background: #ffffff;
+}
+
+.form-floating label {
+    font-weight: 400;
+    color: #444;
+}
+
+.user-photo {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    aspect-ratio: 100/130;
+}
+
+.user-photo .avatar {
+    width: 55%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.user-photo .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.user-photo .btns {
+    border-top: 1px solid #e0e0e0;
+    height: 45px;
+}
+
+.user-photo .btns button {
+    background: none;
+    border: none;
+    font-weight: 500;
+}
+
+.user-photo .btns button.change {
+    color: var(--blue1);
+}
+
+.user-photo .btns>div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-photo .top {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.user-photo .top label {
+    font-weight: 500;
+}
+
+.advantages-list {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.advantages-list li h6 {
+    color: var(--blue2);
+
+}
+
+.advantages-list li p {
+    border-radius: 20px;
+    font-weight: 500;
+    color: white;
+    padding: 20px;
+}
+
+/* .advantages-list li:nth-child(2n){
+    background: #eee;
+    color: #444;
+} */
+.advantages-list li:nth-child(3n + 1) p {
+    background-color: var(--blue1);
+}
+
+.advantages-list li:nth-child(3n + 2) p {
+    background-color: #eee;
+    color: #444 !important;
+}
+
+.advantages-list li:nth-child(3n + 3) p {
+    background-color: var(--blue2);
+}
+
+/* .advantages-list li:nth-child(even) {
+    background-color: var(--blue2);
+}
+
+.advantages-list li:nth-child(odd) {
+    background-color: #eee;
+    color: #444 !important;
+} */
+.registration-btn{
+    border: none;
+    background: var(--blue1);
+    color: white;
+    padding: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 50px;
+    border-radius: 6px;
+}
+.reduc-p{
+    color: #555;
+    font-weight: 500;
+    font-size: 15px;
+}
+.reduc-price{
+    color: var(--blue1);
+    font-size: 40px;
+}
+.normal-price{
+    font-size: 20px;
+    text-decoration:line-through;
+    color: #5c5c5c;
+}
+#webcamModal .modal-content{
+    overflow: hidden !important;
+}
+#webcamModal .modal-footer{
+    bottom: 0;
+    left: 0;
+    border: none;
+    
+}
+#takePhotoBtn{
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+    padding: 0 15px;
+    border: 1px solid white;
+    color: white;
+}
