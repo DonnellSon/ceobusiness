@@ -15,6 +15,14 @@
 .ttl-1{
     font-size: 25px;
 }
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 
 .banner {
     background: linear-gradient(rgba(26, 40, 80, 0.692), rgba(26, 40, 80, 0.5));
@@ -322,14 +330,6 @@
     color: var(--blue2);
 }
 
-.cible .cible-title::after {
-    content: '';
-    height: 2px;
-    width: 100px;
-    background-color: var(--blue2);
-    position: absolute;
-    margin-top: -10px;
-}
 .nav-ceo{
     justify-content: center;
 }
@@ -1689,22 +1689,7 @@ footer {
 
 footer .container {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     max-width: 1300px !important;
-}
-
-footer .container .sec {
-    flex: 1;
-    padding: 0 15px;
-}
-
-footer .container .sec:first-child {
-    padding-left: 0;
-}
-
-footer .container .sec:last-child {
-    padding-right: 0;
 }
 
 footer .container.top {
@@ -1771,7 +1756,6 @@ footer hr {
     min-width: 50px;
     height: 50px;
     border-radius: 5px;
-    background: white;
     border: 2px solid var(--blue1);
 }
 
@@ -1781,8 +1765,10 @@ footer hr {
 
 .latest-news-link-preview .img img {
     border-radius: inherit;
+    border: 2px solid transparent;
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .copyright p {
@@ -1795,38 +1781,11 @@ footer hr {
 
 /*=============== responsive ==============*/
 @media (max-width:768px) {
-    footer .container {
-        margin: 0 10px;
-    }
-
-    footer .container .sec {
-        margin-bottom: 15px;
-        padding: 0 15px !important;
-        flex: unset;
-        width: 100%;
-    }
+    
 }
 @media (max-width:992px) {
-    footer .container {
-        margin: 0 10px;
-    }
-
-    footer .container .sec {
-        margin-bottom: 15px;
-        padding: 0 15px !important;
-        flex: unset;
-        width: 50%;
-    }
+    
 }
 @media (max-width:1200px) {
-    footer .container {
-        margin: 0 10px;
-    }
-
-    footer .container .sec {
-        margin-bottom: 15px;
-        padding: 0 15px !important;
-        flex: unset;
-        width: calc(100% / 3);
-    }
+    
 }
