@@ -33,13 +33,28 @@ $(document).ready(function(){
     });
   });
 
-
-  $(document).ready(function(){
+  $(document).ready(function() {
     $('.sld-video').slick({
-    //   dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      adaptiveHeight: true
+        dot:false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        arrows: true,
+        prevArrow: $('.prev-btn'),
+        nextArrow: $('.next-btn'),
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
-  });
+});
