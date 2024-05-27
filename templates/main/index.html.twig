@@ -3,263 +3,288 @@
 {% block title %}CEO BUSINESS FORUM IO
 {% endblock %}
 {% block links %}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-	integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-	crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-	integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 {% endblock %}
 
-{% block head %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-	integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="{{ asset('assets/js/doslider.js')}}"></script>
+{% block head %} <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+		integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	 <script src="{{ asset('assets/js/doslider.js')}}"></script>
 {% endblock %}
 
 {% block body %}
-{# <section id="parallax" class="parallax">
-	<div class="parallax">
-		<img src="{{ asset('assets/img/png/ciel.png') }}" alt="ciel" id="ciel" srcset="">
-		<img src="{{ asset('assets/img/png/mer.png') }}" alt="mer" id="mer" srcset="">
-		<img src="{{ asset('assets/img/png/bulding.png') }}" alt="ciel" id="bulding" srcset="">
-		<img src="{{ asset('assets/img/png/ceo2.png') }}" alt="ciel" id="ceo" srcset="">
-	</div>
-</section> #}
-<div class="banner position-relative">
-	<div class="banner-slider position-absolute w-100 h-100">
-		<div class="banner-slide position-relative">
-			<img class="position-absolute" src="{{ asset('assets/img/ban1.png') }}" alt="">
+	{# <section id="parallax" class="parallax">
+		<div class="parallax">
+			<img src="{{ asset('assets/img/png/ciel.png') }}" alt="ciel" id="ciel" srcset="">
+			<img src="{{ asset('assets/img/png/mer.png') }}" alt="mer" id="mer" srcset="">
+			<img src="{{ asset('assets/img/png/bulding.png') }}" alt="ciel" id="bulding" srcset="">
+			<img src="{{ asset('assets/img/png/ceo2.png') }}" alt="ciel" id="ceo" srcset="">
 		</div>
-		<div class="banner-slide position-relative">
-			<img class="position-absolute" src="{{ asset('assets/img/ban2.jpg') }}" alt="">
+	</section> #}
+	<div class="banner position-relative">
+		<div class="banner-slider position-absolute w-100 h-100">
+			<div class="banner-slide position-relative">
+				<img class="position-absolute" src="{{ asset('assets/img/ban1.png') }}" alt="">
+			</div>
+			<div class="banner-slide position-relative">
+				<img class="position-absolute" src="{{ asset('assets/img/ban2.jpg') }}" alt="">
+			</div>
 		</div>
-	</div>
-	<div class="parrain">
-		<span>sous le haut parrainage du:<span>
-	</div>
-	<div class="organisme">
-		<span>Organisé par:</span>
-	</div>
-	<div class="capt">
-		<span></b>Rendez-vous à Madagascar</b></span>
-		<h1 style="color: var(--blue1)">Ce 14 - 15 Novembre 2024</h1><br>
-		<h1 style="font-size:30px">Le plus grand forum économique des pays riverains et partenaires de l’océan Indien va
-			se dérouler à
-			Madagascar pour cette année 2024.</h1>
-		<div class="countdown">
-			<div id="countdown">
-				<div>
-					<span id="countdown_day">--</span>
-					<small>Jours</small>
+		<div class="parrain">
+			<span>Organisé par</span>
+
+			<div class="o-logo" style="display:flex">
+				<div class="logo-organisme" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/gta.png') }}" style="height: 40px" alt="CEO Business Forum">
 				</div>
-				<div>
-					<span id="countdown_hour">--</span>
-					<small>heures</small>
+				<div class="logo-organisme" style="text-align:center; justify-content:center">
+					<img src="{{ asset('assets/img/logo/LOGO-3.png') }}" style="height: 40px; background-color: rgba(255, 255, 255, 0.582)" alt="CEO Business Forum">
 				</div>
-				<div>
-					<span id="countdown_min">--</span>
-					<small>minutes</small>
-				</div>
-				<div>
-					<span id="countdown_sec">--</span>
-					<small>secondes</small>
+			</div>
+			<div class="o-logo" style="display:flex">
+				<div class="logo-organisme" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/gg-logo.jpg') }}" style="height: 40px" alt="CEO Business Forum">
 				</div>
 			</div>
 		</div>
-		<span>Thème :</span>
-		<span>
-			<b>CEO BUSINESS FORUM INDIAN OCEAN "Economie dynamique, partenariats stratégique: l'esprit de l'Océan
-				Indien."</b>
+		<div class="organisme">
+			<span>sous le haut parrainage du<span>
+					<div class="p-logo" style="display:flex">
+						<div class="logo-parrain" style="justify-content:center">
+							<img src="{{ asset('assets/img/logo/etrangere.jpg') }}" style="height: 60px" alt="CEO Business Forum"><br>
+						</div>
+						<div class="logo-parrain" style="justify-content:center">
+							<img src="{{ asset('assets/img/logo/finance.jpg') }}" style="height: 60px" alt="CEO Business Forum"><br>
+						</div>
+					</div>
+					<div class="p-logo" style="display:flex">
+						<div class="logo-parrain" style="justify-content:center">
+							<img src="{{ asset('assets/img/logo/culture.png') }}" style="height: 60px" alt="CEO Business Forum" style="font-size: 10px"><br>
+						</div><br>
+						<div class="logo-parrain" style="justify-content:center">
+							<img src="{{ asset('assets/img/logo/LOGO-2.png') }}" alt="CEO Business Forum" style="height: 60px"><br>
+						</div>
+						<div class="logo-parrain" style="justify-content:center">
+							<img src="{{ asset('assets/img/logo/tourisme.png') }}" alt="CEO Business Forum" style="height: 60px"><br>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="capt">
+					<span></b>Rendez-vous à Madagascar</b>
+			</span>
+			<h1 style="color: var(--blue1)">Ce 14 - 15 Novembre 2024</h1><br>
+			<h1 style="font-size:30px">Le plus grand forum économique des pays riverains et partenaires de l’océan Indien va
+							se dérouler à
+							Madagascar pour cette année 2024.</h1>
+			<div class="countdown">
+				<div id="countdown">
+					<div>
+						<span id="countdown_day">--</span>
+						<small>Jours</small>
+					</div>
+					<div>
+						<span id="countdown_hour">--</span>
+						<small>heures</small>
+					</div>
+					<div>
+						<span id="countdown_min">--</span>
+						<small>minutes</small>
+					</div>
+					<div>
+						<span id="countdown_sec">--</span>
+						<small>secondes</small>
+					</div>
+				</div>
+			</div>
+			<span>Thème de l’évènement : </span>
 			<span>
-	</div>
-</div>
+				<b>« ECONOMIE DYNAMIQUE , PARTENARIATS STRATEGIQUES : ESPRIT DE L’OCEAN INDIEN »</b>
+				<span></div>
+			</div>
 
-<section class="sec-secteur pt-3 pb-1" id="theme">
-	<h2 class="mb-3">Plusieurs secteurs seront discutés</h2>
-	<div class="position-relative">
-		<div class="sec-prev position-absolute">
-			<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-				class="bi bi-chevron-left" viewBox="0 0 16 16">
-				<path fill-rule="evenodd"
-					d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-			</svg>
-		</div>
-		<div class="sec-next position-absolute">
-			<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-				class="bi bi-chevron-right" viewBox="0 0 16 16">
-				<path fill-rule="evenodd"
-					d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-			</svg>
-		</div>
-		<div class="secteur px-0">
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-leaf"></i>
+			<section class="sec-secteur pt-3 pb-1" id="theme">
+				<h2 class="mb-3">Plusieurs secteurs seront discutés</h2>
+				<div class="position-relative">
+					<div class="sec-prev position-absolute">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chevron-left" viewbox="0 0 16 16">
+							<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+						</svg>
 					</div>
-					<span class="text-center">Economie</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-computer"></i>
+					<div class="sec-next position-absolute">
+						<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chevron-right" viewbox="0 0 16 16">
+							<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+						</svg>
 					</div>
-					<span class="text-center">Numerique</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-cloud-showers-heavy"></i>
-					</div>
-					<span class="text-center">Climat</span>
-				</div>
+					<div class="secteur px-0">
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-leaf"></i>
+								</div>
+								<span class="text-center">Economie</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-computer"></i>
+								</div>
+								<span class="text-center">Numerique</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-cloud-showers-heavy"></i>
+								</div>
+								<span class="text-center">Climat</span>
+							</div>
 
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-brands fa-envira"></i>
-					</div>
-					<span class="text-center">Envirenement</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-brands fa-leanpub"></i>
-					</div>
-					<span class="text-center">Education</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-water"></i>
-					</div>
-					<span class="text-center">Economie bleu</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-helmet-safety"></i>
-					</div>
-					<span>Logistique</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-truck-fast"></i>
-					</div>
-					<span>Transport</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-shirt"></i>
-					</div>
-					<span>Textile</span>
-				</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-brands fa-envira"></i>
+								</div>
+								<span class="text-center">Envirenement</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-brands fa-leanpub"></i>
+								</div>
+								<span class="text-center">Education</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-water"></i>
+								</div>
+								<span class="text-center">Economie bleu</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-helmet-safety"></i>
+								</div>
+								<span>Logistique</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-truck-fast"></i>
+								</div>
+								<span>Transport</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-shirt"></i>
+								</div>
+								<span>Textile</span>
+							</div>
 
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-ship"></i>
-					</div>
-					<span>Tourisme</span>
-				</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-ship"></i>
+								</div>
+								<span>Tourisme</span>
+							</div>
 
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-prescription-bottle-medical"></i>
-					</div>
-					<span>Santé</span>
-				</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-prescription-bottle-medical"></i>
+								</div>
+								<span>Santé</span>
+							</div>
 
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-bolt"></i>
-					</div>
-					<span>Energie</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-gem"></i>
-					</div>
-					<span>Mines</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-tractor"></i>
-					</div>
-					<span>Agriculture</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-clapperboard"></i>
-					</div>
-					<span>Audiovisuel</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-building-columns"></i>
-					</div>
-					<span>Gouvernance</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-money-bill-trend-up"></i>
-					</div>
-					<span>Finance</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-building"></i>
-					</div>
-					<span>Urbanisation</span>
-				</div>
-			</div>
-			<div class="secteur-content">
-				<div class="content">
-					<div class="icon">
-						<i class="fa-solid fa-hand-holding-heart"></i>
-					</div>
-					<span class="text-center">Ong et<br>
-						Organisation
-						<br>
-						internationales</span>
-				</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-bolt"></i>
+								</div>
+								<span>Energie</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-gem"></i>
+								</div>
+								<span>Mines</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-tractor"></i>
+								</div>
+								<span>Agriculture</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-clapperboard"></i>
+								</div>
+								<span>Audiovisuel</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-building-columns"></i>
+								</div>
+								<span>Gouvernance</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-money-bill-trend-up"></i>
+								</div>
+								<span>Finance</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-building"></i>
+								</div>
+								<span>Urbanisation</span>
+							</div>
+						</div>
+						<div class="secteur-content">
+							<div class="content">
+								<div class="icon">
+									<i class="fa-solid fa-hand-holding-heart"></i>
+								</div>
+								<span class="text-center">Ong et<br>
+									Organisation
+									<br>
+									internationales</span>
+							</div>
 
-			</div>
-		</div>
+						</div>
+					</div>
 
 
-	</div>
-</section>
+				</div>
+			</section>
 
 <section class="objectifMaj py-5">
 	<div>
@@ -395,11 +420,7 @@
 			<div class="video-container">
 				<div class="you-vid position-relative">
 
-					<iframe class="position-absolute" width="887" height="499"
-						src="https://www.youtube.com/embed/RKL6TJcIhZ4"
-						title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 				</div>
 				<div class="video-title">CEO BUSINESS FORUM presentation 2024</div>
@@ -407,11 +428,7 @@
 			<div class="video-container">
 				<div class="you-vid position-relative">
 
-					<iframe class="position-absolute" width="887" height="499"
-						src="https://www.youtube.com/embed/RKL6TJcIhZ4"
-						title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 				</div>
 				<div class="video-title">Vidéo CEO Business Forum Indian 2024</div>
@@ -437,9 +454,62 @@
 	</div>
 
 
+									</div>
+									<div class="tab-pane fade leforum-content" id="pills-contact" role="tabpanel">
+										<div class="leforum-img">
+											<img src="{{ asset('assets/img/sary/72.jpg') }}" alt="CEO Business Forum" class="img-1">
+										</div>
+										<div class="leforum-img stand">
+											<img src="{{ asset('assets/img/sary/66.jpg') }}" alt="CEO Business Forum" class="img-stand">
+										</div>
+										<div class="leforum-txt">
+											<p>
+												- Keynote
+												<br>
+												- Intervention des Guest Speakers
+												<br>
+												- Conférences plénières
+												<br>
+												- Ateliers thématiques
+												<br>
+												- Ateliers pays
+												<br>
+												- Happenings culturels
+												<br>
+												- Réseautage (RDV : B2B Sectoriels, entrepreneurs-Investisseurs, talents-recruteurs) Partenariats publics et privés
+												<br>
+												- Signature convention et accord de partenariat
+												<br>
+												- Présentation du nouveau social de l'Afrique te de océan Indien « GateAfri »
+												<br>
+												- Démonstration et présentation de divers projets des participants et partenaires.
+												<br>
 
+											</p>
+										</div>
 
-</section>
+									</div>
+								</div>
+							</div>
+							<div class="ceo-illustration d-flex justify-content-space-between mb-5">
+								<div style="margin-left: 0">
+									<img src="{{ asset('assets/img/portrait/ceo agro.jfif') }}" alt="CEO Business Forum" class="c-img img-1">
+								</div>
+								<div>
+									<img src="{{ asset('assets/img/portrait/ceo ia.jfif') }}" alt="CEO Business Forum" class="c-img img-2">
+								</div>
+								<div>
+									<img src="{{ asset('assets/img/portrait/ceo banque.jfif') }}" alt="CEO Business Forum" class="c-img img-3">
+								</div>
+								<div>
+									<img src="{{ asset('assets/img/portrait/ceo industrie.jfif') }}" alt="CEO Business Forum" class="c-img img-4">
+								</div>
+								<div>
+									<img src="{{ asset('assets/img/portrait/coe economie.jfif') }}" alt="CEO Business Forum" class="c-img img-5">
+								</div>
+							</div>
+						</div>
+					</section>
 
 <section id="reportage">
 	<div class="top">
@@ -664,6 +734,4 @@
 </section>
 {% endblock %}
 
-{% block scripts %}
-
-{% endblock %}
+				{% block scripts %}{% endblock %}
