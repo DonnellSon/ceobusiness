@@ -1188,15 +1188,6 @@ section#avantages>.bottom h3 {
     color: var(--blue2);
 }
 
-section#program {
-    /* background: linear-gradient(#152644ea, #152644ea), url(../img/fondmarin.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 50px 0;
-    color: white; */
-}
-
 section#program p {
     color: rgba(255, 255, 255, 0.925);
 }
