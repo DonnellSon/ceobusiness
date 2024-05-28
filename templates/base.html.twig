@@ -69,7 +69,7 @@
 					<div class="mb-3 newsletter col-lg-3 col-md-6 col-sm-12 col-121">
 						<h2>NewsLetter</h2>
 						<p class="text-white">Restez au jour avec notre newsletter, exclusive et personnalisée pour vous!
-																											Profitez des dernières actualités et des offres exclusives dès maintenant.</p>
+																																		Profitez des dernières actualités et des offres exclusives dès maintenant.</p>
 						<div class="news-letter-form d-flex align-items-center">
 							<input type="email" placeholder="Votre email" class="form-control" name="news_letter_email">
 							<button class="btn btn-primary">Go</button>
@@ -179,11 +179,18 @@
 			<i class="fa-regular fa-comment-dots"></i>
 		</div>
 		<div class="messenger-window">
-			<div class="message-container"></div>
-			
-			<textarea class="message-input" placeholder="Entrez votre message ici"></textarea>
-			
-			<button class="send-boutton">Envoyer</button>
+			<div class="header">
+				<h2>Nous contacter</h2>
+			</div>
+			<div class="body-message">
+			<div class="message-compose">
+				<input type="text" class="subject-input" placeholder="Sujet :">
+				<textarea class="body-input" placeholder="Corps du message..."></textarea>
+			</div>
+			<div class="footer">
+				<button class="send-btn">Envoyer</button>
+			</div>
+		</div>
 		</div>
 		 <script src="{{ asset('assets/js/countdown.js')}}"></script>
 		 <script src="{{ asset('assets/js/parallax.js')}}"></script>
@@ -192,11 +199,11 @@
 		 <script src="{{ asset('assets/js/messenger.js')}}"></script>
 		 <script src="{{ asset('assets/js/slick-slider.js')}}"></script>
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
-								integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
-								crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+										integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+										crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
-								integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
-								crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% block scripts %}
+										integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+										crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% block scripts %}
 		{% endblock %}{% block basefoot %}
 	{% endblock %}
 </body></html>

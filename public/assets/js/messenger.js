@@ -13,37 +13,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var sendBtn = document.querySelector('.send-boutton');
-    var messageInput = document.querySelector('.message-input');
-    var messageContainer = document.querySelector('.message-container');
+    var messengerWindow = document.querySelector('.messenger-window');
+    var messengerBtn = document.querySelector('.messenger');
 
-    sendBtn.addEventListener("click", function() {
-        var userMessage = messageInput.value.trim(); 
-        if (userMessage !== '') {
-           
-            appendMessage(userMessage, 'user');
-           
-            messageInput.value = '';
-           
-            messageContainer.scrollTop = messageContainer.scrollHeight;
-           
-            setTimeout(function() {
-                var serviceMessage = "Désolé, ce service n'est pas encore disponible.";
-                appendMessage(serviceMessage, 'service');
-              
-                messageContainer.scrollTop = messageContainer.scrollHeight;
-            }, 2000);
+    messengerBtn.addEventListener("click", function() {
+        if (messengerWindow.style.display === "block") {
+            messengerWindow.style.display = "none";
+        } else {
+            messengerWindow.style.display = "block";
         }
     });
 
-    function appendMessage(message, sender) {
-      
-        var messageElement = document.createElement('div');
-    
-        messageElement.classList.add(sender === 'user' ? 'user-message' : 'service-message');
-      
-        messageElement.textContent = message;
-       
-        messageContainer.appendChild(messageElement);
-    }
+    var closeBtn = document.querySelector('.close-btn');
+    closeBtn.addEventListener("click", function() {
+        messengerWindow.style.display = "none";
+    });
 });
