@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\UserRegisterRepository;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
 
 #[ORM\Entity(repositoryClass: UserRegisterRepository::class)]
 class UserRegister
