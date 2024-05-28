@@ -273,7 +273,7 @@ header{
 header 
 
 .visualiser .content .header h2 {
-    color: var(--blue2);
+    color: var(--blue2) !important;
 }
 
 .visualiser .content .header button {
