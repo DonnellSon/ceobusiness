@@ -272,9 +272,8 @@ header{
 }
 header 
 
-.visualiser .content .header h1 {
+.visualiser .content .header h2 {
     color: var(--blue2);
-    font-size: 25px;
 }
 
 .visualiser .content .header button {
@@ -290,7 +289,7 @@ header
     margin-top: 5px;
 }
 
-.visualiser .content .header::after {
+/* .visualiser .content .header::after {
     content: "";
     position: absolute;
     background-color: #eee;
@@ -299,7 +298,7 @@ header
     z-index: 100;
     margin-top: 20px;
     margin-left: 400px;
-}
+} */
 
 .video-title {
     text-align: center;
