@@ -1,13 +1,13 @@
 //navbar sticky
-window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
-    if(window.document.scrollingElement.scrollTop > 700){
-        header.classList.add('sticky');
-    }
-    else{
-        header.classList.remove('sticky');
-    }
-});
+// window.addEventListener("scroll", function(){
+//     var header = document.querySelector("header");
+//     if(window.document.scrollingElement.scrollTop > 5){
+//         header.classList.add('sticky');
+//     }
+//     else{
+//         header.classList.remove('sticky');
+//     }
+// });
 
 
 //nabar responsive navigation
