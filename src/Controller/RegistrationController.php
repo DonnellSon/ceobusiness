@@ -50,8 +50,8 @@ class RegistrationController extends AbstractController
                 ->setAddress($adress)
                 ->setPersoEmail($persoMail)
                 ->setProEmail($proMail)
-                ->setPersoNumber($persoNumber)
-                ->setProNumber($proNumber)
+                ->setPersoNumber((int) $persoNumber)
+                ->setProNumber((int) $proNumber)
                 ->setWhatsApp($whatsapp);
             
             $this->em->persist($persoInfos);
