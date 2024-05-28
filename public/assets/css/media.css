@@ -117,17 +117,7 @@ i.menu-btn{
     display: block;
     z-index: 3;
 }
-.c-img{
-    width: 100%;
-}
-.img-3{
-    height: 300px;
-    margin-top: 200px;
-}
-.img-2, .img-4{
-    height: 400px;
-    margin-top: 100px;
-}
+
 .parrain, .organisme{
     position: relative;
     margin: 0;
@@ -148,25 +138,10 @@ i.menu-btn{
     justify-content: center;
     justify-items: center;
 }
-.banner{
-    display: block;
-    height: 110vh;
-}
-.banner-slider {
-    z-index: -1;
-    margin-left: -20px;
-}
 
-.banner-slider .banner-slide {
-    height: 110vh;
-}
 
-.banner-slider .banner-slide img {
-    width: 120%;
-    height: 100%;
-    object-fit: cover;
-    object-position: bottom;
-}
+
+
 }
 @media (max-width: 700px){
     .visualiser .content .header::after {
