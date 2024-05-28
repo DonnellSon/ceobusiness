@@ -349,6 +349,7 @@ header a{
 
 .cible .map img {
     width: 550px;
+    max-width: 100%;
 
 }
 
