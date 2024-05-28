@@ -38,6 +38,13 @@
     .leforum-img{
         display: none;
     }
+    .leforum-img-2{
+        display: block;
+        position: absolute;
+        width: 35%;
+        margin-top: 30%;
+        margin-left: 30%;
+    }
     .leforum-txt{
         width: 100%;
     }
@@ -122,8 +129,15 @@
     margin-top: 100px;
 }
 }
-@media (max-width: 500px){
+@media (max-width: 700px){
     .visualiser .content .header::after {
         display: none;
+    }
+    .leforum-img-2{
+        display: block;
+        position: absolute;
+        width: 35%;
+        margin-top: 55%;
+        margin-left: 30%;
     }
 }
