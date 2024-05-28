@@ -104,6 +104,10 @@
     background-color: white;
     margin-left: 50px;
 }
+i.menu-btn{
+    color: #000;
+    position: fixed;
+}
 .register-btn{
     font-weight: 500 !important;
     font-size: 13px;
@@ -111,7 +115,7 @@
     margin: 0 10px;
     padding: 10px;
     border: 1px solid var(--grid1);
-    color: #fff;
+    color: #000;
     transition: 0.3s;
     transition-property: color, background-color;
     text-transform: uppercase;
@@ -127,7 +131,6 @@
     color: #fff;
     position: absolute;
     top: 80px;
-
 }
 .organisme {
     left: 30px;
@@ -622,7 +625,7 @@ header.sticky .topbar-logo img {
 }
 
 header .brand {
-    color: #fff;
+    color: #000;
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
@@ -651,7 +654,7 @@ header .menu .nav-btn {
     margin: 0 10px;
     padding: 0 10px;
     border-radius: 20px;
-    color: #fff;
+    color: #000 !important;
     transition: 0.3s;
     transition-property: color, background-color;
     text-transform: uppercase;
