@@ -6,6 +6,7 @@ use App\Repository\UserRegisterRepository;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
+
 #[ORM\Entity(repositoryClass: UserRegisterRepository::class)]
 class UserRegister
 {

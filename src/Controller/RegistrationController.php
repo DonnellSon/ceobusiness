@@ -50,8 +50,8 @@ class RegistrationController extends AbstractController
                 ->setAddress($adress)
                 ->setPersoEmail($persoMail)
                 ->setProEmail($proMail)
-                ->setPersoNumber($persoNumber)
-                ->setProNumber($proNumber)
+                ->setPersoNumber((int) $persoNumber)
+                ->setProNumber((int) $proNumber)
                 ->setWhatsApp($whatsapp);
             
             $this->em->persist($persoInfos);
@@ -69,7 +69,7 @@ class RegistrationController extends AbstractController
         
         return $this->render('registration/index.html.twig', [
             'controller_name' => 'RegistrationController',
-            'errors'=> count($errors) > 0 ? $this->formatErrors($errors) : []
+            'errors'=> (isset($errors) && count($errors)) > 0 ? $this->formatErrors($errors) : []
         ]);
     }
     #[Route('/registration/informations-professionnelles', name: 'professional_register')]

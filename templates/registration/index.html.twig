@@ -4,7 +4,7 @@
 
 {% block content %}
 <form id="user-registration-form" method="post" class="user-registration-form" enctype="multipart/form-data">
-    <div class="p-5">
+    <div class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5">
         <div class="top d-flex align-items-center justify-content-center px-2">
             <h2>Informations personnelles</h2>
         </div>
@@ -45,8 +45,8 @@
                     </div>
                 </div>
                 <div>
-                    <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <select class="form-select" name="gender" id="floatingSelectGrid" aria-label="Floating label select example">
+                    <div class="form-floating">
+                        <select class="form-select mb-3" name="gender" id="floatingSelectGrid" aria-label="Floating label select example">
                           <option selected value="1">Madagascar</option>
                           <option value="2">Femme</option>
                           <option value="3">Autre</option>
@@ -85,7 +85,7 @@
             <div class="left col-lg-4 col-md-5 col-sm-12">
                 <div class="user-photo d-flex flex-column p-1">
                     <div class="top flex align-items-center justify-content-center">
-                        <label for="" class="w500">Photo buste</label>
+                        <label for="" class="w500">Importer photo</label>
                     </div>
                     <div class="flex-grow-1 flex align-items-center justify-content-center">
                         <div class="avatar position-relative">
@@ -119,12 +119,12 @@
                 </div>
             </div>
         </div>
-        <div class="btns flex justify-content-end align-items-center mt-3">
-            <button class="btn btn-outline-secondary mr-2">Enregistrer et quitter</button>
-            <button class="btn btn-primary">Suivant</button>
+        <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">
+            <button class="btn btn-outline-secondary d-block mr-lg-2 col-lg-auto col-md-auto col-sm-12 mb-lg-0 mb-md-0 mb-sm-0 mb-0">Enregistrer et quitter</button>
+            <button class="btn btn-primary d-block col-lg-auto col-md-auto col-sm-12">Suivant</button>
         </div>
     </div>
-    <div class="p-5">
+    <div class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5">
         <h2 class="txt-blue2 mb-3">Quels sont les AVANTAGES PERSONELLES <br>en participant à ce forum ?</h2>
         <h5 class="mb-5" style="color:#444">Vos avantages "personnelles" en vous inscrivant au CEO BUSINESS FORUM -
             INDIAN OCEAN :</h5>
