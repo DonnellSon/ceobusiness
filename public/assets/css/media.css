@@ -1,7 +1,6 @@
 @media (max-width: 1135px){
     header .btn{
         display: block;
-        margin-left: 80%;
     }
     header .menu{
         position: fixed;
@@ -98,16 +97,6 @@ i.menu-btn{
 }
 .img-stand{
     width: 100%;
-}
-.ceo-illustration{
-    width: 100%;
-}
-.ceo-illustration div{
-    width: calc(100% / 5 - 50px);
-    max-height: 500px;
-    margin-left: 65px;
-    overflow: hidden;
-    gap: 10px;
 }
 .nav-ceo::after{
    display: none;
