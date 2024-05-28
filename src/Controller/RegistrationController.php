@@ -56,7 +56,7 @@ class RegistrationController extends AbstractController
             
             $this->em->persist($persoInfos);
 
-            $errors = $this->validator->validate($user);
+            $errors = $this->validator->validate($persoInfos);
                
                 if (count($errors) < 0) {
                     $this->em->flush();

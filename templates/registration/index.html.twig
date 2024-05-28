@@ -12,51 +12,82 @@
             <div class="left col-lg-8 col-md-12 col-sm-12">
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="firstName" class="form-control" id="floatingInput" placeholder="Votre nom">
+                        <input type="text" name="firstName" class="form-control" id="floatingInput"
+                            placeholder="Votre nom">
                         <label for="floatingInput">Nom</label>
                     </div>
                     <div class="form-floating  mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="lastName" class="form-control" id="floatingInput" placeholder="Votre prénom">
+                        <input type="text" name="lastName" class="form-control" id="floatingInput"
+                            placeholder="Votre prénom">
                         <label for="floatingInput">Prénom</label>
                     </div>
                 </div>
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="otherName" class="form-control" id="floatingInput" placeholder="Votre nom">
+                        <input type="text" name="otherName" class="form-control" id="floatingInput"
+                            placeholder="Votre nom">
                         <label for="floatingInput">Autre Nom</label>
                     </div>
                     <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <select class="form-select" name="gender" id="floatingSelectGrid" aria-label="Floating label select example">
-                          <option selected value="homme">Homme</option>
-                          <option value="femme">Femme</option>
-                          <option value="Autre">Autre</option>
+                        <select class="form-select" name="gender" id="floatingSelectGrid"
+                            aria-label="Floating label select example">
+                            <option selected value="homme">Homme</option>
+                            <option value="femme">Femme</option>
+                            <option value="Autre">Autre</option>
                         </select>
                         <label for="floatingSelectGrid">Genre</label>
-                      </div>
+                    </div>
                 </div>
                 <div class="row g-2">
                     <div class="form-floating  mb-3 col-md-6">
-                        <input type="text" name="city" class="form-control" id="floatingInput" placeholder="Votre ville">
+                        <input type="text" name="city" class="form-control" id="floatingInput"
+                            placeholder="Votre ville">
                         <label for="floatingInput">Ville</label>
                     </div>
                     <div class="form-floating  mb-3 col-md-6">
-                        <input type="text" name="adress" class="form-control" id="floatingInput" placeholder="Votre adresse">
+                        <input type="text" name="adress" class="form-control" id="floatingInput"
+                            placeholder="Votre adresse">
                         <label for="floatingInput">Adresse</label>
                     </div>
                 </div>
+                <div class="form-floating mb-3 col-md-6 col-sm-12">
+                    <select class="form-select" name="gender" id="floatingSelectGrid"
+                        aria-label="Floating label select example">
+                        <option selected value="homme">- Selectionnez votre nationalité -</option>
+                        <option selected value="Malagasy">Malagasy</option>
+                        <option value="Française">Française</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                    <label for="floatingSelectGrid">Nationalité</label>
+                </div>
                 <div>
                     <div class="form-floating">
-                        <select class="form-select mb-3" name="gender" id="floatingSelectGrid" aria-label="Floating label select example">
-                          <option selected value="1">Madagascar</option>
-                          <option value="2">Femme</option>
-                          <option value="3">Autre</option>
+                        <div class="dropdown show">
+                            <div class="form-floating dropdown-toggle mb-3 col-md-6" id="countryMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <input type="text" name="city" class="form-control" id="floatingInput"
+                                    placeholder="Votre ville">
+                                <label for="floatingInput">Pays</label>
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="countryMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                        <select class="form-select mb-3" name="gender" id="floatingSelectGrid"
+                            aria-label="Floating label select example">
+                            <option selected value="1">Madagascar</option>
+                            <option value="2">Femme</option>
+                            <option value="3">Autre</option>
                         </select>
                         <label for="floatingSelectGrid">Pays</label>
-                      </div>
+                    </div>
                 </div>
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="persoMail" class="form-control" id="floatingInput" placeholder="Votre mail personnel">
+                        <input type="text" name="persoMail" class="form-control" id="floatingInput"
+                            placeholder="Votre mail personnel">
                         <label for="floatingInput">Mail personnel</label>
                     </div>
                     <div class="form-floating  mb-3 col-md-6 col-sm-12">
@@ -67,18 +98,19 @@
                 </div>
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="persoNumber" class="form-control" id="floatingInput"
+                        <input type="text" name="persoNumber" class="form-control phone-inpt" id="floatingInput"
                             placeholder="Votre téléphone personnel">
                         <label for="floatingInput">Téléphone personnel</label>
                     </div>
                     <div class="form-floating  mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="proNumber" class="form-control" id="floatingInput"
+                        <input type="text" name="proNumber" class="form-control phone-inpt" id="floatingInput"
                             placeholder="Votre télephone professionnel">
                         <label for="floatingInput">Télephone professionnel</label>
                     </div>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="text" name="whatsapp" class="form-control" id="floatingInput" placeholder="Votre contact WhatsApp">
+                    <input type="text" name="whatsapp" class="form-control" id="floatingInput"
+                        placeholder="Votre contact WhatsApp">
                     <label for="floatingInput">WhatsApp</label>
                 </div>
             </div>
@@ -89,7 +121,8 @@
                     </div>
                     <div class="flex-grow-1 flex align-items-center justify-content-center">
                         <div class="avatar position-relative">
-                            <img id="user-avatar-preview-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ymu7uVmjL4SXLpbox_aXSml1EOxgeyZ7lEoG89gPT3m0SipIkI5f3IM264XDR2GhAIo&usqp=CAU"
+                            <img id="user-avatar-preview-img"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ymu7uVmjL4SXLpbox_aXSml1EOxgeyZ7lEoG89gPT3m0SipIkI5f3IM264XDR2GhAIo&usqp=CAU"
                                 class="position-absolute" alt="">
                         </div>
                     </div>
@@ -102,12 +135,15 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="editPhotoLink">
                                     <li>
-                                        <a class="dropdown-item" id="importPhotoBtn" href="#" type="button">Importer une photo</a>
+                                        <a class="dropdown-item" id="importPhotoBtn" href="#" type="button">Importer une
+                                            photo</a>
                                     </li>
 
                                     <li>
-                                        <input type="file" name="photo" id="photoInput" class="d-none" accept="image/*" capture="camera">
-                                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#webcamModal">Prendre avec la webcam</a>
+                                        <input type="file" name="photo" id="photoInput" class="d-none" accept="image/*"
+                                            capture="camera">
+                                        <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#webcamModal">Prendre avec la webcam</a>
                                     </li>
                                 </ul>
                             </div>
@@ -120,7 +156,9 @@
             </div>
         </div>
         <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">
-            <button class="btn btn-outline-secondary d-block mr-lg-2 col-lg-auto col-md-auto col-sm-12 mb-lg-0 mb-md-0 mb-sm-0 mb-0">Enregistrer et quitter</button>
+            <button
+                class="btn btn-outline-secondary d-block mr-lg-2 col-lg-auto col-md-auto col-sm-12 mb-lg-0 mb-md-0 mb-sm-0 mb-0">Enregistrer
+                et quitter</button>
             <button class="btn btn-primary d-block col-lg-auto col-md-auto col-sm-12">Suivant</button>
         </div>
     </div>
@@ -215,7 +253,8 @@
             </div>
             <div class="modal-body p-0 bg-danger" style="aspect-ratio:1 !important">
                 <div class="previewVideoParent position-relative h-100 w-100">
-                    <video class="position-absolute display-block bg-dark" style="width: 100% !important;height:100% !important" id="previewVideo" autoplay></video>
+                    <video class="position-absolute display-block bg-dark"
+                        style="width: 100% !important;height:100% !important" id="previewVideo" autoplay></video>
                     <div class="modal-footer position-absolute d-flex justify-content-center w-100">
                         <button id="takePhotoBtn" type="button" class="btn btn-success">Prendre Photo</button>
                     </div>

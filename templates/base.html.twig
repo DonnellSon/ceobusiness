@@ -16,7 +16,9 @@
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('assets/css/media.css') }}">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+		integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	{% block links %}
 	{% endblock %}
 	{% block head %}{% endblock %}
@@ -49,7 +51,7 @@
 					<button class="nav-btn dropdown-toggle lang" type="button" data-bs-toggle="dropdown"
 						aria-expanded="false">
 						<img src="{{ asset('assets/img/flag/french.png') }}" style="width:20px; height:20px" alt="">
-				<span style="color:black">fr</span>
+						<span style="color:black">fr</span>
 					</button>
 					<ul class="dropdown-menu">
 						<li>
@@ -86,10 +88,14 @@
 						<li>
 							<div class="latest-news-link-preview d-flex">
 								<div class="img position-relative">
-									<img class="position-absolute" src="https://midi-madagasikara.mg/wp-content/uploads/2024/05/BUSINESS.jpg.webp" alt="">
+									<img class="position-absolute"
+										src="https://midi-madagasikara.mg/wp-content/uploads/2024/05/BUSINESS.jpg.webp"
+										alt="">
 								</div>
 								<div class="capt">
-									<h4 class="ttl line-clamp-2">Madagascar abritera un événement d’envergure régionale et internationale intitulé CEO Business Forum Indian Ocean qui aura lieu les 14 et 15 novembre 2024 au CCI Ivato.</h4>
+									<h4 class="ttl line-clamp-2">Madagascar abritera un événement d’envergure régionale
+										et internationale intitulé CEO Business Forum Indian Ocean qui aura lieu les 14
+										et 15 novembre 2024 au CCI Ivato.</h4>
 									<small>Ce forum économique est organisé conjointement par...</small>
 								</div>
 							</div>
@@ -97,10 +103,13 @@
 						<li>
 							<div class="latest-news-link-preview d-flex">
 								<div class="img position-relative">
-									<img class="position-absolute" src="https://www.gasigasy.mg/wp-content/uploads/2024/05/c95d578c45a5ad01d1a193f2118aeeba_S.jpg.webp" alt="">
+									<img class="position-absolute"
+										src="https://www.gasigasy.mg/wp-content/uploads/2024/05/c95d578c45a5ad01d1a193f2118aeeba_S.jpg.webp"
+										alt="">
 								</div>
 								<div class="capt">
-									<h4 class="ttl line-clamp-2">Forum économique – Un rassemblement des décideurs de l’océan Indien en gestation</h4>
+									<h4 class="ttl line-clamp-2">Forum économique – Un rassemblement des décideurs de
+										l’océan Indien en gestation</h4>
 									<small>Ambitions régionales. Gatenews Africa...</small>
 								</div>
 							</div>
@@ -108,10 +117,13 @@
 						<li>
 							<div class="latest-news-link-preview d-flex">
 								<div class="img position-relative">
-									<img class="position-absolute" src="https://ledefi.mg/wp-content/uploads/2024/05/FB_IMG_1715745486806.jpg" alt="">
+									<img class="position-absolute"
+										src="https://ledefi.mg/wp-content/uploads/2024/05/FB_IMG_1715745486806.jpg"
+										alt="">
 								</div>
 								<div class="capt">
-									<h4 class="ttl line-clamp-2">« CEO Business Forum Océan Indien » : RENDEZ-VOUS LE 14- 15 NOVEMBRE 2024 AU CCI IVATO</h4>
+									<h4 class="ttl line-clamp-2">« CEO Business Forum Océan Indien » : RENDEZ-VOUS LE
+										14- 15 NOVEMBRE 2024 AU CCI IVATO</h4>
 									<small>Madagascar se prépare à accueillir le « CEO Business Forum...</small>
 								</div>
 							</div>
@@ -191,6 +203,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
 		integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
 		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+	<script src="{{ asset('assets/js/phoneInput.js')}}"></script>
 	{% block scripts %}{% endblock %}
 	{% block basefoot %}{% endblock %}
 </body>
