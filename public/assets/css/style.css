@@ -1826,6 +1826,7 @@ footer hr {
         display: flex;
         flex-direction: column;
         gap: 30px;
+        padding: 0 15px;
     }
     #pavillon .bottom .pavillon-item{
         width: 100% !important;
@@ -1836,6 +1837,7 @@ footer hr {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-gap: 30px;
+        padding: 0 15px;
     }
     
 }
