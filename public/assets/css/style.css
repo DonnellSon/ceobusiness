@@ -23,6 +23,9 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+  .modal{
+    z-index: 10000000;
+  }
 
 .banner {
     background: linear-gradient(rgba(26, 40, 80, 0.692), rgba(26, 40, 80, 0.5));

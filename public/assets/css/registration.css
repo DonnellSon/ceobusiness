@@ -204,3 +204,12 @@ p{
     border: 1px solid white;
     color: white;
 }
+@media (max-width:768px){
+    .register-form-btns{
+        flex-direction: var(--blue3);
+        gap: 15px;
+    }
+    .register-form-btns button{
+        width: 100% !important;
+    }
+}
