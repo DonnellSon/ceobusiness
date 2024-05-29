@@ -1871,6 +1871,9 @@ footer hr {
 
 /*=============== responsive ==============*/
 @media (max-width:768px) {
+    .nav-pills {
+        border-right: none;
+    }
     .cible .map{
         min-width: 0;
     }
@@ -1907,6 +1910,9 @@ footer hr {
 }
 
 @media (max-width:992px) {
+    .nav-pills {
+        border-right: none;
+    }
     .cible .map{
         min-width: 0;
     }
