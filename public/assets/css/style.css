@@ -12,18 +12,17 @@
     --grid1: #eee;
 }
 
-html,body {
+html{
     overflow-x: hidden;
+    
+}
+
+body {
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100%;
 }
-/*
-body {
-    width: 100%;
-    height: 100%;
-} */
 
 .messenger {
     position: fixed;
@@ -672,8 +671,6 @@ header {
     z-index: 999;
     position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
