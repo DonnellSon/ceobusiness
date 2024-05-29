@@ -1,7 +1,6 @@
+
 @media (max-width: 1135px){
-    header .btn{
-        display: block;
-    }
+    
     header .menu{
         position: fixed;
         background-color: white;
@@ -33,9 +32,7 @@
     header .reg-btn{
         margin-top: -20px;
     }
-    .menu-btn{
-        margin-left: -50px;
-    }
+
     .leforum-img{
         display: none;
     }
@@ -49,11 +46,6 @@
     .leforum-txt{
         width: 100%;
     }
-    i.menu-btn{
-        color: #000;
-        position: fixed;
-        margin-left: -130px;
-    }
 }
 
 @media (max-width: 839px){
@@ -65,11 +57,6 @@
     }
 .leforum-txt{
     justify-content: center;
-}
-i.menu-btn{
-    color: #000;
-    position: fixed;
-    margin-left: -130px;
 }
 .leforum-img{
     max-width: 40%;
@@ -125,14 +112,6 @@ i.menu-btn{
     top: 0;
     justify-content: center;
     width: 100%;
-}
-.organisme{
-    margin-left: -30px;
-    margin-bottom: 20px;
-}
-.parrain{
-    margin-top: 70px;
-    margin-left: 30px;
 }
 .o-logo, .p-logo{
     justify-content: center;

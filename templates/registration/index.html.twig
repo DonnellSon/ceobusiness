@@ -10,6 +10,16 @@
         </div>
         <div class="body row mt-5">
             <div class="left col-lg-8 col-md-12 col-sm-12">
+                <div>
+                    <div class="form-floating mb-3 col-md-6 col-sm-12">
+                        <select class="form-select" name="gender" id="floatingSelectGrid"
+                            aria-label="Floating label select example">
+                            <option selected value="homme">Monsieur</option>
+                            <option value="femme">Madame</option>
+                        </select>
+                        <label for="floatingSelectGrid">Civilité</label>
+                    </div>
+                </div>
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-md-6 col-sm-12">
                         <input type="text" name="firstName" class="form-control" id="floatingInput"
@@ -140,8 +150,7 @@
                                     </li>
 
                                     <li>
-                                        <input type="file" name="photo" id="photoInput" class="d-none" accept="image/*"
-                                            capture="camera">
+                                        <input type="file" name="photo" id="photoInput" accept="image/*">
                                         <a class="dropdown-item" href="#" data-bs-toggle="modal"
                                             data-bs-target="#webcamModal">Prendre avec la webcam</a>
                                     </li>
@@ -269,4 +278,5 @@
 
 {% block foot %}
 <script src="{{ asset('assets/js/capturePhoto.js') }}"></script>
+<script src="{{ asset('assets/js/phoneInput.js') }}"></script>
 {% endblock %}
