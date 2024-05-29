@@ -90,7 +90,7 @@ body {
     color: white;
     text-align: center;
     width: 1024px;
-    max-width: 90%;
+    max-width: 90vw;
     font-family: "Poppins", sans-serif;
 }
 
@@ -768,7 +768,7 @@ header .btn {
     color: white;
     text-align: center;
     width: 800px;
-    max-width: 90%;
+    max-width: 90vw;
 }
 
 .banner .capt {
@@ -1734,6 +1734,7 @@ section#program p {
     max-width: 800px;
     margin-bottom: 15px;
     line-height: 25px;
+    padding: 0 15px;
 }
 
 #pavillon .top h1,
