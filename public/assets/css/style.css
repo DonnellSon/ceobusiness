@@ -11,10 +11,14 @@
     --txt-white2: rgba(255, 255, 255, 0.61);
     --grid1: #eee;
 }
-html,body{
+
+html {
+    overflow-x: hidden;
+}
+
+body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
 }
 
 .messenger {
@@ -70,7 +74,7 @@ html,body{
 }
 
 .banner {
-    background: linear-gradient(rgba(26, 40, 80, 0.692), #0692e3a4);
+    background: linear-gradient(rgba(26, 40, 80, 0.774), #0692e3a4);
     height: 100vh;
     /* margin-top: -460px;
     padding-top: 170px; */
@@ -304,7 +308,8 @@ html,body{
 header {
     background-color: white;
 }
-.btn.expand-sidebar-btn{
+
+.btn.expand-sidebar-btn {
     display: none !important;
 }
 
@@ -372,7 +377,8 @@ header a {
     max-width: 100%;
 
 }
-.cible .map img{
+
+.cible .map img {
     width: 100%;
 }
 
@@ -1875,12 +1881,28 @@ footer hr {
 
 /*=============== responsive ==============*/
 @media (max-width:768px) {
+    #countdown>* {
+        width: 60px !important;
+    }
+
+    #countdown>*>small {
+        font-weight: 500;
+        font-size: 13px;
+        color: #254379;
+    }
+
+    #countdown>*>span {
+        font-size: 1.5rem;
+    }
+
     .nav-pills {
         border-right: none;
     }
-    .cible .map{
+
+    .cible .map {
         min-width: 0;
     }
+
     #pavillon .bottom {
         display: flex;
         flex-direction: column;
@@ -1900,7 +1922,8 @@ footer hr {
     .parrain {
         position: static !important;
     }
-    .btn.expand-sidebar-btn{
+
+    .btn.expand-sidebar-btn {
         min-width: none !important;
         padding: 0 !important;
         color: #444;
@@ -1917,9 +1940,11 @@ footer hr {
     .nav-pills {
         border-right: none;
     }
-    .cible .map{
+
+    .cible .map {
         min-width: 0;
     }
+
     #pavillon .bottom {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -1935,7 +1960,8 @@ footer hr {
     .parrain {
         position: static !important;
     }
-    .btn.expand-sidebar-btn{
+
+    .btn.expand-sidebar-btn {
         min-width: none !important;
         padding: 0 !important;
         color: #444;
