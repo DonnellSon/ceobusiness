@@ -307,7 +307,7 @@ header {
     background-color: white;
 }
 
-.btn.expand-sidebar-btn {
+.expand-sidebar-btn {
     display: none !important;
 }
 
@@ -1920,11 +1920,10 @@ footer hr {
         position: static !important;
     }
 
-    .btn.expand-sidebar-btn {
+    .expand-sidebar-btn {
         min-width: none !important;
         padding: 0 !important;
         color: #444;
-        border: 1px solid red !important;
         height: 40px;
         width: 40px;
         display: flex !important;
@@ -1958,7 +1957,7 @@ footer hr {
         position: static !important;
     }
 
-    .btn.expand-sidebar-btn {
+    .expand-sidebar-btn {
         min-width: none !important;
         padding: 0 !important;
         color: #444;
