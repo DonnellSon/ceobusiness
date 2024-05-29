@@ -12,14 +12,14 @@
     --grid1: #eee;
 }
 
-html {
+/* html {
     overflow-x: hidden;
 }
 
 body {
     width: 100%;
     height: 100%;
-}
+} */
 
 .messenger {
     position: fixed;
