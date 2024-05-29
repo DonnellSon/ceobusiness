@@ -361,10 +361,13 @@ header a {
     background: white;
 }
 
-.cible .map img {
+.cible .map {
     width: 550px;
     max-width: 100%;
 
+}
+.cible .map img{
+    width: 100%;
 }
 
 .cible .cible-title {
