@@ -11,6 +11,9 @@
     --txt-white2: rgba(255, 255, 255, 0.61);
     --grid1: #eee;
 }
+html,body{
+    overflow-x: hidden;
+}
 
 .messenger {
     position: fixed;
