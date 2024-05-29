@@ -362,7 +362,7 @@ header a {
 }
 
 .cible .map {
-    width: 550px;
+    min-width: 550px;
     max-width: 100%;
 
 }
@@ -1868,6 +1868,9 @@ footer hr {
 
 /*=============== responsive ==============*/
 @media (max-width:768px) {
+    .cible .map{
+        min-width: 0;
+    }
     #pavillon .bottom {
         display: flex;
         flex-direction: column;
@@ -1901,6 +1904,9 @@ footer hr {
 }
 
 @media (max-width:992px) {
+    .cible .map{
+        min-width: 0;
+    }
     #pavillon .bottom {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
