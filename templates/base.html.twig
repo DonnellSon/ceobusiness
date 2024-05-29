@@ -44,9 +44,12 @@
 					<a class="nav-btn" href="{{ path('home') }}#guest">Guest Speakers</a>
 					<a class="nav-btn" href="{{ path('home') }}#hote">Hôte</a>
 					<a class="nav-btn" href="{{ path('home') }}#pavillon">Pavillon</a>
-					<a href="{{ path('register') }}" class="register-btn px-3">
+					<a href="{{ path('personal_register') }}" class="register-btn px-3">
 						<i class="fa-solid fa-pen-nib"></i>
 						S'inscrire</a>
+						{# <a href="{{ path('login') }}" class="register-btn px-3">
+							<i class="fa-solid fa-pen-nib"></i>
+							S'inscrire</a> #}
 					<div class="dropdown">
 						<button class="nav-btn dropdown-toggle lang" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<img src="{{ asset('assets/img/flag/french.png') }}" style="width:20px; height:20px" alt="">
