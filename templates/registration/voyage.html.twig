@@ -1,0 +1,75 @@
+{% extends 'registration/base.html.twig' %}
+
+{% block pgTitle %}Voyage - CEO BUSINESS FORUM IO{% endblock %}
+
+{% block content %}
+<form class="user-registration-form">
+    <div class="p-5">
+        <div class="top d-flex align-items-center justify-content-center px-2">
+            <h2>Voyage</h2>
+        </div>
+        <div class="body mt-5">
+            <div class="left">
+                <div class="mb-3">
+                    <label for="floatingInput">Voulez vous un assistance pendant le voyage ?</label>
+                    <div class="d-flex">
+                        <div class="square-radio">
+                            <input type="radio" name="travelAssistance" value="oui" />
+                            <div class="square-radio-label">Oui</div>
+                        </div>
+                        <div class="square-radio">
+                            <input type="radio" name="travelAssistance" value="non" />
+                            <div class="square-radio-label">Non</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="floatingInput">Réservation d'hotel</label>
+                    <div class="d-flex">
+                        <div class="square-radio">
+                            <input type="radio" name="hotelReservation" value="oui" />
+                            <div class="square-radio-label">Oui</div>
+                        </div>
+                        <div class="square-radio">
+                            <input type="radio" name="hotelReservation" value="non" />
+                            <div class="square-radio-label">Non</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="floatingInput">Transfert de l'aéroport à l'hotel</label>
+                    <div class="d-flex">
+                        <div class="square-radio">
+                            <input type="radio" name="airportTransfer" value="oui" />
+                            <div class="square-radio-label">Oui</div>
+                        </div>
+                        <div class="square-radio">
+                            <input type="radio" name="airportTransfer" value="non" />
+                            <div class="square-radio-label">Non</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-floating">
+                    <textarea class="form-control" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Autres détails ou question à préciser</label>
+                  </div>
+
+            </div>
+
+        </div>
+        <div class="d-flex align-items-center justify-content-end">
+            <button class="registration-btn"><span>Enregistrer et quitter</span> &nbsp;<i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    
+    
+    
+</form>
+
+{% endblock %}
+
+{% block foot %}
+<script src="{{ asset('assets/js/registration.js') }}"></script>
+{% endblock %}

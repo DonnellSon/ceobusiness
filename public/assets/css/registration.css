@@ -204,6 +204,22 @@ p{
     border: 1px solid white;
     color: white;
 }
+.square-radio-label{
+    border: 1px solid #eee;
+    border-radius: 6px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    color: #444;
+    justify-content: center;
+    cursor: pointer;
+}
+.square-radio input[type="checkbox"]:checked + .square-radio-label{
+    border-color: var(--blue2);
+    color: var(--blue2);
+}
+
+
 @media (max-width:768px){
     .register-form-btns{
         flex-direction: var(--blue3);

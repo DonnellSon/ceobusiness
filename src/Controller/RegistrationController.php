@@ -79,4 +79,11 @@ class RegistrationController extends AbstractController
             'controller_name' => 'RegistrationController',
         ]);
     }
+    #[Route('/registration/voyage', name: 'travel_register')]
+    public function travel_registration(): Response
+    {
+        return $this->render('registration/voyage.html.twig', [
+            'controller_name' => 'RegistrationController',
+        ]);
+    }
 }
