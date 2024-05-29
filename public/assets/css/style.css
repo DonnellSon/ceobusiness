@@ -68,7 +68,7 @@ html,body{
 }
 
 .banner {
-    background: linear-gradient(rgba(26, 40, 80, 0.692), rgba(26, 40, 80, 0.5));
+    background: linear-gradient(rgba(26, 40, 80, 0.692), #0692e36b);
     height: 100vh;
     /* margin-top: -460px;
     padding-top: 170px; */
