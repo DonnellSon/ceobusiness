@@ -31,7 +31,7 @@ class RegisterController extends AbstractController
         return $errorArray;
     }
 
-    #[Route('/inscription', name: 'register')]  
+    #[Route('/inscription/none', name: 'register')]  
     public function register(Request $request): Response
     {
       
