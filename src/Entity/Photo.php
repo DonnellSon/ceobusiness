@@ -5,9 +5,11 @@ namespace App\Entity;
 use App\Repository\PhotoRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\HasLifecycleCallbacks]
 #[ORM\Entity(repositoryClass: PhotoRepository::class)]
+#[Vich\Uploadable]
 class Photo
 {
     #[ORM\Id]

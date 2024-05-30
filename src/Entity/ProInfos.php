@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ProInfosRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ProInfosRepository::class)]
 class ProInfos
@@ -14,21 +15,39 @@ class ProInfos
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"Le nom de l'entrprise est requis",
+    )]
     private ?string $entrepriseName = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"Votre titre dans l'entrprise est requis",
+    )]
     private ?string $entrepriseTitle = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"La taille de l'entreprise est requise",
+    )]
     private ?string $entrepriseSize = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"L'activité de l'entreprise est requise",
+    )]
     private ?string $entrepriseActivity = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"La région où se situe l'entreprise est requise",
+    )]
     private ?string $region = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"La ville où se situe l'entreprise est requise",
+    )]
     private ?string $city = null;
 
     #[ORM\OneToOne(mappedBy: 'proInfos', cascade: ['persist', 'remove'])]

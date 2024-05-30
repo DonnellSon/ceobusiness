@@ -33,28 +33,60 @@ class PersoInfos
     private ?string $otherName = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"Le genre est requis",
+    )]
     private ?string $gender = null;
 
+    #[Assert\NotBlank(
+        message:"La ville est requise",
+    )]
     #[ORM\Column(length: 255)]
     private ?string $city = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"L'adresse est requise",
+    )]
     private ?string $address = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"Le pays est requis",
+    )]
     private ?string $country = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Email(
+        message: "L'email '{{ value }}' n'est pas valide."
+    )]
     private ?string $persoEmail = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"Votre email professionel est requis",
+    )]
+    #[Assert\Email(
+        message: "L'email '{{ value }}' n'est pas valide."
+    )]
     private ?string $proEmail = null;
 
-    #[ORM\Column]
-    private ?int $persoNumber = null;
+    #[ORM\Column(length: 255)]
+    #[Assert\Regex(
+        pattern:"/^\+(?:[0-9] ?){6,14}[0-9]$/",
+        message:"Le numéro de téléphone doit commencer par '+' suivi de 6 à 15 chiffres."
+    )]
+    private ?string $persoNumber = null;
 
-    #[ORM\Column]
-    private ?int $proNumber = null;
+    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"Votre numéro professionel est requis",
+    )]
+    #[Assert\Regex(
+        pattern:"/^\+(?:[0-9] ?){6,14}[0-9]$/",
+        message:"Le numéro de téléphone doit commencer par '+' suivi de 6 à 15 chiffres."
+    )]
+    private ?string $proNumber = null;
 
     #[ORM\Column(length: 255)]
     private ?string $whatsApp = null;
@@ -66,12 +98,21 @@ class PersoInfos
     private ?\DateTimeImmutable $updatedAt = null;
 
     #[ORM\OneToOne(inversedBy: 'persoInfos', cascade: ['persist', 'remove'])]
+    #[Assert\NotBlank(
+        message:"Votre photo est requise",
+    )]
     private ?Photo $photo = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"Votre nationalité est requise",
+    )]
     private ?string $nationality = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(
+        message:"Votre civilité est requise",
+    )]
     private ?string $civility = null;
 
     #[ORM\OneToOne(mappedBy: 'persoInfos', cascade: ['persist', 'remove'])]
@@ -196,24 +237,24 @@ class PersoInfos
         return $this;
     }
 
-    public function getPersoNumber(): ?int
+    public function getPersoNumber(): ?string
     {
         return $this->persoNumber;
     }
 
-    public function setPersoNumber(int $persoNumber): static
+    public function setPersoNumber(string $persoNumber): static
     {
         $this->persoNumber = $persoNumber;
 
         return $this;
     }
 
-    public function getProNumber(): ?int
+    public function getProNumber(): ?string
     {
         return $this->proNumber;
     }
 
-    public function setProNumber(int $proNumber): static
+    public function setProNumber(string $proNumber): static
     {
         $this->proNumber = $proNumber;
 

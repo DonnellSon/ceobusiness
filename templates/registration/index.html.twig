@@ -22,20 +22,37 @@
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="firstName" class="form-control" id="floatingInput"
-                            placeholder="Votre nom">
-                        <label for="floatingInput">Nom</label>
+                    <div class="mb-3 col-md-6 col-sm-12">
+                        <div class="form-floating">
+                            <input type="text" value="{{ persoInfos.firstName is defined ? persoInfos.firstName : '' }}"
+                                name="firstName"
+                                class="form-control {{ errors.firstName is defined ? 'is-invalid' : '' }}"
+                                id="floatingInput" placeholder="Votre nom">
+                            <label for="floatingInput">Nom</label>
+                        </div>
+                        {% if errors.firstName is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.firstName }}</div>
+                        {% endif %}
                     </div>
-                    <div class="form-floating  mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="lastName" class="form-control" id="floatingInput"
-                            placeholder="Votre prénom">
-                        <label for="floatingInput">Prénom</label>
+                    <div class="mb-3 col-md-6 col-sm-12">
+                        <div class="form-floating">
+                            <input type="text" name="lastName"
+                                value="{{ persoInfos.lastName is defined ? persoInfos.lastName : '' }}"
+                                class="form-control {{ errors.lastName is defined ? 'is-invalid' : '' }}"
+                                id="floatingInput" placeholder="Votre prénom">
+                            <label for="floatingInput">Prénom</label>
+                        </div>
+                        {% if errors.lastName is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.lastName }}</div>
+                        {% endif %}
                     </div>
+
+
                 </div>
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-md-6 col-sm-12">
                         <input type="text" name="otherName" class="form-control" id="floatingInput"
+                            value="{{ persoInfos.otherName is defined ? persoInfos.otherName : '' }}"
                             placeholder="Votre nom">
                         <label for="floatingInput">Autre Nom</label>
                     </div>
@@ -50,15 +67,29 @@
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="form-floating  mb-3 col-md-6">
-                        <input type="text" name="city" class="form-control" id="floatingInput"
-                            placeholder="Votre ville">
-                        <label for="floatingInput">Ville</label>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input type="text" name="city"
+                                value="{{ persoInfos.city is defined ? persoInfos.city : '' }}"
+                                class="form-control{{ errors.city is defined ? ' is-invalid' : '' }}" id="floatingInput"
+                                placeholder="Votre ville">
+                            <label for="floatingInput">Ville</label>
+                        </div>
+                        {% if errors.city is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.city }}</div>
+                        {% endif %}
                     </div>
-                    <div class="form-floating  mb-3 col-md-6">
-                        <input type="text" name="adress" class="form-control" id="floatingInput"
-                            placeholder="Votre adresse">
-                        <label for="floatingInput">Adresse</label>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input type="text" name="adress"
+                                value="{{ persoInfos.address is defined ? persoInfos.address : '' }}"
+                                class="form-control{{ errors.address is defined ? ' is-invalid' : '' }}"
+                                id="floatingInput" placeholder="Votre adresse">
+                            <label for="floatingInput">Adresse</label>
+                        </div>
+                        {% if errors.address is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.address }}</div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="form-floating mb-3">
@@ -72,61 +103,81 @@
                     <label for="floatingSelectGrid">Nationalité</label>
                 </div>
                 <div>
-                    <div class="form-floating">
-                        <div class="dropdown show">
-                            <div class="form-floating dropdown-toggle mb-3" id="countryMenuLink" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <input type="text" name="city" class="form-control" id="floatingInput"
-                                    placeholder="Votre ville">
-                                <label for="floatingInput">Pays</label>
-                            </div>
-                            <div class="dropdown-menu" aria-labelledby="countryMenuLink">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </div>
-                        <select class="form-select mb-3" name="gender" id="floatingSelectGrid"
+                    <div class="form-floating mb-3">
+                        <select class="form-select mb-3" name="country" id="floatingSelectGrid"
                             aria-label="Floating label select example">
-                            <option selected value="1">Madagascar</option>
-                            <option value="2">Femme</option>
-                            <option value="3">Autre</option>
+                            <option selected value="Madagascar">Madagascar</option>
+                            <option value="France">France</option>
+                            <option value="Autre">Autre</option>
                         </select>
                         <label for="floatingSelectGrid">Pays</label>
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="persoMail" class="form-control" id="floatingInput"
-                            placeholder="Votre mail personnel">
-                        <label for="floatingInput">Mail personnel</label>
+                    <div class="mb-3 col-md-6 col-sm-12">
+                        <div class="form-floating">
+                            <input type="text" name="persoMail"
+                                value="{{ persoInfos.persoEmail is defined ? persoInfos.persoEmail : '' }}"
+                                class="form-control{{ errors.persoEmail is defined ? ' is-invalid' : '' }}"
+                                id="floatingInput" placeholder="Votre mail personnel">
+                            <label for="floatingInput">Mail personnel</label>
+                        </div>
+                        {% if errors.persoEmail is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.persoEmail }}</div>
+                        {% endif %}
                     </div>
-                    <div class="form-floating  mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="proMail" class="form-control" id="floatingInput"
-                            placeholder="Votre mail professionnel">
-                        <label for="floatingInput">Mail professionnel</label>
+                    <div class="mb-3 col-md-6 col-sm-12">
+                        <div class="form-floating">
+                            <input type="text" name="proMail"
+                                value="{{ persoInfos.proEmail is defined ? persoInfos.proEmail : '' }}"
+                                class="form-control{{ errors.proEmail is defined ? ' is-invalid' : '' }}"
+                                id="floatingInput" placeholder="Votre mail professionnel">
+                            <label for="floatingInput">Mail professionnel</label>
+                        </div>
+                        {% if errors.proEmail is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.proEmail }}</div>
+                        {% endif %}
                     </div>
+
                 </div>
                 <div class="row g-2">
-                    <div class="form-floating mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="persoNumber" class="form-control phone-inpt" id="floatingInput"
-                            placeholder="Votre téléphone personnel">
-                        <label for="floatingInput">Téléphone personnel</label>
+                    <div class="mb-3 col-md-6 col-sm-12">
+                        <div class="form-floating">
+                            <input type="text" name="persoNumber"
+                                value="{{ persoInfos.persoNumber is defined ? persoInfos.persoNumber : '' }}"
+                                class="form-control phone-inpt{{ errors.persoNumber is defined ? ' is-invalid' : '' }}"
+                                id="floatingInput" placeholder="Votre téléphone personnel">
+                            <label for="floatingInput">Téléphone personnel</label>
+                        </div>
+                        {% if errors.persoNumber is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.persoNumber }}</div>
+                        {% endif %}
                     </div>
-                    <div class="form-floating  mb-3 col-md-6 col-sm-12">
-                        <input type="text" name="proNumber" class="form-control phone-inpt" id="floatingInput"
-                            placeholder="Votre télephone professionnel">
-                        <label for="floatingInput">Télephone professionnel</label>
+                    <div class="mb-3 col-md-6 col-sm-12">
+                        <div class="form-floating">
+                            <input type="text" name="proNumber"
+                                value="{{ persoInfos.proNumber is defined ? persoInfos.proNumber : '' }}"
+                                class="form-control phone-inpt{{ errors.proNumber is defined ? ' is-invalid' : '' }}"
+                                id="floatingInput" placeholder="Votre télephone professionnel">
+                            <label for="floatingInput">Télephone professionnel</label>
+                        </div>
+                        {% if errors.proNumber is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.proNumber }}</div>
+                        {% endif %}
+
                     </div>
+
+
                 </div>
                 <div class="form-floating mb-3">
                     <input type="text" name="whatsapp" class="form-control" id="floatingInput"
+                        value="{{ persoInfos.whatsApp is defined ? persoInfos.whatsApp : '' }}"
                         placeholder="Votre contact WhatsApp">
                     <label for="floatingInput">WhatsApp</label>
                 </div>
             </div>
             <div class="left col-lg-4 col-md-5 col-sm-12">
-                <div class="user-photo d-flex flex-column p-1">
+                <div class="user-photo d-flex flex-column p-1{{ errors.photo is defined ? ' border-danger' : '' }}">
                     <div class="top flex align-items-center justify-content-center">
                         <label for="" class="w500">Importer photo</label>
                     </div>
@@ -163,6 +214,9 @@
                         </div>
                     </div>
                 </div>
+                {% if errors.photo is defined %}
+                <div class="invalid-feedback d-block">{{ errors.photo }}</div>
+                {% endif %}
             </div>
         </div>
         <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">

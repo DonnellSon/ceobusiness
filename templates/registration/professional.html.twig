@@ -3,30 +3,43 @@
 {% block pgTitle %}Informations Personnelles - CEO BUSINESS FORUM IO{% endblock %}
 
 {% block content %}
-<form class="user-registration-form">
+<form class="user-registration-form" method="post">
     <div class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5">
         <div class="top d-flex align-items-center justify-content-center px-2">
             <h2>Informations professionnelles</h2>
         </div>
         <div class="body mt-5">
-            <div class="left">
-                <div class="flex">
-                    <div class="form-floating mb-3 col-md-6 px-1">
-                        <input type="text" name="entrepriseName" class="form-control" id="floatingInput"
-                            placeholder="Votre nom">
+            <div class="row g-2">
+                <div class="mb-3 col-md-6 col-sm-12">
+                    <div class="form-floating">
+                        <input type="text" name="entrepriseName"
+                            class="form-control{{ errors.entrepriseName is defined ? ' is-invalid' : '' }}"
+                            id="floatingInput" placeholder="Votre nom">
                         <label for="floatingInput">Nom de votre entreprise</label>
                     </div>
-                    <div class="form-floating  mb-3 col-md-6 px-1">
-                        <input type="text" name="entrepriseTitle" class="form-control" id="floatingInput"
-                            placeholder="Votre prénom">
+                    {% if errors.entrepriseName is defined %}
+                    <div class="invalid-feedback d-block">{{ errors.entrepriseName }}</div>
+                    {% endif %}
+                </div>
+                <div class="mb-3 col-md-6 col-sm-12">
+                    <div class="form-floating">
+                        <input type="text" name="entrepriseTitle"
+                            class="form-control{{ errors.entrepriseTitle is defined ? ' is-invalid' : '' }}"
+                            id="floatingInput" placeholder="Votre prénom">
                         <label for="floatingInput">Titre dans l'entreprise</label>
                     </div>
+                    {% if errors.entrepriseTitle is defined %}
+                    <div class="invalid-feedback d-block">{{ errors.entrepriseTitle }}</div>
+                    {% endif %}
                 </div>
-                <div>
-                    <div class="form-floating mb-3">
+
+            </div>
+            <div class="row g-2">
+                <div class="mb-3 col-md-6 col-sm-12">
+                    <div class="form-floating">
                         <select class="form-select" name="entrepriseSize" id="floatingSelect"
                             aria-label="Floating label select example">
-                            <option selected>- Sélectionner-</option>
+                            <option selected>- Sélectionner -</option>
                             <option selected>1 - 10</option>
                             <option value="1">10 - 30</option>
                             <option value="2">30 - 50</option>
@@ -37,30 +50,48 @@
                         <label for="floatingSelect">Nombre d'employeés dans votre entreprise</label>
                     </div>
                 </div>
-                <div>
-                    <div class="form-floating mb-3">
-                        <div class="form-floating mb-3 col-md-6 px-1">
-                            <input type="text" name="entrepriseActivity" class="form-control" id="floatingInput"
-                                placeholder="Votre nom">
-                            <label for="floatingInput">Activité de votre entreprise</label>
-                        </div>
+                <div class="mb-3 col-md-6 col-sm-12">
+                    <div class="form-floating">
+                        <input type="text" name="entrepriseActivity"
+                            class="form-control{{ errors.region is defined ? ' is-invalid' : '' }}"
+                            id="floatingInput" placeholder="Votre nom">
+                        <label for="floatingInput">Activité de votre entreprise</label>
                     </div>
+                    {% if errors.entrepriseActivity is defined %}
+                    <div class="invalid-feedback d-block">{{ errors.entrepriseActivity }}</div>
+                    {% endif %}
                 </div>
+                
+            </div>
 
-                <div class="flex">
-                    <div class="form-floating  mb-3 col-md-6 px-1">
-                        <input type="text" name="region" class="form-control" id="floatingInput"
-                            placeholder="Votre téléphone personnel">
+            <div class="row g-2">
+                <div class="mb-3 col-md-6 col-sm-12">
+                    <div class="form-floating">
+                        <input type="text" name="region"
+                            class="form-control{{ errors.region is defined ? ' is-invalid' : '' }}"
+                            id="floatingInput" placeholder="Votre nom">
                         <label for="floatingInput">Région</label>
                     </div>
-                    <div class="form-floating  mb-3 col-md-6 px-1">
-                        <input type="text" name="city" class="form-control" id="floatingInput"
-                            placeholder="Votre télephone professionnel">
+                    {% if errors.region is defined %}
+                    <div class="invalid-feedback d-block">{{ errors.region }}</div>
+                    {% endif %}
+                </div>
+                <div class="mb-3 col-md-6 col-sm-12">
+                    <div class="form-floating">
+                        <input type="text" name="city"
+                            class="form-control{{ errors.city is defined ? ' is-invalid' : '' }}"
+                            id="floatingInput" placeholder="Votre prénom">
                         <label for="floatingInput">Ville</label>
                     </div>
+                    {% if errors.city is defined %}
+                    <div class="invalid-feedback d-block">{{ errors.city }}</div>
+                    {% endif %}
                 </div>
 
             </div>
+
+            
+
 
         </div>
         <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">
@@ -129,7 +160,7 @@
             opérationnels, aidant une entreprise à se développer, à innover et à se positionner favorablement dans un
             marché concurrentiel.</p>
     </div>
-    
+
 </form>
 
 {% endblock %}
