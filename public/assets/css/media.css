@@ -1,0 +1,136 @@
+
+@media (max-width: 1135px){
+    
+    header .menu{
+        position: fixed;
+        background-color: white;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: -100vw;
+        padding: 80px 50px;
+        transition: right 0.6s ease;
+    }
+    header .menu.active{
+        right: 0;
+    }
+    header .menu .close-btn{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: 25px;
+        margin-top: 20px;
+        color: #000;
+    }
+    header .menu .nav-btn{
+        display: block;
+        font-size: 20px;
+        margin: 20px;
+        padding: 0 15px;
+    }
+    header .reg-btn{
+        margin-top: -20px;
+    }
+
+    .leforum-img{
+        display: none;
+    }
+    .leforum-img-2{
+        display: block;
+        position: absolute;
+        width: 35%;
+        margin-top: 30%;
+        margin-left: 30%;
+    }
+    .leforum-txt{
+        width: 100%;
+    }
+}
+
+@media (max-width: 839px){
+    .visualiser .content .header::after {
+        width: 300px;
+    }
+    .leforum .nav-item{
+        font-size: 15px;
+    }
+.leforum-txt{
+    justify-content: center;
+}
+.leforum-img{
+    max-width: 40%;
+    object-fit: cover;
+    margin-left: 50px;
+    box-shadow: 10px 0px 30px 0px black;
+    border-radius: 8px;
+    transition: all .6s;
+}
+.leforum-img img{
+    width: 100%;
+    border-radius: 8px;
+}
+.leforum-content.active{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.stand{
+    position: absolute;
+    width: 504px;
+    height: 336px;
+    margin-left: 0px;
+    margin-top: -30px;
+    z-index: -1;
+}
+.img-stand{
+    width: 100%;
+}
+.nav-ceo::after{
+   display: none;
+}
+.nav-ceo button::after{
+   display: none;
+}
+.nav-ceo button.active::before{
+    display: none;
+}
+.nav-ceo button.active::after{
+    content: "";
+    height: 1px;
+    width: 250px;
+    margin-left: 10px;
+    background-color: var(--blue2);
+    position: absolute;
+    display: block;
+    z-index: 3;
+}
+
+.parrain, .organisme{
+    position: relative;
+    margin: 0;
+    text-align: center;
+    top: 0;
+    justify-content: center;
+    width: 100%;
+}
+.o-logo, .p-logo{
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+
+}
+@media (max-width: 700px){
+    .visualiser .content .header::after {
+        display: none;
+    }
+    .leforum-img-2{
+        display: block;
+        position: absolute;
+        width: 35%;
+        margin-top: 55%;
+        margin-left: 30%;
+    }
+}

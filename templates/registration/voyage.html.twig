@@ -1,0 +1,92 @@
+{% extends 'registration/base.html.twig' %}
+
+{% block pgTitle %}Voyage - CEO BUSINESS FORUM IO{% endblock %}
+
+{% block content %}
+<form class="user-registration-form">
+    <div class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5">
+        <div class="top d-flex align-items-center justify-content-center px-2">
+            <h2>Voyage</h2>
+        </div>
+        <div class="body mt-5">
+            <div class="mb-3">
+                <label for="floatingInput">Voulez vous une assistance pendant le voyage ?</label>
+                <div class="d-flex gap-10">
+                    <div class="square-radio flex-1">
+                        <input type="radio" checked name="travelAssistance" value="oui" />
+                        <div class="square-radio-label">
+                            <span>Oui</span>
+                            <div class="check-mark"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                    <div class="square-radio flex-1">
+                        <input type="radio" name="travelAssistance" value="non" />
+                        <div class="square-radio-label">
+                            <span>Non</span>
+                            <div class="check-mark"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="floatingInput">Réservation d'hotel</label>
+                <div class="d-flex gap-10">
+                    <div class="square-radio flex-1">
+                        <input type="radio" checked name="hotelReservation" value="oui" />
+                        <div class="square-radio-label">
+                            <span>Oui</span>
+                            <div class="check-mark"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                    <div class="square-radio flex-1">
+                        <input type="radio" name="hotelReservation" value="non" />
+                        <div class="square-radio-label">
+                            <span>Non</span>
+                            <div class="check-mark"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="floatingInput">Transfert de l'aéroport à l'hotel ?</label>
+                <div class="d-flex gap-10">
+                    <div class="square-radio flex-1">
+                        <input type="radio" checked name="airportTransfer" value="oui" />
+                        <div class="square-radio-label">
+                            <span>Oui</span>
+                            <div class="check-mark"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                    <div class="square-radio flex-1">
+
+                        <input type="radio" name="airportTransfer" value="non" />
+                        <div class="square-radio-label">
+                            <span>Non</span>
+                            <div class="check-mark"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-2">
+                <div class="form-floating">
+                    <textarea class="form-control" name="otherTravelDetails" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">Autres détails ou question à préciser</label>
+                </div>
+            </div>
+        </div>
+        <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">
+            <a href="{{ path('personal_register') }}"
+                class="btn btn-outline-secondary d-block mr-lg-2 col-lg-auto col-md-auto col-sm-12 mb-lg-0 mb-md-0 mb-sm-0 mb-0">Précédent</a>
+            <button class="btn btn-primary d-block col-lg-auto col-md-auto col-sm-12">Suivant</button>
+        </div>
+    </div>
+
+
+
+</form>
+
+{% endblock %}
+
+{% block foot %}
+<script src="{{ asset('assets/js/registration.js') }}"></script>
+{% endblock %}

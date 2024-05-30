@@ -1,0 +1,39 @@
+{% extends 'registration/base.html.twig' %}
+
+{% block pgTitle %}Finalisation - CEO BUSINESS FORUM IO{% endblock %}
+
+{% block content %}
+<form class="user-registration-form">
+    <div class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5">
+        <div class="top d-flex align-items-center justify-content-center px-2">
+            <h2>Finalisation de votre inscription</h2>
+        </div>
+        <div class="body mt-5">
+            <div class="mb-3">
+                <p>Merci pour vos inscription, veuillez confirmer votre adresse email pour continuer</p>
+            </div>
+            <div class="mb-3">
+                <small>Veillez entrer le code de confirmation que nous vous avons communiqué par email à email de l'user</small>
+                <div class="form-floating mb-3 col-md-6 col-sm-12">
+                    <input type="text" name="persoNumber" class="form-control phone-inpt" id="floatingInput"
+                        placeholder="Votre téléphone personnel">
+                    <label for="floatingInput">Entrez votre code de confirmation</label>
+                </div>
+            </div>
+        </div>
+        <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">
+            <a href="{{ path('travel_register') }}"
+                class="btn btn-outline-secondary d-block mr-lg-2 col-lg-auto col-md-auto col-sm-12 mb-lg-0 mb-md-0 mb-sm-0 mb-0">Précédent</a>
+            <button class="btn btn-primary d-block col-lg-auto col-md-auto col-sm-12">Suivant</button>
+        </div>
+    </div>
+
+
+
+</form>
+
+{% endblock %}
+
+{% block foot %}
+<script src="{{ asset('assets/js/registration.js') }}"></script>
+{% endblock %}

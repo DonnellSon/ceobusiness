@@ -1,0 +1,283 @@
+{% extends 'registration/base.html.twig' %}
+
+{% block pgTitle %}Information Personnels - CEO BUSINESS FORUM IO{% endblock %}
+
+{% block content %}
+<form id="user-registration-form" method="post" class="user-registration-form" enctype="multipart/form-data">
+    <div class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5">
+        <div class="top d-flex align-items-center justify-content-center px-2">
+            <h2>Informations personnelles</h2>
+        </div>
+        <div class="body row mt-5">
+            <div class="left col-lg-8 col-md-12 col-sm-12">
+                <div>
+                    <div class="form-floating mb-3">
+                        <select class="form-select" name="civility" id="floatingSelectGrid"
+                            aria-label="Floating label select example">
+                            <option selected value="Monsieur">Monsieur</option>
+                            <option value="Madame">Madame</option>
+                            <option value="Mademoiselle">Mademoiselle</option>
+                        </select>
+                        <label for="floatingSelectGrid">Civilité</label>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="form-floating mb-3 col-md-6 col-sm-12">
+                        <input type="text" name="firstName" class="form-control" id="floatingInput"
+                            placeholder="Votre nom">
+                        <label for="floatingInput">Nom</label>
+                    </div>
+                    <div class="form-floating  mb-3 col-md-6 col-sm-12">
+                        <input type="text" name="lastName" class="form-control" id="floatingInput"
+                            placeholder="Votre prénom">
+                        <label for="floatingInput">Prénom</label>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="form-floating mb-3 col-md-6 col-sm-12">
+                        <input type="text" name="otherName" class="form-control" id="floatingInput"
+                            placeholder="Votre nom">
+                        <label for="floatingInput">Autre Nom</label>
+                    </div>
+                    <div class="form-floating mb-3 col-md-6 col-sm-12">
+                        <select class="form-select" name="gender" id="floatingSelectGrid"
+                            aria-label="Floating label select example">
+                            <option selected value="homme">Homme</option>
+                            <option value="femme">Femme</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                        <label for="floatingSelectGrid">Genre</label>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="form-floating  mb-3 col-md-6">
+                        <input type="text" name="city" class="form-control" id="floatingInput"
+                            placeholder="Votre ville">
+                        <label for="floatingInput">Ville</label>
+                    </div>
+                    <div class="form-floating  mb-3 col-md-6">
+                        <input type="text" name="adress" class="form-control" id="floatingInput"
+                            placeholder="Votre adresse">
+                        <label for="floatingInput">Adresse</label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <select class="form-select" name="nationality" id="floatingSelectGrid"
+                        aria-label="Floating label select example">
+                        <option selected value="homme">- Selectionnez votre nationalité -</option>
+                        <option selected value="Malagasy">Malagasy</option>
+                        <option value="Française">Française</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                    <label for="floatingSelectGrid">Nationalité</label>
+                </div>
+                <div>
+                    <div class="form-floating">
+                        <div class="dropdown show">
+                            <div class="form-floating dropdown-toggle mb-3" id="countryMenuLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <input type="text" name="city" class="form-control" id="floatingInput"
+                                    placeholder="Votre ville">
+                                <label for="floatingInput">Pays</label>
+                            </div>
+                            <div class="dropdown-menu" aria-labelledby="countryMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                        <select class="form-select mb-3" name="gender" id="floatingSelectGrid"
+                            aria-label="Floating label select example">
+                            <option selected value="1">Madagascar</option>
+                            <option value="2">Femme</option>
+                            <option value="3">Autre</option>
+                        </select>
+                        <label for="floatingSelectGrid">Pays</label>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="form-floating mb-3 col-md-6 col-sm-12">
+                        <input type="text" name="persoMail" class="form-control" id="floatingInput"
+                            placeholder="Votre mail personnel">
+                        <label for="floatingInput">Mail personnel</label>
+                    </div>
+                    <div class="form-floating  mb-3 col-md-6 col-sm-12">
+                        <input type="text" name="proMail" class="form-control" id="floatingInput"
+                            placeholder="Votre mail professionnel">
+                        <label for="floatingInput">Mail professionnel</label>
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="form-floating mb-3 col-md-6 col-sm-12">
+                        <input type="text" name="persoNumber" class="form-control phone-inpt" id="floatingInput"
+                            placeholder="Votre téléphone personnel">
+                        <label for="floatingInput">Téléphone personnel</label>
+                    </div>
+                    <div class="form-floating  mb-3 col-md-6 col-sm-12">
+                        <input type="text" name="proNumber" class="form-control phone-inpt" id="floatingInput"
+                            placeholder="Votre télephone professionnel">
+                        <label for="floatingInput">Télephone professionnel</label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" name="whatsapp" class="form-control" id="floatingInput"
+                        placeholder="Votre contact WhatsApp">
+                    <label for="floatingInput">WhatsApp</label>
+                </div>
+            </div>
+            <div class="left col-lg-4 col-md-5 col-sm-12">
+                <div class="user-photo d-flex flex-column p-1">
+                    <div class="top flex align-items-center justify-content-center">
+                        <label for="" class="w500">Importer photo</label>
+                    </div>
+                    <div class="flex-grow-1 flex align-items-center justify-content-center">
+                        <div class="avatar position-relative">
+                            <img id="user-avatar-preview-img"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2ymu7uVmjL4SXLpbox_aXSml1EOxgeyZ7lEoG89gPT3m0SipIkI5f3IM264XDR2GhAIo&usqp=CAU"
+                                class="position-absolute" alt="">
+                        </div>
+                    </div>
+                    <div class="btns d-flex align-items-center">
+                        <div class="flex-1">
+                            <div class="dropdown">
+                                <a class="change dropdown-toggle" href="#" role="button" id="editPhotoLink"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Modifier
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="editPhotoLink">
+                                    <li>
+                                        <a class="dropdown-item" id="importPhotoBtn" href="#" type="button">Importer une
+                                            photo</a>
+                                    </li>
+
+                                    <li>
+                                        <input type="file" name="photo" class="d-none" id="photoInput" accept="image/*">
+                                        <a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                            data-bs-target="#webcamModal">Prendre avec la webcam</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <button class="remove text-danger">Supprimer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">
+            <button type="submit" name="exit"
+                class="btn btn-outline-secondary d-block mr-lg-2 col-lg-auto col-md-auto col-sm-12 mb-lg-0 mb-md-0 mb-sm-0 mb-0">Enregistrer
+                et quitter</button>
+            <button class="btn btn-primary d-block col-lg-auto col-md-auto col-sm-12">Suivant</button>
+        </div>
+    </div>
+    <div class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5">
+        <h2 class="txt-blue2 mb-3">Quels sont les AVANTAGES PERSONELLES <br>en participant à ce forum ?</h2>
+        <h5 class="mb-5" style="color:#444">Vos avantages "personnelles" en vous inscrivant au CEO BUSINESS FORUM -
+            INDIAN OCEAN :</h5>
+        <ul class="advantages-list">
+            <li>
+                <h6>Développement de Réseaux Professionnels :</h6>
+                <p>Le CEO BUSINESS FORUM INDIAN OCEAN vous permettra de rencontrer des leaders de l'industrie, des
+                    experts et des décideurs, ce qui peut être bénéfique pour élargir votre réseau professionnel et
+                    créer des relations précieuses.</p>
+            </li>
+            <li>
+                <h6>Acquisition de Connaissances et de Compétences :</h6>
+                <p>Assister à nos conférences et des ateliers animés par des experts offre l'opportunité d'acquérir
+                    de nouvelles connaissances, de comprendre les tendances du marché et d'apprendre des meilleures
+                    pratiques.</p>
+            </li>
+            <li>
+                <h6>Visibilité Personnelle :</h6>
+                <p>Participer activement à ce prestigieux forum, en posant des questions ou en participant à des
+                    discussions, peut augmenter la visibilité personnelle et établir une réputation de personne
+                    engagée et informée dans son domaine.</p>
+            </li>
+            <li>
+                <h6>Développement de Carrière :</h6>
+                <p>Les interactions avec des leaders du secteur et la participation à des discussions de haut niveau
+                    peuvent ouvrir des opportunités de carrière, que ce soit à travers des offres d'emploi, des
+                    invitations à collaborer sur des projets ou des propositions de mentorat.</p>
+            </li>
+            <li>
+                <h6>Inspiration et Motivation :</h6>
+                <p>Écouter des intervenants inspirants et échanger avec des personnes partageant les mêmes idées
+                    peut revitaliser sa motivation et inspirer de nouvelles idées et perspectives pour sa carrière
+                    ou son entreprise.</p>
+            </li>
+            <li>
+                <h6>Accès à des Informations Exclusives :</h6>
+                <p>Les forums économiques peuvent offrir des informations
+                    exclusives sur les tendances économiques, les innovations et les prévisions de marché, aidant
+                    ainsi
+                    à prendre des décisions éclairées dans son domaine professionnel.</p>
+            </li>
+            <li>
+                <h6>Amélioration des Compétences en Communication :</h6>
+                <p>Participer à des discussions, poser des questions
+                    et interagir avec d'autres professionnels améliore les compétences en communication et en prise
+                    de parole en public.</p>
+            </li>
+            <li>
+                <h6>Renforcement de l’Image Professionnelle :</h6>
+                <p>Être présent dans des événements de haut niveau démontre
+                    un engagement envers le développement professionnel continu, ce qui peut renforcer son image
+                    professionnelle auprès de ses pairs et employeurs.</p>
+            </li>
+            <li>
+                <h6>Accès à des Ressources :</h6>
+                <p>Les forums offrent souvent des ressources supplémentaires telles que des
+                    publications, des rapports et des études de cas qui peuvent être utiles pour son travail ou son
+                    développement personnel.</p>
+            </li>
+            <li>
+                <h6>Opportunités de Mentorat et de Collaboration :</h6>
+                <p>Rencontrer des experts et des leaders peut ouvrir
+                    des opportunités pour être mentoré par des personnes expérimentées ou pour collaborer sur des
+                    projets innovants.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="p-5">
+        <div class="d-flex align-items-center justify-content-between">
+            <h5>Frais de participation</h5><b class="normal-price">1 250 USD</b>
+        </div>
+        <div class="d-flex align-items-center justify-content-between">
+            <p class="reduc-p m-0">Inscrivez-vous <strong>anvant le 14 Août</strong> et bénéficiez d'un tarif remisé,
+                inscription pour seulement</p>
+            <strong class="reduc-price">700 USD</strong>
+        </div>
+    </div>
+</form>
+
+
+
+<div class="modal fade" id="webcamModal" tabindex="-1" aria-labelledby="webcamModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 700px !important;height:auto !important">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="webcamModalLabel">Prendre une photo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0 bg-danger" style="aspect-ratio:1 !important">
+                <div class="previewVideoParent position-relative h-100 w-100">
+                    <video class="position-absolute display-block bg-dark"
+                        style="width: 100% !important;height:100% !important" id="previewVideo" autoplay></video>
+                    <div class="modal-footer position-absolute d-flex justify-content-center w-100">
+                        <button id="takePhotoBtn" type="button" class="btn btn-success">Prendre Photo</button>
+                    </div>
+                </div>
+                <canvas id="photoCanvas" width="400" height="400" class="d-none"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block foot %}
+<script src="{{ asset('assets/js/capturePhoto.js') }}"></script>
+<script src="{{ asset('assets/js/phoneInput.js') }}"></script>
+{% endblock %}

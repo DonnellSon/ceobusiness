@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sign up!
+{% endblock %}
+
+{% block body %}
+	<form method="post" class="col-md-5 mx-auto bg-white p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5 my-5" id="user_reg">
+		{% if errors %}
+        {% for err in errors %}
+            <div class="alert alert-danger">{{ err }}</div>
+        {% endfor %}
+			
+		{% endif %}
+
+		{% if app.user %}
+			<div class="mb-3">
+				You are logged in as
+				{{ app.user.userIdentifier }},
+				<a href="{{ path('app_logout') }}">Logout</a>
+			</div>
+		{% endif %}
+
+		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+		<label for="email">Email</label>
+		<input type="text" value="{{ user.email is defined ? user.email : "" }}" name="email" id="email" class="form-control" autocomplete="email" autofocus>
+		<label for="password">Mot de passe</label>
+		<input type="password" name="password" id="password" class="form-control" autocomplete="current-password">
+		<label for="password">Confirmer mot de passe</label>
+		<input type="password" name="password" id="password" class="form-control" autocomplete="current-password">
+
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+		<button class="btn btn-lg btn-primary d-block w-100"  type="submit">
+			Creer mon compte
+		</button>
+	</form>
+{% endblock %}

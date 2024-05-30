@@ -1,0 +1,164 @@
+{% extends 'base.html.twig' %}
+
+{% block links %}
+	<link rel="stylesheet" href="{{ asset('assets/css/register.css') }}">
+{% endblock %}
+
+{% block title %}Inscription - CEO BUSINESS FORUM
+{% endblock %}
+
+{% block body %}
+	<div id="register-form" class="container-fluid py-5 mx-auto">
+		<div class="row d-flex justify-content-center">
+			<div class="col-12 col-md-11 col-lg-10 col-xl-11">
+				<form method="post" action="/inscription" class="card card0 border-0">
+					<div class="row">
+						<div class="col-12">
+							<div class="card card00 m-2 border-0 py-5">
+								<div class="row text-center justify-content-center px-3">
+									<p class="prev text-primary">
+										<span class="fa fa-long-arrow-left">
+											Précédent</span>
+									</p>
+								</pid="back">
+								<h3 class="mt-4">Formulaire d'inscription</h3>
+
+							</div>
+							<div class="errors-list mx-5">
+							{% if errors is defined %}
+								<ul>
+									{% for err in errors %}
+										<li>
+											<div class="d-flex align-items-center px-1 py-1 mb-1" role="alert">
+                                            <div class="badge badge-danger mr-2">Erreur</div>
+												<small class="text-danger">{{err}}</small>
+											</div>
+										</li>
+									{% endfor %}
+								</ul>
+							{% endif %}
+							</div>
+							<div class="d-flex flex-md-row px-3 mt-4 flex-column-reverse">
+								<div class="col-md-4">
+									<div class="card1">
+										<ul id="progressbar" class="text-center">
+											<li class="active step0"></li>
+											<li class="step0"></li>
+											<li class="step0"></li>
+										</ul>
+										<h6 class="mb-5">Informations Général</h6>
+										<h6 class="mb-5">Informations sur l'Entreprise</h6>
+										<h6 class="mb-5">Vos contacts personnels</h6>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div class="card2 first-screen show ml-2">
+										<div class="row px-3 mr-2 mb-2">
+											<div class="col-md-6">
+												<label for="">Nom</label>
+												<input type="text" name="firstName" placeholder="Votre nom" class="form-control">
+											</div>
+											<div class="col-md-6">
+												<label for="">Prénom</label>
+												<input type="text" name="lastName" placeholder="Votre prénom" class="form-control">
+											</div>
+										</div>
+										<div class="row px-3 mr-2 mb-2">
+											<div class="col-md-6">
+												<label for="">Nom de l'entreprise</label>
+												<input type="text" name="companyName" placeholder="Quel est le nom de votre entreprise?" class="form-control">
+											</div>
+											<div class="col-md-6">
+												<label for="">Secteur de l'entreprise</label>
+												<input type="text" name="secteur" placeholder="Dans quel secteur éxerce votre entreprise" class="form-control">
+											</div>
+										</div>
+										<div class="row px-3 mt-4 col-12 flex justify-content-end">
+											<div class="next-button mt-1 ml-2 d-flex align-items-center justify-content-center">
+												<span>Suivant
+												</span>
+												<span class="fa fa-arrow-right"></span>
+											</div>
+										</div>
+									</div>
+
+									<div class="card2 ml-2">
+										<div class="row px-3 mr-2 mb-2">
+											<div class="col-md-6">
+												<label for="">Adresse</label>
+												<input type="text" name="companyAdress" placeholder="Adresse ou nom de la rue" class="form-control">
+											</div>
+											<div class="col-md-6">
+												<label for="">Ville</label>
+												<input type="text" name="city" placeholder="Siège de votre entreprise" class="form-control">
+											</div>
+										</div>
+										<div class="row px-3 mr-2 mb-2">
+											<div class="col-md-6">
+												<label for="">Pays</label>
+												<input type="text" name="country" placeholder="Votre pays" class="form-control">
+											</div>
+											<div class="col-md-6">
+												<label for="">Code postal</label>
+												<input type="text" name="zipCode" placeholder="Quel est votre code postal ?" class="form-control">
+											</div>
+
+										</div>
+										<div class="row px-3 mt-4 col-12 flex justify-content-end">
+											<div class="next-button mt-1 ml-2 d-flex align-items-center justify-content-center">
+												<span>Suivant
+												</span>
+												<span class="fa fa-arrow-right"></span>
+											</div>
+										</div>
+									</div>
+									<div class="card2 ml-2">
+										<div class="row px-3 mr-2 mb-2">
+											<div class="col-md-6">
+												<label for="">Votre adresse</label>
+												<input type="text" name="userAdress" placeholder="Adresse ou nom de la rue" class="form-control">
+											</div>
+											<div class="col-md-6">
+												<label for="">Votre email</label>
+												<input type="text" name="mail" placeholder="Adresse email" class="form-control">
+											</div>
+										</div>
+										<div class="row px-3 mr-2 mb-2">
+											<div class="col-md-6">
+												<label for="">Téléphone</label>
+												<input type="text" name="contact" placeholder="Numéro de telephone" class="form-control">
+											</div>
+											<div class="col-md-6">
+												<label for="">Vous vous inscrivez en tant que :</label>
+												<select name="registerAs" class="form-control mb-0" id="">
+													<option value="1">Participant</option>
+													<option value="2">Sponsor</option>
+													<option value="3">Partenaire</option>
+													<option value="4">Guest Speaker</option>
+													<option value="5">Journaliste</option>
+												</select>
+											</div>
+
+										</div>
+										<div class="row px-3 mt-4 col-12 flex justify-content-end">
+											<button type="submit" class="register-button mt-1 ml-2 d-flex align-items-center justify-content-center">
+												<span>S'inscrire
+												</span>
+												<span class="fa fa-arrow-right"></span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>{% endblock %}{% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ asset('assets/js/register.js')}}"></script>
+
+{% endblock %}

@@ -1,0 +1,136 @@
+							<div class="leforum">
+								<h1>LE CEO BUSINESS FORUM -INDIAN OCEAN</h1>
+								<ul class="nav nav-ceo mb-3 d-flex align-items justify-content-spacebetween" id="pills-tab" role="tablist">
+									<li class="nav-item" role="presentation">
+										<button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">AMBITION</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">SUJETS DES TABLES RONDES</button>
+									</li>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+											ANIMATIONS ET ATELIERS
+										</button>
+									</li>
+								</ul>
+								<div class="tab-content ceo-content" id="pills-tabContent">
+									<div class="tab-pane leforum-content fade show active" id="pills-home" role="tabpanel">
+										<div class="leforum-img">
+											<img src="{{ asset('assets/img/sary/83.jpg') }}" alt="CEO Business Forum" class="img-1">
+										</div>
+										<div class="leforum-img stand">
+											<img src="{{ asset('assets/img/sary/66.jpg') }}" alt="CEO Business Forum" class="img-stand">
+										</div>
+										<div class="leforum-txt">
+											<p>
+												- La durée de l'événement sera de deux (2) jours, de 8h30 à 17h30 le premier jour, et de 9h à 17h30 le deuxième jour. Le deuxième jour sera également suivi d'un Dîner de Cala à partir de 19h.
+												<br>
+												- L'événement se tiendra dans un lieu prestigieux à Madagascar, le Centre d e Conférence International - Ivato Antananarivo, les jeudi 14 et vendredi 15 novembre 2024.
+												<br>
+												- L'événement se déroulera en présentiel avec des sessions plénières, et sera également disponible en streaming sur www.GateNews.Africa, avec des intervenants en présentiel et en ligne:
+												<br>
+												- Le nombre de participants en présentiel sera de 1000personnes, tandis que l'événement touchera des millions de followers en streaming.
+											</p>
+										</div>
+
+									</div>
+									<div class="tab-pane fade leforum-content" id="pills-profile" role="tabpanel">
+										<div class="leforum-img">
+											<img src="{{ asset('assets/img/sary/66.jpg') }}" alt="CEO Business Forum" class="img-1">
+										</div>
+										<div class="leforum-img stand">
+											<img src="{{ asset('assets/img/sary/72.jpg') }}" alt="CEO Business Forum" class="img-stand">
+										</div>
+										<div class="leforum-txt">
+											<p>
+												• Eau, énergie, développement durable
+												<br>
+												• Agriculture, agro-industrie, économie bleue
+												<br>
+												• Infrastructures e t développement touristique
+												<br>
+												• Investissements: regards croisés entre les pays riverains et partenaires de l'océan Indien
+												<br>
+												• Urbanisation et décentralisation
+												<br>
+												• Développement numérique, Intelligence Artificielle et cybersécurité
+												<br>
+												• Financement et développement des PME
+												<br>
+											</p>
+										</div>
+						
+									</div>
+									<div class="tab-pane fade leforum-content" id="pills-contact" role="tabpanel">
+										<div class="leforum-img">
+											<img src="{{ asset('assets/img/sary/72.jpg') }}" alt="CEO Business Forum" class="img-1">
+										</div>
+										<div class="leforum-img stand">
+											<img src="{{ asset('assets/img/sary/66.jpg') }}" alt="CEO Business Forum" class="img-stand">
+										</div>
+										<div class="leforum-txt">
+											<p>
+												- Keynote
+												<br>
+												- Intervention des Guest Speakers
+												<br>
+												- Conférences plénières
+												<br>
+												- Ateliers thématiques
+												<br>
+												- Ateliers pays
+												<br>
+												- Happenings culturels
+												<br>
+												- Réseautage (RDV : B2B Sectoriels, entrepreneurs-Investisseurs, talents-recruteurs) Partenariats publics et privés
+												<br>
+												- Signature convention et accord de partenariat
+												<br>
+												- Présentation du nouveau social de l'Afrique te de océan Indien « GateAfri »
+												<br>
+												- Démonstration et présentation de divers projets des participants et partenaires.
+												<br>
+
+											</p>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+
+                            .leforum-txt{
+    width: 50%;
+    justify-content: center;
+}
+.leforum-img{
+    max-width: 35%;
+    object-fit: cover;
+    margin-left: 50px;
+    box-shadow: 10px 0px 30px 0px black;
+    border-radius: 8px;
+    transition: all .6s;
+}
+.leforum-img img{
+    width: 100%;
+    border-radius: 8px;
+}
+.leforum-content.active{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.stand{
+    position: absolute;
+    width: 441px;
+    height: 294px;
+    margin-left: 20px;
+    margin-top: -20px;
+    z-index: -1;
+}
+.img-stand{
+    width: 100%;
+}
