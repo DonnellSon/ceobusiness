@@ -68,6 +68,15 @@ class PersoInfos
     #[ORM\OneToOne(inversedBy: 'persoInfos', cascade: ['persist', 'remove'])]
     private ?Photo $photo = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $nationality = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $civility = null;
+
+    #[ORM\OneToOne(mappedBy: 'persoInfos', cascade: ['persist', 'remove'])]
+    private ?User $user = null;
+
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable();
@@ -255,6 +264,52 @@ class PersoInfos
     public function setPhoto(?Photo $photo): static
     {
         $this->photo = $photo;
+
+        return $this;
+    }
+
+    public function getNationality(): ?string
+    {
+        return $this->nationality;
+    }
+
+    public function setNationality(string $nationality): static
+    {
+        $this->nationality = $nationality;
+
+        return $this;
+    }
+
+    public function getCivility(): ?string
+    {
+        return $this->civility;
+    }
+
+    public function setCivility(string $civility): static
+    {
+        $this->civility = $civility;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($user === null && $this->user !== null) {
+            $this->user->setPersoInfos(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($user !== null && $user->getPersoInfos() !== $this) {
+            $user->setPersoInfos($this);
+        }
+
+        $this->user = $user;
 
         return $this;
     }

@@ -12,10 +12,11 @@
             <div class="left col-lg-8 col-md-12 col-sm-12">
                 <div>
                     <div class="form-floating mb-3">
-                        <select class="form-select" name="gender" id="floatingSelectGrid"
+                        <select class="form-select" name="civility" id="floatingSelectGrid"
                             aria-label="Floating label select example">
-                            <option selected value="homme">Monsieur</option>
-                            <option value="femme">Madame</option>
+                            <option selected value="Monsieur">Monsieur</option>
+                            <option value="Madame">Madame</option>
+                            <option value="Mademoiselle">Mademoiselle</option>
                         </select>
                         <label for="floatingSelectGrid">Civilité</label>
                     </div>
@@ -61,7 +62,7 @@
                     </div>
                 </div>
                 <div class="form-floating mb-3">
-                    <select class="form-select" name="gender" id="floatingSelectGrid"
+                    <select class="form-select" name="nationality" id="floatingSelectGrid"
                         aria-label="Floating label select example">
                         <option selected value="homme">- Selectionnez votre nationalité -</option>
                         <option selected value="Malagasy">Malagasy</option>
@@ -73,8 +74,8 @@
                 <div>
                     <div class="form-floating">
                         <div class="dropdown show">
-                            <div class="form-floating dropdown-toggle mb-3" id="countryMenuLink"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <div class="form-floating dropdown-toggle mb-3" id="countryMenuLink" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 <input type="text" name="city" class="form-control" id="floatingInput"
                                     placeholder="Votre ville">
                                 <label for="floatingInput">Pays</label>
@@ -165,7 +166,7 @@
             </div>
         </div>
         <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">
-            <button
+            <button type="submit" name="exit"
                 class="btn btn-outline-secondary d-block mr-lg-2 col-lg-auto col-md-auto col-sm-12 mb-lg-0 mb-md-0 mb-sm-0 mb-0">Enregistrer
                 et quitter</button>
             <button class="btn btn-primary d-block col-lg-auto col-md-auto col-sm-12">Suivant</button>

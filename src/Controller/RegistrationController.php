@@ -32,6 +32,7 @@ class RegistrationController extends AbstractController
     public function index(Request $request): Response
     {
         if($request->getMethod()==="POST"){
+            
             extract($request->request->all());
             $uploadedPhoto = $request->files->get('photo');
             $persoInfos=new PersoInfos();
@@ -52,7 +53,9 @@ class RegistrationController extends AbstractController
                 ->setProEmail($proMail)
                 ->setPersoNumber((int) $persoNumber)
                 ->setProNumber((int) $proNumber)
-                ->setWhatsApp($whatsapp);
+                ->setWhatsApp($whatsapp)
+                ->setNationality($nationality)
+                ->setCivility($civility);
             
             $this->em->persist($persoInfos);
 
@@ -83,6 +86,13 @@ class RegistrationController extends AbstractController
     public function travel_registration(): Response
     {
         return $this->render('registration/voyage.html.twig', [
+            'controller_name' => 'RegistrationController',
+        ]);
+    }
+    #[Route('/registration/finalisation', name: 'final_register')]
+    public function final_registration(): Response
+    {
+        return $this->render('registration/final.html.twig', [
             'controller_name' => 'RegistrationController',
         ]);
     }

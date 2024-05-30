@@ -1,6 +1,6 @@
 :root {
     --blue1: #25a0d8;
-    --blue2: #254379;
+    --blue2: #0693e3;
     --blue3: #376387;
 }
 
@@ -206,17 +206,57 @@ p{
 }
 .square-radio-label{
     border: 1px solid #eee;
-    border-radius: 6px;
-    height: 35px;
+    border-radius: 4px;
+    height: 48px;
     display: flex;
     align-items: center;
     color: #444;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
-.square-radio input[type="checkbox"]:checked + .square-radio-label{
-    border-color: var(--blue2);
+
+.gap-10{
+   gap: 10px; 
+}
+.flex-1{
+    flex: 1;
+}
+.square-radio input[type="radio"]{
+    display: none !important;
+}
+.square-radio input[type="radio"] + .square-radio-label{
+    position: relative;
+}
+.square-radio input[type="radio"] + .square-radio-label .check-mark{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    right: -9px;
+    top: -9px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: .5s;
+    background: var(--blue2);
+}
+.square-radio input[type="radio"] + .square-radio-label .check-mark i{
+    color: white;
+    font-size: 12px;
+    display: block;
+}
+
+.square-radio input[type="radio"]:checked + .square-radio-label .check-mark{
+    opacity: 1;
+    transform: scale(1);
+}
+.square-radio input[type="radio"]:checked + .square-radio-label{
+    border: 1px solid var(--blue2);
     color: var(--blue2);
+    font-weight: 600;
 }
 
 
@@ -228,4 +268,12 @@ p{
     .register-form-btns button{
         width: 100% !important;
     }
+}
+.register-form-btns button{
+    font-weight: 500;
+    font-size: 14px;
+}
+label{
+    font-weight: 500;
+    font-size: 14px;
 }

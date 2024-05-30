@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
+use App\Entity\ProInfos;
+use App\Entity\PersoInfos;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use App\Repository\UserRepository;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
@@ -27,6 +29,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     #[ORM\Column]
     private ?string $password = null;
+
+    #[ORM\OneToOne(inversedBy: 'user', cascade: ['persist', 'remove'])]
+    private ?PersoInfos $persoInfos = null;
+
+    #[ORM\OneToOne(inversedBy: 'user', cascade: ['persist', 'remove'])]
+    private ?ProInfos $proInfos = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $confirmationCode = null;
 
     public function getId(): ?int
     {
@@ -96,5 +107,41 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getPersoInfos(): ?PersoInfos
+    {
+        return $this->persoInfos;
+    }
+
+    public function setPersoInfos(?PersoInfos $persoInfos): static
+    {
+        $this->persoInfos = $persoInfos;
+
+        return $this;
+    }
+
+    public function getProInfos(): ?proInfos
+    {
+        return $this->proInfos;
+    }
+
+    public function setProInfos(?proInfos $proInfos): static
+    {
+        $this->proInfos = $proInfos;
+
+        return $this;
+    }
+
+    public function getConfirmationCode(): ?string
+    {
+        return $this->confirmationCode;
+    }
+
+    public function setConfirmationCode(?string $confirmationCode): static
+    {
+        $this->confirmationCode = $confirmationCode;
+
+        return $this;
     }
 }
