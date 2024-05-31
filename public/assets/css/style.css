@@ -16,19 +16,16 @@ html{
     overflow-x: hidden;
  
 }
-
-
-
 .messenger {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 30px; 
+    right: 30px; 
     z-index: 9999;
     color: white;
     background-color: var(--blue2);
     padding: 10px;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); 
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -37,9 +34,72 @@ html{
     justify-content: center;
     align-items: center;
 }
-
 .messenger i {
     font-size: 24px;
+}
+.messenger-window {
+    position: fixed;
+    bottom: 100px; 
+    right: 35px; 
+    width: 400px;
+    min-height: 400px;
+    max-height: 700px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow-y: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    display: none;
+    flex-direction: column;
+    z-index: 9999;
+}
+.messenger-window.active{
+    display: block;
+}
+.message-compose input,
+.message-compose textarea {
+    width: 100%;
+    min-height: 50px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+.message-compose textarea{
+    min-height: 300px;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: right;
+}
+
+.send-btn {
+    padding: 5px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #eee;
+    padding-left: 20px;
+}
+.body-message{
+    padding: 20px;
+}
+.header h2{
+    color: var(--blue2);
+    text-align: center;
+    font-size: 25px;
 }
 
 
@@ -479,6 +539,11 @@ header a {
     display: inline-flex;
     justify-content: space-between;
 }
+
+.leforum-img-2, .stand-2{
+    display: none;
+}
+
 
 .stand {
     position: absolute;

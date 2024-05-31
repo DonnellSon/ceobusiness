@@ -12,6 +12,10 @@
     --grid1: #eee;
 }
 
+.leforum-img-2, .stand-2{
+    display: none;
+    
+}
 .ttl-1{
     font-size: 25px;
 }
