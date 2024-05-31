@@ -13,14 +13,28 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
+use Symfony\Component\Uid\Uuid;
 
 
-class RegistrationController extends AbstractController
+class CeoRegistrationController extends AbstractController
 {
 
     public function __construct(private EntityManagerInterface $em,private ValidatorInterface $validator)
     {
     }
+
+    public function generateConfirmationCode(): string
+    {
+        // Générer un UUID v4 (Universally Unique Identifier)
+        $uuid = Uuid::v4();
+
+        // Extraire les 6 premiers caractères de l'UUID
+        $code = substr($uuid->toBase32(), 0, 6);
+
+        // Retourner le code de confirmation
+        return $code;
+    }
+
     public function formatErrors(ConstraintViolationListInterface $errors): array
     {
         $errorArray = [];
@@ -33,6 +47,7 @@ class RegistrationController extends AbstractController
     #[Route('/registration/informations-personnelles', name: 'personal_register')]
     public function index(Request $request): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
         if($request->getMethod()==="POST"){
             
             extract($request->request->all());
@@ -48,7 +63,8 @@ class RegistrationController extends AbstractController
                 
                 $this->em->persist($photo);
             }
-            $persoInfos->setFirstName($firstName)
+            $persoInfos->
+            setFirstName($firstName)
                 ->setLastName($lastName)
                 ->setOtherName($otherName)
                 ->setGender($gender)
@@ -62,8 +78,11 @@ class RegistrationController extends AbstractController
                 ->setNationality($nationality)
                 ->setCivility($civility)
                 ->setCountry($country);
-            
+                ;
             $this->em->persist($persoInfos);
+            $user=$this->getUser();
+                $user->setPersoInfos($persoInfos);
+            $this->em->persist($user);
 
             $errors = $this->validator->validate($persoInfos);
                
@@ -89,7 +108,10 @@ class RegistrationController extends AbstractController
     #[Route('/registration/informations-professionnelles', name: 'professional_register')]
     public function professional_registration(Request $request): Response
     {
-
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if(!$this->getUser()->getPersoInfos()){
+            $this->redirectToRoute('personal_register');
+        }
         if($request->getMethod()==="POST"){
             
             extract($request->request->all());
@@ -102,6 +124,9 @@ class RegistrationController extends AbstractController
                 ->setCity($city);
             
             $this->em->persist($proInfos);
+            $user=$this->getUser();
+                $user->setProInfos($proInfos);
+            $this->em->persist($user);
 
             $errors = $this->validator->validate($proInfos);
                
@@ -124,8 +149,12 @@ class RegistrationController extends AbstractController
         ]);
     }
     #[Route('/registration/voyage', name: 'travel_register')]
-    public function travel_registration(Request $request): Response
+    public function travel_registration(Request $request,MailerInterface $mailer): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if(!$this->getUser()->getProInfos()){
+            $this->redirectToRoute('professional_register');
+        }
         if($request->getMethod()==="POST"){
             
             extract($request->request->all());
@@ -142,10 +171,22 @@ class RegistrationController extends AbstractController
                 if(count($errors) > 0) {
                     
                 }else{
+                    $user=$this->getUser();
+                    $confirmationCode=$this->generateConfirmationCode();
+                    $user->setConfirmationCode($confirmationCode)
+                    ->setTravelInfos($travelInfos);
+                    $this->em->persist($user);
                     $this->em->flush();
+                    $email = (new Email())
+                        ->from('inscription@ceobusinessforum.io')
+                        ->to('nyainajoelfb@gmail.com')
+                        ->subject('Confirmation de votre inscription au CEO BUSINESS FORUM IO')
+                        ->text('Votre inscription a bien été reçue')
+                        ->html("<p>Veillez confimer votre inscription en communiquant votre code de confirmation: $confirmationCode</p>");
+                    $mailer->send($email);
                     $this->addFlash(
                     'success',
-                    'Inscription effectuer'
+                    'Inscription effectué'
                     );
                     return $this->redirectToRoute('final_register');
                 }
@@ -158,9 +199,20 @@ class RegistrationController extends AbstractController
     #[Route('/registration/finalisation', name: 'final_register')]
     public function final_registration(Request $request): Response
     {
+        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if(!$this->getUser()->getConfirmationCode()){
+            $this->redirectToRoute('travel_register');
+        }
         if($request->getMethod()==="POST"){
             
             extract($request->request->all());
+            if($confirmationCode==$this->getUser()->getConfirmationCode()){
+                return $this->render('registersuccess.html.twig', [
+                    'controller_name' => 'RegistrationController',
+                ]);
+            }else {
+                $errors['confirmation']='Votre code est incorrect';
+            }
             //$verificationCode
             
             // $this->em->persist($travelInfos);
@@ -180,6 +232,7 @@ class RegistrationController extends AbstractController
         }
         return $this->render('registration/final.html.twig', [
             'controller_name' => 'RegistrationController',
+            'errors'=>isset($errors) ? $errors : []
         ]);
     }
 }

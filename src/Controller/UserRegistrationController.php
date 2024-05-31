@@ -38,25 +38,22 @@ class UserRegistrationController extends AbstractController
                 extract($request->request->all());
         
                 $user = new User();
-
-                $hashedPassword = $this->passwordHasher->hashPassword(
-                    $user,
-                    $password
-                );
-
                 $user->setEmail($email)
-                ->setPassword($hashedPassword);
+                ->setPassword($password);
 
-                $this->em->persist($user);
 
                 $errors = $this->validator->validate($user);
                
-                if (count($errors) < 0) {
+                if (count($errors) <= 0) {
+                    $hashedPassword = $this->passwordHasher->hashPassword(
+                        $user,
+                        $password
+                    );
+                    $user->setPassword($hashedPassword);
+                    $this->em->persist($user);
                     $this->em->flush();
                     return $this->redirectToRoute('personal_register');
                 }
-               
-                
                 
              }
                 return $this->render('user_registration/index.html.twig',[

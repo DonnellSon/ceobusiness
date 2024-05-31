@@ -26,10 +26,13 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\NotBlank(
         message: 'L\'email est requis',
     )]
+    #[Assert\Unique(
+        message: 'Cet adresse email est déjà utilisé,veillez vous connecter'
+    )]
     private ?string $email = null;
 
     #[ORM\Column]
-    private array $roles = [];
+    private array $roles = ['ROLE_USER'];
 
     /**
      * @var string The hashed password
