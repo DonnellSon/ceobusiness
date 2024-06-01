@@ -257,6 +257,9 @@ class CeoRegistrationController extends AbstractController
                 $errors['confirmationCode']='Votre code est incorrect';
             }
         }
+        if($this->getUser()->isConfirmed()){
+            $this->redirectToRoute('home');
+        }
         return $this->render('registration/final.html.twig', [
             'controller_name' => 'RegistrationController',
             'proEmail'=>$this->getUser()->getPersoInfos()->getProEmail(),
