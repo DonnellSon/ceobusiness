@@ -11,12 +11,17 @@
         <div class="body mt-5">
             <p>Merci pour votre inscription, veuillez confirmer votre adresse email pour Terminer</p>
             <div class="mb-3">
-                <small>Veillez entrer le code de confirmation que nous vous avons communiqué par email à {{ proEmail is defined ? proEmail }}</small>
+                <small>Veillez entrer le code de confirmation que nous vous avons communiqué par email à {{ proEmail is
+                    defined ? proEmail }}</small>
                 <div class="form-floating my-2">
-                    <input type="text" name="confirmationCode" class="form-control phone-inpt" id="floatingInput"
-                        placeholder="Votre téléphone personnel">
+                    <input type="text" name="confirmationCode"
+                        class="form-control phone-inpt{{ errors.confirmationCode is defined ? ' is-invalid' : '' }}"
+                        id="floatingInput" placeholder="Votre téléphone personnel">
                     <label for="floatingInput">Entrez votre code de confirmation</label>
                 </div>
+                {% if errors.confirmationCode is defined %}
+                <div class="invalid-feedback d-block">{{ errors.confirmationCode }}</div>
+                {% endif %}
             </div>
         </div>
         <div class="register-form-btns flex justify-content-end align-items-center mt-3 flex-wrap">
