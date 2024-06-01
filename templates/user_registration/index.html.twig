@@ -21,7 +21,7 @@
 	</div>
 	<div class="mb-3">
 		<div class="form-floating">
-			<input type="text" name="password" value="{{ user.password is defined ? user.password : "" }}"
+			<input type="password" name="password" value="{{ user.password is defined ? user.password : "" }}"
 				class="form-control{{ errors.password is defined ? ' is-invalid' : '' }}" id="floatingInput"
 				autocomplete="email" autofocus>
 			<label for="floatingInput">Mot de passe</label>
@@ -32,7 +32,7 @@
 	</div>
 	<div class="mb-3">
 		<div class="form-floating">
-			<input type="text" name="password" value="{{ user.password2 is defined ? user.password2 : "" }}"
+			<input type="password" name="password2" value="{{ user.password2 is defined ? user.password2 : "" }}"
 				class="form-control{{ errors.password2 is defined ? ' is-invalid' : '' }}" id="floatingInput"
 				autocomplete="email" autofocus>
 			<label for="floatingInput">Confirmation du mot de passe</label>
