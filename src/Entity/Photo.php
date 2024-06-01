@@ -6,6 +6,7 @@ use App\Repository\PhotoRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Serializer\Annotation\Ignore;
 
 #[ORM\HasLifecycleCallbacks]
 #[ORM\Entity(repositoryClass: PhotoRepository::class)]
@@ -37,6 +38,7 @@ class Photo
     private ?\DateTimeImmutable $updatedAt = null;
 
     #[Vich\UploadableField(mapping: 'photo_upload', fileNameProperty: 'fileName', size: 'fileSize')]
+    #[Ignore]
     private ?File $file = null;
 
     #[ORM\PreUpdate]

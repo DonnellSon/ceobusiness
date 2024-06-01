@@ -4,10 +4,12 @@ namespace App\Entity;
 
 use App\Entity\ProInfos;
 use App\Entity\PersoInfos;
+use App\Entity\TravelInfos;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
-use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Serializer\Annotation\Ignore;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
@@ -26,9 +28,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\NotBlank(
         message: 'L\'email est requis',
     )]
-    #[Assert\Unique(
-        message: 'Cet adresse email est déjà utilisé,veillez vous connecter'
-    )]
     private ?string $email = null;
 
     #[ORM\Column]
@@ -46,6 +45,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     #[ORM\OneToOne(inversedBy: 'user', cascade: ['persist', 'remove'])]
+    #[Ignore]
     private ?PersoInfos $persoInfos = null;
 
     #[ORM\OneToOne(inversedBy: 'user', cascade: ['persist', 'remove'])]
@@ -54,9 +54,25 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $confirmationCode = null;
 
+    #[ORM\OneToOne(inversedBy: 'user', cascade: ['persist', 'remove'])]
+    private ?TravelInfos $travelInfos = null;
+
+    #[ORM\Column]
+    private ?bool $confirmed = false;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function __serialize(): array
+    {
+        return [
+            'id' => $this->getId(),
+            'email' => $this->getEmail(),
+            'password'=>$this->getPassword()
+            // Exclude other properties that shouldn't be stored in the session
+        ];
     }
 
     public function getEmail(): ?string
@@ -156,6 +172,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setConfirmationCode(?string $confirmationCode): static
     {
         $this->confirmationCode = $confirmationCode;
+
+        return $this;
+    }
+
+    public function getTravelInfos(): ?TravelInfos
+    {
+        return $this->travelInfos;
+    }
+
+    public function setTravelInfos(?TravelInfos $travelInfos): static
+    {
+        $this->travelInfos = $travelInfos;
+
+        return $this;
+    }
+
+    public function isConfirmed(): ?bool
+    {
+        return $this->confirmed;
+    }
+
+    public function setConfirmed(bool $confirmed): static
+    {
+        $this->confirmed = $confirmed;
 
         return $this;
     }

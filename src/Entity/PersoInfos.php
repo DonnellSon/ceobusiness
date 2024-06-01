@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\PersoInfosRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Serializer\Annotation\Ignore;
 
 #[ORM\Entity(repositoryClass: PersoInfosRepository::class)]
 class PersoInfos
@@ -89,6 +90,10 @@ class PersoInfos
     private ?string $proNumber = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\Regex(
+        pattern:"/^\+(?:[0-9] ?){6,14}[0-9]$/",
+        message:"Le numéro de téléphone doit commencer par '+' suivi de 6 à 15 chiffres."
+    )]
     private ?string $whatsApp = null;
 
     #[ORM\Column]
@@ -101,6 +106,7 @@ class PersoInfos
     #[Assert\NotBlank(
         message:"Votre photo est requise",
     )]
+    #[Ignore]
     private ?Photo $photo = null;
 
     #[ORM\Column(length: 255)]

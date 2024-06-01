@@ -1,0 +1,31 @@
+.new-user{
+    max-width: 600px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+}
+.new-user .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-bottom: 1px solid #eee;
+}
+.new-user .top img{
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+}
+.new-user-table-label{
+    font-weight: bold;
+}
+
+table td {
+    padding-top: 15px; /* Augmente la hauteur des cellules en ajoutant de l'espace au-dessus du contenu */
+    padding-bottom: 15px; /* Augmente la hauteur des cellules en ajoutant de l'espace en dessous du contenu */
+}
+h5{
+    color: #254379 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}

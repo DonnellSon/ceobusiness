@@ -25,6 +25,9 @@ class TravelInfos
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $otherTravelDetails = null;
 
+    #[ORM\OneToOne(mappedBy: 'travelInfos', cascade: ['persist', 'remove'])]
+    private ?User $user = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -74,6 +77,28 @@ class TravelInfos
     public function setOtherTravelDetails(?string $otherTravelDetails): static
     {
         $this->otherTravelDetails = $otherTravelDetails;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        // unset the owning side of the relation if necessary
+        if ($user === null && $this->user !== null) {
+            $this->user->setTravelInfos(null);
+        }
+
+        // set the owning side of the relation if necessary
+        if ($user !== null && $user->getTravelInfos() !== $this) {
+            $user->setTravelInfos($this);
+        }
+
+        $this->user = $user;
 
         return $this;
     }

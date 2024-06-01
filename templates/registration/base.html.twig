@@ -4,6 +4,8 @@
 {% block pgTitle %}{% endblock %}
 {% endblock %}
 {% block links %}
+
+
 <link rel="stylesheet" href="{{ asset('assets/css/registration.css') }}">
 {% endblock %}
 
@@ -17,5 +19,8 @@
 </div>
 {% endblock %}
 {% block basefoot %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.7/autoComplete.min.js"></script>
+<script src="{{ asset('assets/js/countries.js') }}"></script>
 {% block foot %}{% endblock %}
 {% endblock %}

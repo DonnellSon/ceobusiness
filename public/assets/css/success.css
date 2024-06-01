@@ -28,6 +28,9 @@ header{
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
 }
+#card h1{
+  color: #254379 !important;
+}
 
 #upper-side {
   padding: 2em;

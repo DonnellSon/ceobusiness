@@ -1,0 +1,17 @@
+.confirmation-code{
+    max-width: 400px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin: auto;
+}
+.confirmation-code .top{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #254379;
+    border-radius: 8px 8px 0 0;
+}
+.confirmation-code .body{
+    padding: 15px;
+}

@@ -14,6 +14,9 @@ use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Validator\ConstraintViolationListInterface;
 use Symfony\Component\Uid\Uuid;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 
 
 class CeoRegistrationController extends AbstractController
@@ -26,13 +29,15 @@ class CeoRegistrationController extends AbstractController
     public function generateConfirmationCode(): string
     {
         // Générer un UUID v4 (Universally Unique Identifier)
-        $uuid = Uuid::v4();
+        $digits = [];
+    for ($i = 0; $i < 6; $i++) {
+        $digits[] = mt_rand(0, 9);
+    }
 
-        // Extraire les 6 premiers caractères de l'UUID
-        $code = substr($uuid->toBase32(), 0, 6);
+    // Convertir les nombres en une seule chaîne
+    $code = implode('', $digits);
 
-        // Retourner le code de confirmation
-        return $code;
+    return $code;
     }
 
     public function formatErrors(ConstraintViolationListInterface $errors): array
@@ -48,6 +53,9 @@ class CeoRegistrationController extends AbstractController
     public function index(Request $request): Response
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if($this->getUser()->isConfirmed()){
+            $this->redirectToRoute('home');
+        }
         if($request->getMethod()==="POST"){
             
             extract($request->request->all());
@@ -112,6 +120,9 @@ class CeoRegistrationController extends AbstractController
         if(!$this->getUser()->getPersoInfos()){
             $this->redirectToRoute('personal_register');
         }
+        if($this->getUser()->isConfirmed()){
+            $this->redirectToRoute('home');
+        }
         if($request->getMethod()==="POST"){
             
             extract($request->request->all());
@@ -152,6 +163,9 @@ class CeoRegistrationController extends AbstractController
     public function travel_registration(Request $request,MailerInterface $mailer): Response
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if($this->getUser()->isConfirmed()){
+            $this->redirectToRoute('home');
+        }
         if(!$this->getUser()->getProInfos()){
             $this->redirectToRoute('professional_register');
         }
@@ -179,7 +193,7 @@ class CeoRegistrationController extends AbstractController
                     $this->em->flush();
                     $email = (new Email())
                         ->from('inscription@ceobusinessforum.io')
-                        ->to('nyainajoelfb@gmail.com')
+                        ->to($this->getUser()->getPersoInfos()->getProEmail())
                         ->subject('Confirmation de votre inscription au CEO BUSINESS FORUM IO')
                         ->text('Votre inscription a bien été reçue')
                         ->html("<p>Veillez confimer votre inscription en communiquant votre code de confirmation: $confirmationCode</p>");
@@ -197,9 +211,12 @@ class CeoRegistrationController extends AbstractController
         ]);
     }
     #[Route('/registration/finalisation', name: 'final_register')]
-    public function final_registration(Request $request): Response
+    public function final_registration(Request $request,MailerInterface $mailer): Response
     {
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
+        if($this->getUser()->isConfirmed()){
+            $this->redirectToRoute('home');
+        }
         if(!$this->getUser()->getConfirmationCode()){
             $this->redirectToRoute('travel_register');
         }
@@ -207,31 +224,42 @@ class CeoRegistrationController extends AbstractController
             
             extract($request->request->all());
             if($confirmationCode==$this->getUser()->getConfirmationCode()){
+                $user=$this->getUser();
+                $user->setConfirmed(true);
+                $successEmail = (new TemplatedEmail())
+                        ->from('inscription@ceobusinessforum.io')
+                        ->to($this->getUser()->getPersoInfos()->getProEmail())
+                        ->subject('Inscription au CEO BUSINESS FORUM IO')
+                        ->text('Votre demande d\'inscription a été reçu avec succès')
+                        ->htmlTemplate('emails/success.html.twig')
+                        ->context([
+                            'user' => $this->getUser(),
+                        ]);
+                    $mailer->send($successEmail);
+                    $adminEmail = (new TemplatedEmail())
+                    ->from('inscription@ceobusinessforum.io')
+                    ->to('inscription@ceobusinessforum.io')
+                    ->subject('Inscription au CEO BUSINESS FORUM IO')
+                    ->htmlTemplate('emails/newuser.html.twig')
+                    ->context([
+                        'user' => $user,
+                        'persoInfos'=>$user->getPersoInfos(),
+                        'proInfos'=>$user->getProInfos(),
+                        'photoFileName'=>$user->getPersoInfos()->getPhoto()->getFileName(),
+                        'travelInfos'=>$user->getTravelInfos()
+                    ]);
+                    $mailer->send($adminEmail);
                 return $this->render('registersuccess.html.twig', [
                     'controller_name' => 'RegistrationController',
                 ]);
-            }else {
-                $errors['confirmation']='Votre code est incorrect';
-            }
-            //$verificationCode
-            
-            // $this->em->persist($travelInfos);
 
-            // $errors = $this->validator->validate($travelInfos);
-               
-            //     if(count($errors) > 0) {
-                    
-            //     }else{
-            //         $this->em->flush();
-            //         $this->addFlash(
-            //         'success',
-            //         'Inscription effectuer'
-            //         );
-            //         return $this->redirectToRoute('final_register');
-            //     }
+            }else {
+                $errors['confirmationCode']='Votre code est incorrect';
+            }
         }
         return $this->render('registration/final.html.twig', [
             'controller_name' => 'RegistrationController',
+            'proEmail'=>$this->getUser()->getPersoInfos()->getProEmail(),
             'errors'=>isset($errors) ? $errors : []
         ]);
     }

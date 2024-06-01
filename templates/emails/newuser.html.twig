@@ -1,0 +1,121 @@
+{% apply inline_css(source('@css/newuseremail.css')) %}
+    <div>
+        <p>Vous avez reçu une une nouvelle inscription au nom de <b>{{ user.persoInfos.civility }} {{ user.persoInfos.firstName }} {{ user.persoInfos.lastName }} {{ user.proInfos.entrepriseTitle }} chez {{ user.proInfos.entrepriseName }}</b></p>
+        
+        <div class="new-user">
+            <div class="top">
+                <img src="{{ email.image('@photos/' ~ photoFileName) }}" alt="Logo">
+            </div>
+            <hr>
+            <div class="bottom">
+                <h5>Informations personnelles</h5>
+                <table>
+                    <tr>
+                        <td class="new-user-table-label">Nom :</td>
+                        <td>{{ user.persoInfos.firstName }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Prénom :</td>
+                        <td>{{ user.persoInfos.lastName}}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Autre nom :</td>
+                        <td>{{ user.persoInfos.otherName ? user.persoInfos.otherName : 'Aucun' }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Genre :</td>
+                        <td>{{ user.persoInfos.gender }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Ville</td>
+                        <td>{{ user.persoInfos.city }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Adresse</td>
+                        <td>{{ user.persoInfos.address }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Pays</td>
+                        <td>{{ user.persoInfos.country }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Adresse email personnel</td>
+                        <td>{{ user.persoInfos.persoEmail }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Adresse email professionnel</td>
+                        <td>{{ user.persoInfos.proEmail }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Téléphone personnel</td>
+                        <td>{{ user.persoInfos.proNumber }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Téléphone professionnel</td>
+                        <td>{{ user.persoInfos.persoNumber }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Contact WhatsApp</td>
+                        <td>{{ user.persoInfos.whatsApp ? user.persoInfos.whatsApp : 'Aucun'}}</td>
+                    </tr>
+                </table>
+                <hr>
+                <h5>Informations professionnelles</h5>
+                <table>
+                    <tr>
+                        <td class="new-user-table-label">Nom de l'entreprise :</td>
+                    <td>{{ user.proInfos.entrepriseName }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Titre dans l'entreprise :</td>
+                        <td>{{ user.proInfos.entrepriseTitle }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Titre dans l'entreprise :</td>
+                        <td>{{ user.proInfos.entrepriseTitle }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Taille l'entreprise :</td>
+                        <td>{{ user.proInfos.entrepriseSize }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Activité de l'entreprise :</td>
+                        <td>{{ user.proInfos.entrepriseActivity }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Activité de l'entreprise :</td>
+                        <td>{{ user.proInfos.entrepriseActivity }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Région de l'entreprise :</td>
+                        <td>{{ user.proInfos.region }}</td>
+                    </tr>
+                    <tr>
+                        <td class="new-user-table-label">Ville de l'entreprise</td>
+                        <td>{{ user.proInfos.city }}</td>
+                    </tr>
+                </table>
+                <hr>
+                <h5>Informations sur le voyage</h5>
+                <table>
+                    <tr>
+                        <td>Besoin d'assistance</td>
+                        <td>{{ user.travelInfos.travelAssistance }}</td>
+                    </tr>
+                    <tr>
+                        <td>Réservation d'hotel</td>
+                        <td>{{ user.travelInfos.hotelReservation }}</td>
+                    </tr>
+                    <tr>
+                        <td>Transfert de l'aéroport à l'hotel</td>
+                        <td>{{ user.travelInfos.airportTransfer }}</td>
+                    </tr>
+                    <tr>
+                        <td>Autre détails</td>
+                        <td>{{ user.travelInfos.otherTravelDetail }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endapply %}

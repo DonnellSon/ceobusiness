@@ -1,0 +1,10 @@
+{% apply inline_css(source('@css/confirmationcode.css')) %}
+    <div class="confirmation-code">
+        <div class="top">
+            <h1>Code de confirmation</h1>
+        </div>
+        <div class="body">
+            <p>Votre code confiramtion est : <span>{{ confirmationCode }}</span></p>
+        </div>
+    </div>
+{% endapply %}

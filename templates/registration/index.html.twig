@@ -92,26 +92,48 @@
                         {% endif %}
                     </div>
                 </div>
-                <div class="form-floating mb-3">
-                    <select class="form-select" name="nationality" id="floatingSelectGrid"
-                        aria-label="Floating label select example">
-                        <option selected value="homme">- Selectionnez votre nationalité -</option>
-                        <option selected value="Malagasy">Malagasy</option>
-                        <option value="Française">Française</option>
-                        <option value="Autre">Autre</option>
-                    </select>
-                    <label for="floatingSelectGrid">Nationalité</label>
-                </div>
                 <div>
                     <div class="form-floating mb-3">
-                        <select class="form-select mb-3" name="country" id="floatingSelectGrid"
+                        <input type="text" name="nationality" class="form-control" id="floatingInput"
+                            value="{{ persoInfos.nationality is defined ? persoInfos.nationality : '' }}"
+                            placeholder="Votre nom">
+                        <label for="floatingInput">Nationalité</label>
+                        {# <select class="form-select" name="nationality" id="floatingSelectGrid"
+                            aria-label="Floating label select example">
+                            <option selected value="homme">- Selectionnez votre nationalité -</option>
+                            <option selected value="Malagasy">Malagasy</option>
+                            <option value="Française">Française</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                        <label for="floatingSelectGrid">Nationalité</label> #}
+                    </div>
+                    {% if errors.nationality is defined %}
+                    <div class="invalid-feedback d-block">{{ errors.nationality }}</div>
+                    {% endif %}
+                </div>
+
+                <div>
+                    {# <div class="form-floating mb-3">
+                        <select class="countries-select form-select mb-3" name="country" id="floatingSelectGrid"
                             aria-label="Floating label select example">
                             <option selected value="Madagascar">Madagascar</option>
                             <option value="France">France</option>
                             <option value="Autre">Autre</option>
                         </select>
                         <label for="floatingSelectGrid">Pays</label>
+                    </div> #}
+                    <label for="">Pays</label>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="country"
+                            autocomplete="off"
+                            value="{{ persoInfos.country is defined ? persoInfos.country : '' }}"
+                            class="form-control{{ errors.country is defined ? ' is-invalid' : '' }}"
+                            id="countries-select">
+                        {# <label for="countries-select">Pays</label> #}
                     </div>
+                    {% if errors.country is defined %}
+                    <div class="invalid-feedback d-block">{{ errors.country }}</div>
+                    {% endif %}
                 </div>
                 <div class="row g-2">
                     <div class="mb-3 col-md-6 col-sm-12">
@@ -169,12 +191,18 @@
 
 
                 </div>
-                <div class="form-floating mb-3">
-                    <input type="text" name="whatsapp" class="form-control" id="floatingInput"
-                        value="{{ persoInfos.whatsApp is defined ? persoInfos.whatsApp : '' }}"
-                        placeholder="Votre contact WhatsApp">
-                    <label for="floatingInput">WhatsApp</label>
+                <div>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="whatsapp" class="form-control{{ errors.whatsApp is defined ? ' is-invalid' : '' }}" id="floatingInput"
+                            value="{{ persoInfos.whatsApp is defined ? persoInfos.whatsApp : '' }}"
+                            placeholder="Votre contact WhatsApp">
+                        <label for="floatingInput">WhatsApp</label>
+                    </div>
+                    {% if errors.whatsApp is defined %}
+                        <div class="invalid-feedback d-block">{{ errors.whatsApp }}</div>
+                        {% endif %}
                 </div>
+                
             </div>
             <div class="left col-lg-4 col-md-5 col-sm-12">
                 <div class="user-photo d-flex flex-column p-1{{ errors.photo is defined ? ' border-danger' : '' }}">

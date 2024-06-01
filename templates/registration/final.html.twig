@@ -9,12 +9,11 @@
             <h2>Finalisation de votre inscription</h2>
         </div>
         <div class="body mt-5">
-            <p>Merci pour votre inscription, veuillez confirmer votre adresse email pour continuer</p>
+            <p>Merci pour votre inscription, veuillez confirmer votre adresse email pour Terminer</p>
             <div class="mb-3">
-                <small>Veillez entrer le code de confirmation que nous vous avons communiqué par email à email de
-                    l'user</small>
+                <small>Veillez entrer le code de confirmation que nous vous avons communiqué par email à {{ proEmail is defined ? proEmail }}</small>
                 <div class="form-floating my-2">
-                    <input type="text" name="persoNumber" class="form-control phone-inpt" id="floatingInput"
+                    <input type="text" name="confirmationCode" class="form-control phone-inpt" id="floatingInput"
                         placeholder="Votre téléphone personnel">
                     <label for="floatingInput">Entrez votre code de confirmation</label>
                 </div>

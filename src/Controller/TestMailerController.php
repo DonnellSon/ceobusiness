@@ -17,8 +17,8 @@ class TestMailerController extends AbstractController
         try {
 
             $email = (new Email())
-            ->from('nyainajoel61@gmail.com')
-            ->to('nyainajoelfb@gmail.com')
+            ->from('inscription@ceobusinessforum.io')
+            ->to('donnellrajemson@gmail.com')
             ->subject('Test Email')
             ->text('This is a test email sent from Symfony.')
             ->html('<p>See Twig integration for better HTML integration!</p>');
