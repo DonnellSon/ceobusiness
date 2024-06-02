@@ -3,7 +3,7 @@
     
     header .menu{
         position: fixed;
-        background-color: white;
+        background-color: var(--blue1);
         flex-direction: column;
         width: 100vw;
         height: 100vh;

@@ -192,11 +192,11 @@ class CeoRegistrationController extends AbstractController
                     $this->em->persist($user);
                     $this->em->flush();
                     $email = (new Email())
-                        ->from('inscription@ceobusinessforum.io')
+                        ->from('register@ceobusinessforum.io')
                         ->to($this->getUser()->getPersoInfos()->getProEmail())
                         ->subject('Confirmation de votre inscription au CEO BUSINESS FORUM IO')
                         ->text('Votre inscription a bien été reçue')
-                        ->html("<p>Veillez confimer votre inscription en communiquant votre code de confirmation: $confirmationCode</p>");
+                        ->html("<p>Veuillez confirmer votre inscription en communiquant votre code de confirmation: <b>$confirmationCode</b></p>");
                     $mailer->send($email);
                     $this->addFlash(
                     'success',
@@ -227,7 +227,7 @@ class CeoRegistrationController extends AbstractController
                 $user=$this->getUser();
                 $user->setConfirmed(true);
                 $successEmail = (new TemplatedEmail())
-                        ->from('inscription@ceobusinessforum.io')
+                        ->from('register@ceobusinessforum.io')
                         ->to($this->getUser()->getPersoInfos()->getProEmail())
                         ->subject('Inscription au CEO BUSINESS FORUM IO')
                         ->text('Votre demande d\'inscription a été reçu avec succès')
@@ -237,8 +237,8 @@ class CeoRegistrationController extends AbstractController
                         ]);
                     $mailer->send($successEmail);
                     $adminEmail = (new TemplatedEmail())
-                    ->from('inscription@ceobusinessforum.io')
-                    ->to('inscription@ceobusinessforum.io')
+                    ->from('register@ceobusinessforum.io')
+                    ->to('register@ceobusinessforum.io')
                     ->subject('Inscription au CEO BUSINESS FORUM IO')
                     ->htmlTemplate('emails/newuser.html.twig')
                     ->context([

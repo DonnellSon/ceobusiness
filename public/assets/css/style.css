@@ -3,18 +3,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --blue1: #25a0d8;
-    --blue2: #0693e3;
+    --blue1: #1a80a8;
+    --blue2: #3f6395;
     --blue3: #376387;
-    --blue-trans: #259fd81c;
+    --blue-trans: #ffffff36;
     --txt-white1: white;
-    --txt-white2: rgba(255, 255, 255, 0.61);
+    --txt-white2: rgba(255, 255, 255, 0.788);
     --grid1: #eee;
 }
 
 html{
     overflow-x: hidden;
  
+}
+
+.txt-white-1{
+    color: var(--txt-white1);
+}
+.txt-white-2{
+    color: var(--txt-white2);
 }
 
 
@@ -45,7 +52,7 @@ html{
 
 .ttl-1 {
     font-size: 25px;
-    color: var(--blue2) !important;
+    color: var(--txt-white1) !important;
 }
 
 .line-clamp-2 {
@@ -72,8 +79,8 @@ html{
 }
 
 .banner {
-    background: rgb(0,212,255);
-background: linear-gradient(169deg, rgba(0,212,255,1) 0%, rgba(4,212,255,1) 16%, rgba(1,156,235,1) 42%, rgba(6,146,227,1) 57%, rgba(6,146,227,1) 100%);
+    background: rgb(63,99,149);
+background: linear-gradient(149deg, rgba(63,99,149,1) 6%, rgba(26,128,168,1) 100%);
     height: 100vh;
     /* margin-top: -460px;
     padding-top: 170px; */
@@ -149,8 +156,8 @@ background: linear-gradient(169deg, rgba(0,212,255,1) 0%, rgba(4,212,255,1) 16%,
     font-weight: 500;
     margin: 0 10px;
     padding: 10px;
-    border: 1px solid var(--grid1);
-    color: #555;
+    border: 1px solid var(--txt-white2);
+    color: var(--txt-white1);
     transition: 0.3s;
     transition-property: color, background-color;
     text-transform: uppercase;
@@ -265,19 +272,20 @@ background: linear-gradient(169deg, rgba(0,212,255,1) 0%, rgba(4,212,255,1) 16%,
 
 .nav-pills {
     justify-content: center;
-    border-right: solid 2px var(--grid1);
+    border-right: solid 1px var(--txt-white2);
 
 }
 
 .nav-pad.active {
     background-color: var(--blue-trans) !important;
-    color: var(--blue2) !important;
+    color: var(--txt-white1) !important;
     z-index: 1;
 }
 
 .nav-pad {
     font-size: 12px;
     text-align: right;
+    color: var(--txt-white2) !important;
 }
 
 .fade img {
@@ -286,14 +294,12 @@ background: linear-gradient(169deg, rgba(0,212,255,1) 0%, rgba(4,212,255,1) 16%,
 }
 
 .fade .img-obj {
-    aspect-ratio: 1;
     position: relative;
 }
 
 .fade .img-obj img {
-    position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -303,7 +309,23 @@ background: linear-gradient(169deg, rgba(0,212,255,1) 0%, rgba(4,212,255,1) 16%,
     align-content: center;
     height: 282px;
 }
-
+.floatting-register-btn{
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 30px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #eee;
+    color: #444;
+    font-weight: 500;
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 header {
     background-color: white;
 }
@@ -317,13 +339,15 @@ header {
 header a {
     color: #555;
 }
-
+.visualiser{
+    background: var(--blue3);
+}
 .visualiser .content .header h2 {
-    color: var(--blue2) !important;
+    color: var(--txt-white1) !important;
 }
 
 .visualiser .content .header button {
-    background-color: var(--blue3);
+    background-color: var(--blue1);
     border-radius: 50%;
     border: none;
     width: 30px;
@@ -348,7 +372,7 @@ header a {
 
 .video-title {
     text-align: center;
-    color: #333;
+    color: var(--txt-white1);
     font-weight: 500;
     margin-top: 8px;
 }
@@ -368,7 +392,7 @@ header a {
 }
 
 .cible {
-    background: white;
+    
 }
 
 .ico{
@@ -403,16 +427,17 @@ header a {
     height: 2px;
     width: 700px;
     background: var(--grid1);
-    margin-top: 37px;
+    margin-top: 34px;
     margin-left: 30px;
     position: absolute;
 }
 
 .nav-ceo button {
     border: none;
-    color: var(--blue2);
+    color: var(--txt-white2);
     background: transparent;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 14px;
     margin-left: 50px;
     width: 300px;
 }
@@ -427,6 +452,7 @@ header a {
     display: block;
     margin-left: 125px;
     z-index: 3;
+    margin-top: 3px;
 }
 
 .nav-ceo button::after {
@@ -465,6 +491,10 @@ header a {
     margin-top: 50px;
     justify-content: center;
 }
+#ambitions{
+    background: var(--blue2);
+    padding: 40px 0;
+}
 
 .leforum-txt {
     width: 50%;
@@ -475,7 +505,6 @@ header a {
     max-width: 35%;
     object-fit: cover;
     margin-left: 50px;
-    box-shadow: 10px 0px 30px 0px black;
     border-radius: 8px;
     transition: all .6s;
 }
@@ -487,7 +516,7 @@ header a {
 
 .leforum-content.active {
     display: inline-flex;
-    justify-content: space-between;
+    gap: 40px;
 }
 
 .stand {
@@ -503,10 +532,8 @@ header a {
     width: 100%;
 }
 
-.ceo-illustration {
+.ceo-illustration img{
     width: 100%;
-    align-items: end;
-    gap: 3px;
 }
 
 .ceo-illustration>div {
@@ -556,7 +583,7 @@ html,
 body {
     /* width: 100%;
     height: 100%; */
-
+    background: var(--blue1);
     padding: 0;
     margin: 0;
 }
@@ -602,7 +629,7 @@ p {
     line-height: 25px;
     font-weight: 500;
     font-size: 14px;
-    color: #666;
+    color: var(--txt-white2);
 }
 
 .txt-center {
@@ -696,14 +723,13 @@ header a {
 }
 
 header {
-    background-color: white;
-    border-bottom: 1px solid #eee;
+    background-color: var(--blue1);
     height: 70px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-header.sticky a {
-    color: #555 !important;
+header a {
+    color: #fff !important;
 }
 
 header.sticky .topbar-logo img {
@@ -713,7 +739,6 @@ header.sticky .topbar-logo img {
 }
 
 header .brand {
-    color: #000;
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
@@ -724,7 +749,7 @@ header .brand {
 header .brand img {
     width: 70px;
     height: auto;
-    background-color: #fff;
+    background-color: var(--txt-white1);
     border-radius: 2px;
 }
 
@@ -742,7 +767,7 @@ header .menu .nav-btn {
     margin: 0 8px;
     padding: 0 10px;
     border-radius: 20px;
-    color: #555 !important;
+    color: var(--txt-white2) !important;
     transition: 0.3s;
     transition-property: color, background-color;
     text-transform: uppercase;
@@ -762,9 +787,8 @@ header .btn {
 }
 
 .banner {
-    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1622,6 +1646,7 @@ section#program p {
 .reportage-slider .slide .img {
     padding: 1px;
     flex: 1;
+    min-height: 0 !important;
 }
 
 .reportage-slider .slide img {
@@ -1672,11 +1697,10 @@ section#program p {
 /* ====================== hote ================= */
 #hote {
     padding: 50px 0 100px 0;
-    background: white;
+    background: var(--blue2);
 }
 
 #hote .top {
-    color: var(--blue2);
     margin-bottom: 50px;
 }
 
@@ -1687,21 +1711,23 @@ section#program p {
 #hote .top h1 {
     font-size: 50px;
     margin: 0;
+    color: var(--txt-white1);
 }
 
 #hote .top h4 {
     font-size: 30px;
     margin: 0;
+    color: var(--txt-white1);
 }
 
 #hote hr {
-    border: 3px solid var(--blue2);
+    border: 3px solid var(--txt-white1);
     max-width: 500px;
     margin: 10px 0;
 }
 
 #hote .bbl {
-    background: var(--blue3);
+    background: var(--blue1);
     color: white !important;
     padding: 20px;
     border-radius: 30px;
@@ -1718,12 +1744,15 @@ section#program p {
     margin: 10px 30px 30px 30px;
     font-weight: 500;
 }
+#hote ul li{
+    color: var(--txt-white2);
+}
 
 
 
 /* ====================== pavillon ============= */
 #pavillon {
-    background: var(--blue2);
+    background: var(--blue1);
     color: white;
 
     /* background-attachment: fixed;
@@ -1731,6 +1760,7 @@ section#program p {
     background-repeat: no-repeat; */
     padding: 80px 0;
 }
+
 
 #pavillon .top {
     display: flex;
@@ -1753,6 +1783,10 @@ section#program p {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
 }
+.pavillon-img img{
+    width: 100%;
+    height: auto;
+}
 
 .pavillon-item {
     border: 3px solid rgba(255, 255, 255, 0.658);
@@ -1768,7 +1802,7 @@ section#program p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--blue2);
+    background: var(--blue1);
     /* background: linear-gradient(#152644ea, #152644ea), url(../img/fondmarin.jpg);
     background-attachment: fixed;
     background-size: cover;
@@ -1791,7 +1825,7 @@ section#program p {
 footer {
     position: relative;
     width: 100%;
-    background: var(--blue3);
+    background: var(--blue2);
 }
 
 footer .container {
@@ -1804,7 +1838,7 @@ footer .container.top {
 }
 
 footer h2 {
-    color: var(--blue1);
+    color: var(--txt-white1);
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: 600;
@@ -1831,7 +1865,7 @@ footer .contact {
 }
 
 footer hr {
-    border-color: rgba(255, 255, 255, 0.068);
+    border-color: rgba(255, 255, 255, 0.767) !important;
 }
 
 .news-letter-form {

@@ -5,6 +5,7 @@ $(document).ready(function () {
         autoplay: false,
         autoplaySpeed: 2000,
         dots:true,
+        arrows:false,
         responsive: [
             {
               breakpoint: 1024,

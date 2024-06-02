@@ -1,6 +1,6 @@
 .new-user{
     max-width: 600px;
-    border: 1px solid #eee;
+    border: 1px solid #c0c0c0;
     border-radius: 8px;
     padding: 10px;
 }
@@ -9,7 +9,6 @@
     align-items: center;
     justify-content: center;
     padding: 30px;
-    border-bottom: 1px solid #eee;
 }
 .new-user .top img{
     width: 100px;
@@ -28,4 +27,7 @@ h5{
     color: #254379 !important;
     font-size: 14px !important;
     font-weight: 500 !important;
+}
+hr{
+    background-color: #c0c0c0;
 }
