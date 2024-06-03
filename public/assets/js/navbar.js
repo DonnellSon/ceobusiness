@@ -14,6 +14,7 @@
 var menu = document.querySelector('.menu');
 var menuBtn = document.querySelector('.menu-btn');
 var closeBtn = document.querySelector('.close-btn');
+let navBtns=document.querySelectorAll('.menu.active .nav-btn');
 
 menuBtn.addEventListener("click", () => {
     menu.classList.add('active');
@@ -22,3 +23,8 @@ menuBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () =>{
     menu.classList.remove('active');
 });
+navBtns.forEach((nav)=>{
+    nav.addEventListener('click',function(){
+        menu.classList.remove('active');
+    })
+})
