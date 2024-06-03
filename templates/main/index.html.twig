@@ -8,32 +8,24 @@
 
 {% endblock %}
 
-{% block head %} <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-		integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	 <script src="{{ asset('assets/js/doslider.js')}}"></script>
+{% block head %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="{{ asset('assets/js/doslider.js')}}"></script>
 {% endblock %}
 
 {% block body %}
 	{# <section id="parallax" class="parallax">
-		<div class="parallax">
-			<img src="{{ asset('assets/img/png/ciel.png') }}" alt="ciel" id="ciel" srcset="">
-			<img src="{{ asset('assets/img/png/mer.png') }}" alt="mer" id="mer" srcset="">
-			<img src="{{ asset('assets/img/png/bulding.png') }}" alt="ciel" id="bulding" srcset="">
-			<img src="{{ asset('assets/img/png/ceo2.png') }}" alt="ciel" id="ceo" srcset="">
-		</div>
-	</section> #}
-	<div class="banner position-relative d-sm-flex d-md-flex flex-column align-items-center">
-		{# <div class="banner-slider position-absolute w-100 h-100">
-			<div class="banner-slide position-relative">
-				<img class="position-absolute" src="{{ asset('assets/img/ban1.png') }}" alt="">
-			</div>
-			<div class="banner-slide position-relative">
-				<img class="position-absolute" src="{{ asset('assets/img/ban2.jpg') }}" alt="">
-			</div>
-		</div> #}
+				<div class="parallax">
+					<img src="{{ asset('assets/img/png/ciel.png') }}" alt="ciel" id="ciel" srcset="">
+					<img src="{{ asset('assets/img/png/mer.png') }}" alt="mer" id="mer" srcset="">
+					<img src="{{ asset('assets/img/png/bulding.png') }}" alt="ciel" id="bulding" srcset="">
+					<img src="{{ asset('assets/img/png/ceo2.png') }}" alt="ciel" id="ceo" srcset="">
+				</div>
+			</section> #}
+	<div id="acceuil" class="banner position-relative d-sm-flex d-md-flex flex-column align-items-center">
+
 		<div class="parrain">
-			<small>Organisé par</small>
+			<small>{{ 'Organized by' | trans }}</small>
 
 			<div class="o-logo" style="display:flex">
 				<div class="logo-organisme" style="justify-content:center">
@@ -50,7 +42,7 @@
 			</div>
 		</div>
 		<div class="organisme">
-			<small>sous le haut parrainage du</small>
+			<small>{{ 'Under the high patronage of' | trans }}</small>
 			<div class="p-logo" style="display:flex">
 				<div class="logo-parrain" style="justify-content:center">
 					<img src="{{ asset('assets/img/logo/etrangere.jpg') }}" style="height: 60px" alt="CEO Business Forum"><br>
@@ -74,47 +66,50 @@
 		</div>
 		<img class="banner-logo" src="{{ asset('assets/img/png/ceo2.png') }}" alt="ciel" id="ceo" srcset="">
 		<div class="capt">
-			<span></b>Rendez-vous à Madagascar</b></span>
-	<h1 style="color: #25a0d8">Ce 14 - 15 Novembre 2024</h1><br>
-	<h1 style="font-size:30px">Le plus grand forum économique des pays riverains et partenaires de l’Océan Indien
-					se déroulera à
-					Madagascar pour cette année 2024.</h1>
+			<span></b>
+			{{ 'Meeting in Madagascar' | trans }}</b>
+	</span>
+	<h1 style="color: #25a0d8">{{ 'On the 14th - 15th of November 2024' | trans }}</h1><br>
+	<h1 style="font-size:30px">{{ 'The largest economic forum of the countries bordering and partnering with the Indian Ocean will take place in Madagascar for the year 2024.' | trans }}</h1>
 	<div class="countdown">
 		<div id="countdown">
 			<div>
 				<span id="countdown_day">--</span>
-				<small>Jours</small>
+				<small>{{ 'Days' | trans }}</small>
 			</div>
 			<div>
 				<span id="countdown_hour">--</span>
-				<small>heures</small>
+				<small>{{ 'Hours' | trans }}</small>
 			</div>
 			<div>
 				<span id="countdown_min">--</span>
-				<small>minutes</small>
+				<small>{{ 'Minutes' | trans }}</small>
 			</div>
 			<div>
 				<span id="countdown_sec">--</span>
-				<small>secondes</small>
+				<small>{{ 'Seconds' | trans }}</small>
 			</div>
 		</div>
 	</div>
-	<span>Thème de l’événement :
+	<span>{{ 'Theme of the event' | trans}}
+		:
 	</span>
 	<span>
-		<b>« ECONOMIE DYNAMIQUE , PARTENARIATS STRATEGIQUES : ESPRIT DE L’OCEAN INDIEN »</b>
+		<b>«
+			{{ 'DYNAMIC ECONOMY, STRATEGIC PARTNERSHIPS: SPIRIT OF THE INDIAN OCEAN' | trans }}
+			»</b>
 		<span></div>
 	</div>
 
-	<section class="sec-secteur pt-3 pb-1" id="theme">
-		<h2 class="mb-3">Plusieurs secteurs seront discutés</h2>
+	<section id="secteur" class="sec-secteur pt-3 pb-1" id="theme">
+		<h2 class="mb-3">{{ 'Several sectors will be discussed' | trans }}</h2>
 		<div class="position-relative">
-			<div class="sec-prev position-absolute">
+			<div class="sec-prev position-absolute" role="button">
 				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chevron-left" viewbox="0 0 16 16">
 					<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
 				</svg>
 			</div>
-			<div class="sec-next position-absolute">
+			<div class="sec-next position-absolute" role="button">
 				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chevron-right" viewbox="0 0 16 16">
 					<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
 				</svg>
@@ -125,7 +120,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-leaf"></i>
 						</div>
-						<span class="text-center">Economie</span>
+						<span class="text-center">{{ 'Economy' | trans}}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -133,7 +128,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-computer"></i>
 						</div>
-						<span class="text-center">Numerique</span>
+						<span class="text-center">{{ 'Digital' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -141,7 +136,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-cloud-showers-heavy"></i>
 						</div>
-						<span class="text-center">Climat</span>
+						<span class="text-center">{{ 'Climate' | trans }}</span>
 					</div>
 
 				</div>
@@ -150,7 +145,7 @@
 						<div class="icon">
 							<i class="fa-brands fa-envira"></i>
 						</div>
-						<span class="text-center">Environnement</span>
+						<span class="text-center">{{ 'Environment' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -158,7 +153,7 @@
 						<div class="icon">
 							<i class="fa-brands fa-leanpub"></i>
 						</div>
-						<span class="text-center">Education</span>
+						<span class="text-center">{{ 'Education' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -166,7 +161,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-water"></i>
 						</div>
-						<span class="text-center">Économie bleue</span>
+						<span class="text-center">{{ 'Blue Economy' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -174,7 +169,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-helmet-safety"></i>
 						</div>
-						<span>Logistique</span>
+						<span>{{ 'Logistics' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -182,7 +177,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-truck-fast"></i>
 						</div>
-						<span>Transport</span>
+						<span>{{ 'Transportation' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -190,7 +185,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-shirt"></i>
 						</div>
-						<span>Textile</span>
+						<span>{{ 'Textile' | trans }}</span>
 					</div>
 
 				</div>
@@ -199,7 +194,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-ship"></i>
 						</div>
-						<span>Tourisme</span>
+						<span>{{ 'Tourism' | trans }}</span>
 					</div>
 
 				</div>
@@ -208,7 +203,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-prescription-bottle-medical"></i>
 						</div>
-						<span>Santé</span>
+						<span>{{ 'Health' | trans }}</span>
 					</div>
 
 				</div>
@@ -217,7 +212,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-bolt"></i>
 						</div>
-						<span>Energie</span>
+						<span>{{ 'Energy' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -225,7 +220,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-gem"></i>
 						</div>
-						<span>Mines</span>
+						<span>{{ 'Mining' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -233,7 +228,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-tractor"></i>
 						</div>
-						<span>Agriculture</span>
+						<span>{{ 'Agriculture' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -241,7 +236,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-clapperboard"></i>
 						</div>
-						<span>Audiovisuel</span>
+						<span>{{ 'Audiovisual' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -249,7 +244,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-building-columns"></i>
 						</div>
-						<span>Gouvernance</span>
+						<span>{{ 'Governance' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -257,7 +252,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-money-bill-trend-up"></i>
 						</div>
-						<span>Finance</span>
+						<span>{{ 'Finance' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -265,7 +260,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-building"></i>
 						</div>
-						<span>Urbanisation</span>
+						<span>{{ 'Urbanization' | trans }}</span>
 					</div>
 				</div>
 				<div class="secteur-content">
@@ -273,10 +268,7 @@
 						<div class="icon">
 							<i class="fa-solid fa-hand-holding-heart"></i>
 						</div>
-						<span class="text-center">Ong et<br>
-							Organisation
-							<br>
-							internationales</span>
+						<span class="text-center">{{ 'NGOs and International Organizations' | trans }}</span>
 					</div>
 
 				</div>
@@ -288,22 +280,22 @@
 
 	<section class="objectifMaj py-5" id="objectifs">
 		<div>
-			<h2 class="title mb-4 ttl-1">Les objectifs majeurs de l'événement</h2>
+			<h2 class="title mb-4 ttl-1">{{ 'The main objectives of the event' | trans }}</h2>
 			<div class="row">
 				<ul class="col-lg-4 col-md-12 col-sm-12 nav nav-pills mb-sm-3 mb-3 px-0 pr-lg-3 pr-sm-3 px-sm-0 d-flex d-md-flex flex-lg-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 					<li class="nav-link nav-pad active text-xl-right text-lg-right text-md-right text-sm-center text-center" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-						<b>Mobiliser le secteur privé et les gouvernements en faveur du développement</b>
+						<b>{{ 'Mobilize the private sector and governments in favor of development' | trans }}</b>
 					</li>
 					<li class="nav-link nav-pad text-xl-right text-lg-right text-md-center text-sm-center text-center" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-						<b>Promouvoir la coopération régionale et internationale
+						<b>{{ 'Promote regional and international cooperation' | trans }}
 						</b>
 					</li>
 					<li class="nav-link nav-pad text-xl-right text-lg-right text-md-center text-sm-center text-center" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-						<b>Identifier des solutions concrètes aux défis du développement
+						<b>{{ 'Identify concrete solutions to development challenges' | trans }}
 						</b>
 					</li>
 					<li class="nav-link nav-pad text-xl-right text-lg-right text-md-center text-sm-center text-center" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-						<b>Développer le réseautage et les opportunités d' affaires</b>
+						<b>{{ 'Develop networking and business opportunities' | trans }}</b>
 					</li>
 				</ul>
 				<div class="tab-content col-lg-8 col-md-12 col-sm-12 px-0" id="v-pills-tabContent">
@@ -312,13 +304,12 @@
 							<div class="img-obj col-lg-4 col-md-4 col-sm-12 pr-lg-4 p-0"><img src="{{ asset('assets/img/mobiliser.jpg') }}" alt="CEO Business Forum">
 							</div>
 							<div class="text-obj col-lg-8 col-md-8 col-sm-12 px-lg-3">
-								<p>• Sensibiliser les chefs d'entreprises et les décideurs politiques aux potentialités
-																	économiques de la région</p>
-								<p>• Encourager les investissements du secteur privé et les politiques publiques favorables
-																	au
-																	développement</p>
-								<p>• Promouvoir la création de partenariats public-privé pour la réalisation de projets
-																	d'envergures</p>
+								<p>•
+									{{ 'Raise awareness among business leaders and policymakers about the economic potential of the region' | trans }}</p>
+								<p>•
+									{{ 'Encourage private sector investments and favorable public policies for development' | trans }}</p>
+								<p>•
+									{{ 'Promote the creation of public-private partnerships for the implementation of large-scale projects' | trans }}</p>
 							</div>
 						</div>
 					</div>
@@ -327,11 +318,12 @@
 							<div class="img-obj col-lg-4 col-md-4 col-sm-12 pr-lg-4 p-0"><img src="{{ asset('assets/img/promotingregional.jpg') }}" alt="CEO Business Forum">
 							</div>
 							<div class="text-obj col-lg-8 col-md-8 col-sm-12 px-lg-3">
-								<p>• Faciliter les échanges entre les acteurs économiques et gouvernementaux de l’océan
-																	Indien</p>
-								<p>• Encourager la collaboration entre sel pays de la région et les partenaires
-																	internationaux</p>
-								<p>• Renforcer les liens entre l 'océan Indien et le reste du monde</p>
+								<p>•
+									{{ 'Facilitate exchanges between economic and governmental actors of the Indian Ocean' | trans }}</p>
+								<p>•
+									{{ 'Encourage collaboration between countries in the region and international partners' | trans }}</p>
+								<p>•
+									{{ 'Strengthen ties between the Indian Ocean and the rest of the world' | trans }}</p>
 							</div>
 						</div>
 					</div>
@@ -340,9 +332,12 @@
 							<div class="img-obj col-lg-4 col-md-4 col-sm-12 p-0"><img src="{{ asset('assets/img/identifying.jpg') }}" alt="CEO Business Forum">
 							</div>
 							<div class="text-obj col-lg-8 col-md-8 col-sm-12 px-lg-3">
-								<p>• Débattre des enjeux économiques, sociaux et environnementaux de la région</p>
-								<p>• Identifier des solutions innovantes et inclusives pour relever ces défis</p>
-								<p>• Promouvoir la mise en œuvre de projets concrets et durables</p>
+								<p>•
+									{{ 'Discuss the economic, social, and environmental challenges of the region' | trans }}</p>
+								<p>•
+									{{ 'Identify innovative and inclusive solutions to address these challenges' | trans }}</p>
+								<p>•
+									{{ 'Promote the implementation of concrete and sustainable projects' | trans }}</p>
 							</div>
 						</div>
 					</div>
@@ -351,12 +346,12 @@
 							<div class="img-obj col-lg-4 col-md-4 col-sm-12 pr-lg-4 p-0"><img src="{{ asset('assets/img/developnetworking.jpg') }}" alt="CEO Business Forum">
 							</div>
 							<div class="text-obj col-lg-8 col-md-8 col-sm-12 px-lg-3">
-								<p>• Créer un espace de rencontre et d'échange pour les chefs d'entreprises, les
-																	investisseurs et
-																	les décideurs politiques</p>
-								<p>• Faciliter la conclusion de partenariats commerciaux et la création de joint
-																	ventures</p>
-								<p>• Promouvoir l’entrepreneuriat et l’innovation</p>
+								<p>•
+									{{ 'Create a space for meeting and exchange for business leaders, investors, and policymakers' | trans }}</p>
+								<p>•
+									{{ 'Facilitate the conclusion of commercial partnerships and the creation of joint ventures' | trans }}</p>
+								<p>•
+									{{ 'Promote entrepreneurship and innovation' | trans }}</p>
 							</div>
 						</div>
 					</div>
@@ -367,7 +362,7 @@
 	<section class="visualiser py-lg-4 py-md-4 py-sm-3 py-3">
 		<div class="content">
 			<div class="header d-flex align-items-center justify-content-between mb-3">
-				<h2 class="title ttl-1 m-0">Visualisez nos vidéos</h2>
+				<h2 class="title ttl-1 m-0">{{ 'View our videos' | trans }}</h2>
 				<div>
 					<button class="prev-btn">
 						<i class="fa-solid fa-chevron-left"></i>
@@ -384,7 +379,7 @@
 						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 					</div>
-					<div class="video-title">Conférence de presse
+					<div class="video-title">{{ 'Press conference' | trans }}
 					</div>
 				</div>
 
@@ -394,7 +389,7 @@
 						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 					</div>
-					<div class="video-title">Présentation CEO Business Forum Indian English version</div>
+					<div class="video-title">{{ 'CEO Business Forum Indian English version presentation' | trans }}</div>
 				</div>
 				<div class="video-container">
 					<div class="you-vid position-relative">
@@ -402,7 +397,7 @@
 						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 					</div>
-					<div class="video-title">Présentation CEO Business Forum Indian version Française</div>
+					<div class="video-title">{{ 'Presentation CEO Business Forum Indian French version' | trans }}</div>
 				</div>
 				<div class="video-container">
 					<div class="you-vid position-relative">
@@ -410,24 +405,7 @@
 						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 					</div>
-					<div class="video-title">Conférence de presse
-					</div>
-				</div>
-				<div class="video-container">
-					<div class="you-vid position-relative">
-
-						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-					</div>
-					<div class="video-title">Presentation CEO Business Forum Indian English version</div>
-				</div>
-				<div class="video-container">
-					<div class="you-vid position-relative">
-
-						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-					</div>
-					<div class="video-title">Présentation Gate Africa Group
+					<div class="video-title">{{ 'Press conference' | trans }}
 					</div>
 				</div>
 				<div class="video-container">
@@ -436,24 +414,35 @@
 						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 					</div>
-					<div class="video-title">vidéo présentation CEO Business Forum Indian version Française</div>
+					<div class="video-title">{{ 'CEO Business Forum Indian English version presentation' | trans }}</div>
+				</div>
+				<div class="video-container">
+					<div class="you-vid position-relative">
+
+						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+					</div>
+					<div class="video-title">{{ 'Gate Africa Group Présentation' | trans }}
+					</div>
+				</div>
+				<div class="video-container">
+					<div class="you-vid position-relative">
+
+						<iframe class="position-absolute" width="887" height="499" src="https://www.youtube.com/embed/RKL6TJcIhZ4" title="CEO BUSINESS FORUM Conférence de presse 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+					</div>
+					<div class="video-title">{{ 'Presentation CEO Business Forum Indian French version' | trans }}</div>
 				</div>
 			</section>
-			<section class="cible py-5" id="cibles">
+			<section class="cible py-3" id="cibles">
 				<div class="d-flex flex-lg-row flex-md-row flex-sm-column flex-column align-items-center">
 					<div class="map"><img src="{{ asset('assets/img/map.png') }}" alt="Ocean Indien"></div>
 					<div class="cible-content">
 						<div class="cible-title">
-							<h2 class="title mb-4 ttl-1 text-center">Nos cibles:</h2>
+							<h2 class="title mb-4 ttl-1 text-center">{{ 'Our targets' | trans }}:</h2>
 						</div>
 						<p style="min-width:0 !important">
-							1000 CEOs, acteurs économiques, dirigeants du secteur public et privé, entrepreneurs et structures
-											d'appui, investisseurs, business angels, organismes institutionnels pertinents des pays riverains de
-											l'Océan Indien (Afrique du
-											Sud, Comores, Kenya, Madagascar, La Réunion, Mayotte, Maurice, Mozambique, Seychelles, Somalie,
-											Tanzanie, Bangladesh, Inde, Indonésie, Iran, Maldives, Malaisie, Oman, Singapour, Sri Lanka, Thailande,
-											Yémen, Australie, Birmanie, Pakistan), et ses pays partenaires en Europe, Asie,
-											Amérique et d'autres pays africains, ainsi que le monde diplomatique, les médias et les influenceurs.
+							{{ '1000 CEOs, economic actors, leaders from the public and private sectors, entrepreneurs and support structures, investors, business angels, relevant institutional bodies from the countries bordering the Indian Ocean (South Africa, Comoros, Kenya, Madagascar, Réunion, Mayotte, Mauritius, Mozambique, Seychelles, Somalia, Tanzania, Bangladesh, India, Indonesia, Iran, Maldives, Malaysia, Oman, Singapore, Sri Lanka, Thailand, Yemen, Australia, Myanmar, Pakistan), and its partner countries in Europe, Asia, America, and other African countries, as well as the diplomatic world, media, and influencers.' | trans }}
 						</p>
 					</div>
 				</div>
@@ -461,11 +450,11 @@
 			<section id="ambitions">
 				<div>
 					<div class="leforum">
-						<h2 class="title ttl-1 mb-4 text-center">Le CEO BUSINESS FORUM -INDIAN OCEAN</h2>
+						<h2 class="title ttl-1 mb-4 text-center">{{ 'The CEO BUSINESS FORUM - INDIAN OCEAN' | trans }}</h2>
 						<ul class="nav nav-ceo mb-5 d-flex align-items justify-content-spacebetween" id="pills-tab" role="tablist">
-							<li class="nav-item nav-link active" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">AMBITION</li>
-							<li class="nav-itemc nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">SUJETS DES TABLES RONDES</li>
-							<li class="nav-item nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">ANIMATIONS ET ATELIERS</li>
+							<li class="nav-item nav-link active" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">{{ 'AMBITION' | trans }}</li>
+							<li class="nav-itemc nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">{{ 'ROUND TABLES TOPICS' | trans }}</li>
+							<li class="nav-item nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">{{ 'ANIMATIONS AND WORKSHOPS' | trans }}</li>
 						</ul>
 						<div class="tab-content ceo-content" id="pills-tabContent">
 							<div class="tab-pane leforum-content fade show active leforum-content flex-lg-row flex-md-row flex-sm-row flex-column px-lg-3 px-md-3 align-items-center" id="pills-home" role="tabpanel">
@@ -474,13 +463,17 @@
 								</div>
 								<div class="leforum-txt d-flex align-items-center">
 									<p>
-										- La durée de l'événement sera de deux (2) jours, de 8h30 à 17h30 le premier jour, et de 9h à 17h30 le deuxième jour. Le deuxième jour sera également suivi d'un Dîner de Gala à partir de 19h.
+										-
+										{{ 'The event will last for two (2) days, from 8:30 am to 5:30 pm on the first day, and from 9:00 am to 5:30 pm on the second day. The second day will also be followed by a Gala Dinner starting at 7:00 pm.' | trans }}
 										<br>
-										- L'événement se tiendra dans un lieu préstigieux à Madagascar, au Centre de Conférence International - Ivato Antananarivo, les Jeudi 14 et Vendredi 15 Novembre 2024.
+										-
+										{{ 'The event will take place at a prestigious venue in Madagascar, at the International Conference Center - Ivato Antananarivo, on Thursday, November 14, and Friday, November 15, 2024.' | trans }}
 										<br>
-										- L'événement se déroulera en présentiel avec des sessions plénières, et sera également disponible en streaming sur www.GateNews.Africa, avec des intervenants en présentiel et en ligne:
+										-
+										{{ 'The event will be held in person with plenary sessions and will also be available for streaming on www.GateNews.Africa, featuring both in-person and online speakers.' | trans}}
 										<br>
-										- Le nombre de participants en présentiel sera de 1000 personnes, tandis que l'événement touchera des millions de followers en streaming.
+										-
+										{{ 'The number of in-person participants will be 1000 people, while the event will reach millions of followers via streaming.' | trans }}
 									</p>
 								</div>
 							</div>
@@ -490,19 +483,26 @@
 								</div>
 								<div class="leforum-txt d-flex align-items-center">
 									<p>
-										- Eau, énergie, développement durable
+										-
+										{{ 'Water Energy Sustainable Development' | trans }}
 										<br>
-										- Agriculture, agro-industrie, économie bleue
+										-
+										{{ 'Agriculture Agroindustry Blue Economy' | trans }}
 										<br>
-										- Infrastructures e t développement touristique
+										-
+										{{ 'Infrastructure Tourism Development' | trans }}
 										<br>
-										- Investissements: regards croisés entre les pays riverains et partenaires de l'océan Indien
+										-
+										{{ 'Investments Comparison Indian Ocean Countries' | trans }}
 										<br>
-										- Urbanisation et décentralisation
+										-
+										{{ 'Urbanization Decentralization' | trans }}
 										<br>
-										- Développement numérique, Intelligence Artificielle et cybersécurité
+										-
+										{{ 'Digital Development Artificial Intelligence Cybersecurity' | trans }}
 										<br>
-										- Financement et développement des PME
+										-
+										{{ 'Financing SME Development' | trans }}
 										<br>
 									</p>
 								</div>
@@ -513,25 +513,35 @@
 								</div>
 								<div class="leforum-txt d-flex align-items-center">
 									<p>
-										- Keynote
+										-
+										{{ 'Keynote' | trans }}
 										<br>
-										- Intervention des Guest Speakers
+										-
+										{{ "Guest Speaker's Interventions" | trans }}
 										<br>
-										- Conférences plénières
+										-
+										{{ "Plenary Conferences" | trans }}
 										<br>
-										- Ateliers thématiques
+										-
+										{{ "Thematic Workshops" | trans }}
 										<br>
-										- Ateliers pays
+										-
+										{{ "Country Workshops" | trans }}
 										<br>
-										- Happenings culturels
+										-
+										{{ "Cultural Happenings" | trans }}
 										<br>
-										- Réseautage (RDV : B2B Sectoriels, entrepreneurs-Investisseurs, talents-recruteurs) Partenariats publics et privés
+										-
+										{{ "Networking (Sectoral B2B Meetings, Entrepreneur-Investor, Talent-Recruiter) Public and Private Partnerships" | trans }}
 										<br>
-										- Signature convention et accord de partenariat
+										-
+										{{ "Convention and Partnership Agreement Signing" | trans }}
 										<br>
-										- Présentation du nouveau social de l'Afrique et de l'Océan Indien « GateAfri »
+										-
+										{{ "Presentation of the new social platform for Africa and the Indian Ocean 'GateAfri'" | trans }}
 										<br>
-										- Démonstration et présentation de divers projets des participants et partenaires.
+										-
+										{{ "Demonstration and presentation of various projects by participants and partners." | trans }}
 										<br>
 
 									</p>
@@ -540,31 +550,56 @@
 						</div>
 					</div>
 					<div class="ceo-illustration d-flex mt-5 justify-content-space-between mb-5">
-							<img class="w-100" src="{{ asset('assets/img/illustration.png') }}" alt="CEO Business Forum">
+						<img class="w-100" src="{{ asset('assets/img/illustration.png') }}" alt="CEO Business Forum">
+					</div>
+				</div>
+			</section>
+			<section id="startuper" class="py-2">
+				<div class="d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-30">
+					<div class="left flex-1">
+						<img class="d-block w-100" src="{{ asset('assets/img/startuper.jpg') }}" alt=""/>
+					</div>
+					<div class="right flex-1">
+						<h1 class="ttl-1 text-center">Deviens le Meilleur Startuppeur de l'Année !</h1>
+						<p class="text-justify">Tu as une idée innovante ? Un projet qui pourrait révolutionner le monde ? Ne laisse pas ton potentiel inexploité ! Participe à ce concours pour jeunes startuppeurs et montre ce dont tu es capable. Concours rganisé par GateNews.africa et la FCCIM dans le cadre du projet CEO BUSINESS FORUM - INDIAN OCEAN
+						</p>
+						<div class="prix d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-15">
+							<div class="flex-1">
+								<h2>Prix et Récompenses</h2>
+								<ul>
+									<li>- Trophée meilleur startuppeur de l'année</li>
+									<li>- Invitation gratuite pendant le forum</li>
+									<li>- Possibilité de financement de votre projet</li>
+									<li>- Accès libre B2B avec les CEOs & Investisseurs</li>
+									<li>- Accompagnement de votre projet</li>
+								</ul>
+							</div>
+							<div class="flex-1">
+								<h2>Qui Peut Participer ?</h2>
+								<ul>
+									<li>- Les jeunes entre 18 et 30 ans.</li>
+									<li>- Ceux qui ont une idée innovante ou une startup en phase de développement. La participation des jeunes femmes et étudiants sont grandement sollicitée.</li>
+								</ul>
+							</div>
+						</div>
+						<p class="text-justify">Venez assister à la session d’information qui se déroulera a la salle de conférence du Ministère des Affaires Étrangères Anosy Antananarivo. Accès libre mais sur invitation. (Invitations à retirer sur notre site : www.ceobusinessforum.io</p>
+						<p class="text-justify">Ne manque pas cette chance unique de transformer ton idée en réalité et de marquer l’histoire. Inscris-toi dès maintenant et prépare-toi à devenir le meilleur startuppeur de l’année !</p>
+						<p class="text-justify">Pour plus d’informations et pour t’inscrire, rends-toi sur notre site : www.ceobusinessforum.io</p>
 					</div>
 				</div>
 			</section>
 
 			<section id="reportage">
 				<div class="top">
-					<h2 class="title ttl-1">Reportages photo</h2>
-					<p>Photos marquantes de la conférence de presse et le lancement officiel de l'événement
-						<br>qui s'est déroulé au CCI
-									Ivato Antananarivo, Madagascar le 14 Mai 2024
-					</p>
-					<p class="text-justify">La présentation du CEO BUSINESS FORUM INDIAN OCEAN a suscité une réaction enthousiaste
-									parmi
-									l'assistance,composée de la communauté économique nationale et internationale,représentants de groupements
-									professionnels,des responsables gouvernementaux,des organismes internationaux, des acteurs économiques ainsi
-									que des membres du corps diplomatique.</p>
+					<h2 class="title ttl-1">{{ "Photo coverages" | trans }}</h2>
+					<p class="text-center">{{ "Memorable photos from the press conference and the official launch of the event, which took place at the CCI Ivato Antananarivo, Madagascar on May 14, 2024." | trans }}</p>
+					<p class="text-center">{{ "The presentation of the CEO BUSINESS FORUM INDIAN OCEAN has sparked enthusiastic reactions among the audience, composed of the national and international economic community, representatives of professional associations, government officials, international organizations, economic actors, as well as members of the diplomatic corps." | trans}}</p>
 				</div>
 				<div class="bottom">
 					<div class="reportage-slider">
 						<div class="slide">
 							<div class="capt">
-								<h1 class="text-center">Photos marquantes
-									<br>du lancement officiel
-									<br>du FORUM
+								<h1 class="text-center">{{ "Highlights from the official launch of the FORUM" | trans }}
 								</h1>
 							</div>
 						</div>
@@ -644,91 +679,91 @@
 				</div>
 			</section>
 			{# <section id="guest">
-				<div class="top">
-					<h1>Qui sont les GUEST SPEAKER<br>
-						et nos MAIN SPEAKER
-						<br>pour ce grand forum économique<br>
-						du 14 au 15
-									Novembre 2024 ?
-					</h1>
-				</div>
-				<div class="bottom">
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-					<div class="guest">
-						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-					</div>
-				</div>
-				<div class="mt-3">
-					<p class="text-center">Voulez-vous devenir un de nos Guest Speaker ou Main Speaker ?<br>Envoyez votre dossier de
-									candidature en cliquant
-						<a href="{{ path('user_registration') }}">ici</a>
-					</p>
-				</div>
-			</section> #}
+										<div class="top">
+											<h1>Qui sont les GUEST SPEAKER<br>
+												et nos MAIN SPEAKER
+												<br>pour ce grand forum économique<br>
+												du 14 au 15
+															Novembre 2024 ?
+											</h1>
+										</div>
+										<div class="bottom">
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+											<div class="guest">
+												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+											</div>
+										</div>
+										<div class="mt-3">
+											<p class="text-center">Voulez-vous devenir un de nos Guest Speaker ou Main Speaker ?<br>Envoyez votre dossier de
+															candidature en cliquant
+												<a href="{{ path('user_registration') }}">ici</a>
+											</p>
+										</div>
+									</section> #}
 			<section id="hote">
 				<div class="top px-0">
-					<div class="logo">
-						<img src="{{ asset('assets/img/png/ceo2.png') }}" alt="ciel" id="ceo" srcset="">
-					</div>
-					<h1>MADAGASCAR :</h1>
-					<h4>Un pays hôte aux atouts multiples</h4>
-					<hr>
+					{% if app.request.locale == 'fr' %}
+						<img class="d-block mx-auto" style="width:100%;max-width:700px" src="{{ asset('assets/img/hotefr.jpg') }}" alt="ciel" id="ceo" srcset="">
+					{% elseif app.request.locale == 'en' %}
+						<img class="d-block mx-auto" style="width:100%;max-width:700px" src="{{ asset('assets/img/hoteen.jpg') }}" alt="ciel" id="ceo" srcset="">
+					{% endif %}
 				</div>
 				<div class="bottom px-0">
 					<div class="bbl">
-						<p>Le choix de Madagascar comme pays hôte du CEO Business Forum - Indian Ocean n'est pas fortuit. La Grande
-											Île présente de nombreux avantages indéniables</p>
+						<p>{{ "The choice of Madagascar as the host country for the CEO Business Forum - Indian Ocean is not coincidental. The Great Island presents numerous undeniable advantages." | trans }}</p>
 					</div>
 					<ul>
-						<li>- Un evironnement économique stable et attractif</li>
-						<li>- Une main-d'oeuvre qualifiée et dynamique</li>
-						<li>- Un cadre naturel exceptionnel et une culture riche</li>
-						<li>- Une position stratégique au coeur de l'Océan Indien </li>
+						<li>-
+							{{ "A stable and attractive economic environment" | trans }}</li>
+						<li>-
+							{{ "Qualified and dynamic workforce" | trans }}</li>
+						<li>-
+							{{ "Exceptional natural surroundings and rich culture" | trans }}</li>
+						<li>-
+							{{ "A strategic position at the heart of the Indian Ocean" | trans }}
+						</li>
 					</ul>
 				</div>
 			</section>
 			<section id="pavillon">
 				<div class="top px-0">
-					<h1>PAVILLON DE MADAGASCAR:</h1>
-					<p class="text-white">Pavillon vitrine de Madagascar, pays récepteur de la première édition de
-									l'événement sous forme de salon ou d'exposition, ils accueillerons plusieurs participants et les acteurs
-									économiques
-									de Madagascar.Ces pavillons mettront donc en valeur l'économie de Madagascar, et sera surtout le reflet de
-									l'économie Malagasy (artisanat, industrie, technologie, etc.)
+					<h1>{{ "PAVILION OF MADAGASCAR" }}:</h1>
+					<p class="text-white">{{ "The showcase pavilion of Madagascar, the host country of the first edition of the event in the form of a trade fair or exhibition, will host several participants and economic actors from Madagascar. These pavilions will thus showcase the economy of Madagascar, and will reflect the Malagasy economy (crafts, industry, technology, etc.)." | trans }}
 					</p>
-					<h2>Les cibles :</h2>
+					<h2>{{ "Targets" | trans }}
+						:</h2>
 				</div>
 				<div class="bottom px-lg-0 px-md-0 px-sm-3 px-3">
 					<div class="pavillon-img">
@@ -738,30 +773,25 @@
 						<div class="ico position-absolute">
 							<i class="fa-solid fa-business-time"></i>
 						</div>
-						<h3>EXPOSITION</h3>
+						<h3>{{ "EXPOSITION" | trans }}</h3>
 						<p>
-							Explorez notre exposition dédiée à l'économie malgache qui met en lumière les secteurs clés, les projets
-											d'infrastructure et les initiatives de développement, offrant aux visiteurs un aperçu approfondi du
-											potentiel économique de Madagascar.
+							{{ "Explore our exhibition dedicated to the Malagasy economy, showcasing key sectors, infrastructure projects, and development initiatives, offering visitors a comprehensive insight into the economic potential of Madagascar." | trans}}
 						</p>
 					</div>
 					<div class="pavillon-item position-relative">
 						<div class="ico position-absolute">
 							<i class="fa-solid fa-business-time"></i>
 						</div>
-						<h3>ANIMATION</h3>
-						<p>Participez à nos sessions d'animation interactives, comprenant des conférences, des tables rondes et des
-											débats, animées par des experts économiques nationaux et internationaux, pour une exploration
-											approfondie des défis et des opportunités économiques à Madagascar.</p>
+						<h3>{{ "ANIMATION" | trans }}</h3>
+						<p>{{ "Join our interactive animation sessions, including conferences, roundtable discussions, and debates, led by national and international economic experts, for an in-depth exploration of the economic challenges and opportunities in Madagascar." | trans }}</p>
 					</div>
 					<div class="pavillon-item position-relative">
 						<div class="ico position-absolute">
 							<i class="fa-solid fa-business-time"></i>
 						</div>
-						<h3>PROMOTION</h3>
-						<p>Profitez de nos promotions exclusives pour découvrir les possibilités d'investissement et les
-											partenariats commerciaux dans divers secteurs de l'économie malgache, offrant des incitations
-											attrayantes pour les entrepreneurs et les investisseurs.
+						<h3>{{ "PROMOTION" | trans }}</h3>
+						<p>{{ "Take advantage of our exclusive promotions to discover investment opportunities and commercial partnerships in various sectors of the Malagasy economy, offering attractive incentives for entrepreneurs and investors." | trans }}
+
 						</p>
 					</div>
 					<div class="pavillon-item position-relative">
@@ -770,8 +800,8 @@
 						</div>
 						<h3>VENTES</h3>
 						<p>Visitez notre espace dédié aux ventes, offrant une gamme de publications spécialisées, de rapports
-											économiques et de ressources stratégiques pour les entreprises et les investisseurs intéressés par le
-											marché malgache.</p>
+																									économiques et de ressources stratégiques pour les entreprises et les investisseurs intéressés par le
+																									marché malgache.</p>
 					</div>
 					<div class="pavillon-item position-relative">
 						<div class="ico position-absolute">
@@ -779,12 +809,12 @@
 						</div>
 						<h3>B2C</h3>
 						<p>Bénéficiez d'une expérience B2C personnalisée et axée sur le networking, où les participants peuvent
-											établir des contacts professionnels, échanger des idées et explorer des opportunités de collaboration
-											avec des partenaires potentiels dans le cadre d'un environnement économique dynamique.
+																									établir des contacts professionnels, échanger des idées et explorer des opportunités de collaboration
+																									avec des partenaires potentiels dans le cadre d'un environnement économique dynamique.
 						</p>
 					</div>
 				</div>
 			</section>
 		{% endblock %}
 
-{% block scripts %}{% endblock %}
+		{% block scripts %}{% endblock %}

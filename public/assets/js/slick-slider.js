@@ -2,10 +2,12 @@ $(document).ready(function(){
     $('.secteur').slick({
         slidesToShow: 7,
         slidesToScroll: 1,
-        autoplay: false,
+        autoplay: true,
         autoplaySpeed: 2000,
-        arrows:false,
+        arrows:true,
         dots:false,
+        prevArrow: $('.sec-prev'),
+        nextArrow: $('.sec-next'),
         responsive: [
           {
             breakpoint: 992,

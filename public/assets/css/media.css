@@ -1,5 +1,9 @@
 
 @media (max-width: 1135px){
+    .banner-logo{
+        margin-top: 10px;
+        max-width: 200px;
+    }
     header .menu{
         position: fixed;
         background-color: var(--blue1);

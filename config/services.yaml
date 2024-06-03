@@ -20,5 +20,14 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Events\LocalePrefixListener:
+        tags:
+            - { name: kernel.event_subscriber, priority: 100 }
+    App\Events\LocaleListener:
+        arguments:
+            $defaultLocale: '%kernel.default_locale%'
+        tags:
+            - { name: kernel.event_listener, event: kernel.request }
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

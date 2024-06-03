@@ -17,16 +17,16 @@ class PersoInfos
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(
-        message:"Le nom est requis",
+        message:"First name is required",
     )]
     #[Assert\NotNull(
-        message:"Le nom est requis",
+        message:"Last name is required",
     )]
     private ?string $firstName = null;
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(
-        message:"Le prénom est requis",
+        message:"Last name is required",
     )]
     private ?string $lastName = null;
 
@@ -35,12 +35,12 @@ class PersoInfos
 
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(
-        message:"Le genre est requis",
+        message:"Gender is required",
     )]
     private ?string $gender = null;
 
     #[Assert\NotBlank(
-        message:"La ville est requise",
+        message:"City is required",
     )]
     #[ORM\Column(length: 255)]
     private ?string $city = null;
