@@ -1970,6 +1970,9 @@ footer hr {
     #countdown>* {
         width: 60px !important;
     }
+    #hote .bbl p{
+        font-size: 20px;
+    }
 
     #countdown>*>small {
         font-weight: 500;
