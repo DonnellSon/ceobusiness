@@ -15,4 +15,11 @@ class MainController extends AbstractController
             'controller_name' => 'MainController',
         ]);
     }
+    #[Route('/councours', name: 'competition')]
+    public function competition(): Response
+    {
+        return $this->render('main/competition.html.twig', [
+            'controller_name' => 'MainController',
+        ]);
+    }
 }

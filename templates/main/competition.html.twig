@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CEO BUSINESS FORUM IO
+{% endblock %}
+{% block links %}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+{% endblock %}
+
+{% block head %}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="{{ asset('assets/js/doslider.js')}}"></script>
+{% endblock %}
+
+{% block body %}
+	<section id="startuper" class="py-5">
+		<div class="d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-30">
+			<div class="left flex-1">
+				<img class="d-block w-100" src="{{ asset('assets/img/startuper.jpg') }}" alt=""/>
+			</div>
+			<div class="right flex-1">
+				<h1 class="ttl-1 text-center">Deviens le Meilleur Startuppeur de l'Année !</h1>
+				<p class="text-justify">Tu as une idée innovante ? Un projet qui pourrait révolutionner le monde ? Ne laisse pas ton potentiel inexploité ! Participe à ce concours pour jeunes startuppeurs et montre ce dont tu es capable. Concours rganisé par GateNews.africa et la FCCIM dans le cadre du projet CEO BUSINESS FORUM - INDIAN OCEAN
+				</p>
+				<div class="prix d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-15">
+					<div class="flex-1">
+						<h2>Prix et Récompenses</h2>
+						<ul>
+							<li>- Trophée meilleur startuppeur de l'année</li>
+							<li>- Invitation gratuite pendant le forum</li>
+							<li>- Possibilité de financement de votre projet</li>
+							<li>- Accès libre B2B avec les CEOs & Investisseurs</li>
+							<li>- Accompagnement de votre projet</li>
+						</ul>
+					</div>
+					<div class="flex-1">
+						<h2>Qui Peut Participer ?</h2>
+						<ul>
+							<li>- Les jeunes entre 18 et 30 ans.</li>
+							<li>- Ceux qui ont une idée innovante ou une startup en phase de développement. La participation des jeunes femmes et étudiants sont grandement sollicitée.</li>
+						</ul>
+					</div>
+				</div>
+				<p class="text-justify">Venez assister à la session d’information qui se déroulera a la salle de conférence du Ministère des Affaires Étrangères Anosy Antananarivo. Accès libre mais sur invitation. (Invitations à retirer sur notre site : www.ceobusinessforum.io</p>
+				<p class="text-justify">Ne manque pas cette chance unique de transformer ton idée en réalité et de marquer l’histoire. Inscris-toi dès maintenant et prépare-toi à devenir le meilleur startuppeur de l’année !</p>
+				<p class="text-justify">Pour plus d’informations et pour t’inscrire, rends-toi sur notre site : www.ceobusinessforum.io</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
+{% block scripts %}{% endblock %}
