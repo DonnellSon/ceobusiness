@@ -15,13 +15,13 @@
 
 {% block body %}
 	{# <section id="parallax" class="parallax">
-																		<div class="parallax">
-																			<img src="{{ asset('assets/img/png/ciel.png') }}" alt="ciel" id="ciel" srcset="">
-																			<img src="{{ asset('assets/img/png/mer.png') }}" alt="mer" id="mer" srcset="">
-																			<img src="{{ asset('assets/img/png/bulding.png') }}" alt="ciel" id="bulding" srcset="">
-																			<img src="{{ asset('assets/img/png/ceo2.png') }}" alt="ciel" id="ceo" srcset="">
-																		</div>
-																	</section> #}
+																				<div class="parallax">
+																					<img src="{{ asset('assets/img/png/ciel.png') }}" alt="ciel" id="ciel" srcset="">
+																					<img src="{{ asset('assets/img/png/mer.png') }}" alt="mer" id="mer" srcset="">
+																					<img src="{{ asset('assets/img/png/bulding.png') }}" alt="ciel" id="bulding" srcset="">
+																					<img src="{{ asset('assets/img/png/ceo2.png') }}" alt="ciel" id="ceo" srcset="">
+																				</div>
+																			</section> #}
 	<div id="acceuil" class="banner position-relative d-sm-flex d-md-flex flex-column align-items-center">
 
 		<div class="parrain">
@@ -67,37 +67,37 @@
 			</div>
 
 		</div>
-		<img class="banner-logo" src="{{ asset('assets/img/ceowflag.png') }}" alt="ciel" id="ceo" srcset="">
+		<img class="banner-logo animated" data-type="fadeInUp" data-duration="1" data-delay="0" src="{{ asset('assets/img/ceowflag.png') }}" alt="ciel" id="ceo" srcset="">
 		<div class="capt">
-			<span></b>
+			<span class="animated" data-type="fadeInUp" data-duration="1" data-delay="1"></b>
 			{{ 'Meeting in Madagascar' | trans }}</b>
 	</span>
-	<h1 style="color: #25a0d8">{{ 'On the 14th - 15th of November 2024' | trans }}</h1><br>
-	<h1 style="font-size:30px">{{ 'The largest economic forum of the countries bordering and partnering with the Indian Ocean will take place in Madagascar for the year 2024.' | trans }}</h1>
+	<h1 style="color: #25a0d8" class="animated" data-type="fadeInUp" data-duration="1" data-delay="2">{{ 'On the 14th - 15th of November 2024' | trans }}</h1><br>
+	<h1 class="text-typing animated" data-type="fadeInUp" data-duration="1" data-delay="3" style="font-size:30px">{{ 'The largest economic forum of the countries bordering and partnering with the Indian Ocean will take place in Madagascar for the year 2024.' | trans }}</h1>
 	<div class="countdown">
 		<div id="countdown">
-			<div>
+			<div class="animated" data-type="fadeInUp" data-duration="1" data-delay="0">
 				<span id="countdown_day">--</span>
 				<small>{{ 'Days' | trans }}</small>
 			</div>
-			<div>
+			<div class="animated" data-type="fadeInUp" data-duration="1" data-delay="1">
 				<span id="countdown_hour">--</span>
 				<small>{{ 'Hours' | trans }}</small>
 			</div>
-			<div>
+			<div class="animated" data-type="fadeInUp" data-duration="1" data-delay="2">
 				<span id="countdown_min">--</span>
 				<small>{{ 'Minutes' | trans }}</small>
 			</div>
-			<div>
+			<div class="animated" data-type="fadeInUp" data-duration="1" data-delay="3">
 				<span id="countdown_sec">--</span>
 				<small>{{ 'Seconds' | trans }}</small>
 			</div>
 		</div>
 	</div>
-	<span>{{ 'Theme of the event' | trans}}
+	<span class="animated" data-type="fadeInUp" data-duration="1" data-delay="0">{{ 'Theme of the event' | trans}}
 		:
 	</span>
-	<span>
+	<span class="animated" data-type="fadeInUp" data-duration="1" data-delay="1">
 		<b>«
 			{{ 'DYNAMIC ECONOMY, STRATEGIC PARTNERSHIPS: SPIRIT OF THE INDIAN OCEAN' | trans }}
 			»</b>
@@ -668,59 +668,59 @@
 				</div>
 			</section>
 			{# <section id="guest">
-																																																				<div class="top">
-																																																					<h1>Qui sont les GUEST SPEAKER<br>
-																																																						et nos MAIN SPEAKER
-																																																						<br>pour ce grand forum économique<br>
-																																																						du 14 au 15
-																																																									Novembre 2024 ?
-																																																					</h1>
-																																																				</div>
-																																																				<div class="bottom">
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																					<div class="guest">
-																																																						<img src="{{ asset('assets/img/guest.png')}}" alt="">
-																																																					</div>
-																																																				</div>
-																																																				<div class="mt-3">
-																																																					<p class="text-center">Voulez-vous devenir un de nos Guest Speaker ou Main Speaker ?<br>Envoyez votre dossier de
-																																																									candidature en cliquant
-																																																						<a href="{{ path('user_registration') }}">ici</a>
-																																																					</p>
-																																																				</div>
-																																																			</section> #}
+																																																										<div class="top">
+																																																											<h1>Qui sont les GUEST SPEAKER<br>
+																																																												et nos MAIN SPEAKER
+																																																												<br>pour ce grand forum économique<br>
+																																																												du 14 au 15
+																																																															Novembre 2024 ?
+																																																											</h1>
+																																																										</div>
+																																																										<div class="bottom">
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																											<div class="guest">
+																																																												<img src="{{ asset('assets/img/guest.png')}}" alt="">
+																																																											</div>
+																																																										</div>
+																																																										<div class="mt-3">
+																																																											<p class="text-center">Voulez-vous devenir un de nos Guest Speaker ou Main Speaker ?<br>Envoyez votre dossier de
+																																																															candidature en cliquant
+																																																												<a href="{{ path('user_registration') }}">ici</a>
+																																																											</p>
+																																																										</div>
+																																																									</section> #}
 			<section id="hote">
 				<div class="top px-0">
 					{% if app.request.locale == 'fr' %}
@@ -789,8 +789,8 @@
 						</div>
 						<h3>VENTES</h3>
 						<p>Visitez notre espace dédié aux ventes, offrant une gamme de publications spécialisées, de rapports
-																																																																																																																											économiques et de ressources stratégiques pour les entreprises et les investisseurs intéressés par le
-																																																																																																																											marché malgache.</p>
+																																																																																																																																									économiques et de ressources stratégiques pour les entreprises et les investisseurs intéressés par le
+																																																																																																																																									marché malgache.</p>
 					</div>
 					<div class="pavillon-item position-relative">
 						<div class="ico position-absolute">
@@ -798,170 +798,170 @@
 						</div>
 						<h3>B2C</h3>
 						<p>Bénéficiez d'une expérience B2C personnalisée et axée sur le networking, où les participants peuvent
-																																																																																																																											établir des contacts professionnels, échanger des idées et explorer des opportunités de collaboration
-																																																																																																																											avec des partenaires potentiels dans le cadre d'un environnement économique dynamique.
+																																																																																																																																									établir des contacts professionnels, échanger des idées et explorer des opportunités de collaboration
+																																																																																																																																									avec des partenaires potentiels dans le cadre d'un environnement économique dynamique.
 						</p>
 					</div>
 				</div>
 			</section>
 			{# <section id="pourquoi" class="py-5">
-				<div class="w-100 px-0" style="max-width:100%">
-
-					<div class="top">
-						<h2 class="ttl-1 text-center mb-4">Pourquoi participer à ce forum ?</h2>
-					</div>
-					<div class="bottom">
-						<ul class="nav nav-pills mb-4" id="pourquoi-tab" role="tablist">
-							<li class="nav-item" role="presentation">
-								<button class="nav-link active" id="pills-perso-tab" data-bs-toggle="pill" data-bs-target="#pills-perso" type="button" role="tab" aria-controls="pills-perso" aria-selected="true">Avantages personnels</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="pills-pro-tab" data-bs-toggle="pill" data-bs-target="#pills-pro" type="button" role="tab" aria-controls="pills-pro" aria-selected="false">Avantages professionels</button>
-							</li>
-							<li class="nav-item" role="presentation">
-								<button class="nav-link" id="pills-pro-tab" data-bs-toggle="pill" data-bs-target="#pills-pro" type="button" role="tab" aria-controls="pills-pro" aria-selected="false">Les avantages de nous sponsoriser</button>
-							</li>
-						</ul>
-						<div class="tab-content" id="pourquoi-tabContent">
-							<div class="tab-pane fade show active" id="pills-perso" role="tabpanel" aria-labelledby="pills-perso-tab" tabindex="0">
-								<div class="avantage-tab-content">
-									<div class="slide">
-										<h1>Développement de Réseaux Professionnels :</h1>
-										<p>Le CEO BUSINESS FORUM INDIAN OCEAN vous permettra de rencontrer des leaders de l'industrie, des
-										experts et des décideurs, ce qui peut être bénéfique pour élargir votre réseau professionnel et
-										créer des relations précieuses.</p>
-									</div>
-									<div class="slide">
-										<h1>Acquisition de Connaissances et de Compétences :</h1>
-										<p>Assister à nos conférences et des ateliers animés par des experts offre l'opportunité d'acquérir
-										de nouvelles connaissances, de comprendre les tendances du marché et d'apprendre des meilleures
-										pratiques.</p>
-									</div>
-									<div class="slide">
-										<h1>Visibilité Personnelle :</h1>
-										<p>Participer activement à ce prestigieux forum, en posant des questions ou en participant à des
-										discussions, peut augmenter la visibilité personnelle et établir une réputation de personne
-										engagée et informée dans son domaine.</p>
-									</div>
-									<div class="slide">
-										<h1>Développement de Carrière :</h1>
-										<p>Les interactions avec des leaders du secteur et la participation à des discussions de haut niveau
-										peuvent ouvrir des opportunités de carrière, que ce soit à travers des offres d'emploi, des
-										invitations à collaborer sur des projets ou des propositions de mentorat.</p>
-									</div>
-									<div class="slide">
-										<h1>Inspiration et Motivation :</h1>
-										<p>Écouter des intervenants inspirants et échanger avec des personnes partageant les mêmes idées
-										peut revitaliser sa motivation et inspirer de nouvelles idées et perspectives pour sa carrière
-										ou son entreprise.</p>
-									</div>
-									<div class="slide">
-										<h1>Accès à des Informations Exclusives :</h1>
-										<p>Les forums économiques peuvent offrir des informations
-										exclusives sur les tendances économiques, les innovations et les prévisions de marché, aidant
-										ainsi
-										à prendre des décisions éclairées dans son domaine professionnel.</p>
-									</div>
-									<div class="slide">
-										<h1>Amélioration des Compétences en Communication :</h1>
-										<p>Participer à des discussions, poser des questions
-										et interagir avec d'autres professionnels améliore les compétences en communication et en prise
-										de parole en public.</p>
-									</div>
-									<div class="slide">
-										<h1>Renforcement de l’Image Professionnelle :</h1>
-										<p>Être présent dans des événements de haut niveau démontre
-											un engagement envers le développement professionnel continu, ce qui peut renforcer son image
-											professionnelle auprès de ses pairs et employeurs.</p>
-									</div>
-									<div class="slide">
-										<h1>Accès à des Ressources :</h1>
-										<p>Les forums offrent souvent des ressources supplémentaires telles que des
-											publications, des rapports et des études de cas qui peuvent être utiles pour son travail ou son
-											développement personnel.</p>
-									</div>
-									<div class="slide">
-										<h1>Opportunités de Mentorat et de Collaboration :</h1>
-										<p>Rencontrer des experts et des leaders peut ouvrir
-											des opportunités pour être mentoré par des personnes expérimentées ou pour collaborer sur des
-											projets innovants.</p>
-									</div>
-								</div>
-							</div>
-							<div class="tab-pane fade" id="pills-pro" role="tabpanel" aria-labelledby="pills-pro-tab" tabindex="0">
-								<div class="avantage-tab-content">
-									<div class="slide">
-										<h1>Développement de Réseaux Professionnels :</h1>
-										<p>Le CEO BUSINESS FORUM INDIAN OCEAN vous permettra de rencontrer des leaders de l'industrie, des
-										experts et des décideurs, ce qui peut être bénéfique pour élargir votre réseau professionnel et
-										créer des relations précieuses.</p>
-									</div>
-									<div class="slide">
-										<h1>Acquisition de Connaissances et de Compétences :</h1>
-										<p>Assister à nos conférences et des ateliers animés par des experts offre l'opportunité d'acquérir
-										de nouvelles connaissances, de comprendre les tendances du marché et d'apprendre des meilleures
-										pratiques.</p>
-									</div>
-									<div class="slide">
-										<h1>Visibilité Personnelle :</h1>
-										<p>Participer activement à ce prestigieux forum, en posant des questions ou en participant à des
-										discussions, peut augmenter la visibilité personnelle et établir une réputation de personne
-										engagée et informée dans son domaine.</p>
-									</div>
-									<div class="slide">
-										<h1>Développement de Carrière :</h1>
-										<p>Les interactions avec des leaders du secteur et la participation à des discussions de haut niveau
-										peuvent ouvrir des opportunités de carrière, que ce soit à travers des offres d'emploi, des
-										invitations à collaborer sur des projets ou des propositions de mentorat.</p>
-									</div>
-									<div class="slide">
-										<h1>Inspiration et Motivation :</h1>
-										<p>Écouter des intervenants inspirants et échanger avec des personnes partageant les mêmes idées
-										peut revitaliser sa motivation et inspirer de nouvelles idées et perspectives pour sa carrière
-										ou son entreprise.</p>
-									</div>
-									<div class="slide">
-										<h1>Accès à des Informations Exclusives :</h1>
-										<p>Les forums économiques peuvent offrir des informations
-										exclusives sur les tendances économiques, les innovations et les prévisions de marché, aidant
-										ainsi
-										à prendre des décisions éclairées dans son domaine professionnel.</p>
-									</div>
-									<div class="slide">
-										<h1>Amélioration des Compétences en Communication :</h1>
-										<p>Participer à des discussions, poser des questions
-										et interagir avec d'autres professionnels améliore les compétences en communication et en prise
-										de parole en public.</p>
-									</div>
-									<div class="slide">
-										<h1>Renforcement de l’Image Professionnelle :</h1>
-										<p>Être présent dans des événements de haut niveau démontre
-											un engagement envers le développement professionnel continu, ce qui peut renforcer son image
-											professionnelle auprès de ses pairs et employeurs.</p>
-									</div>
-									<div class="slide">
-										<h1>Accès à des Ressources :</h1>
-										<p>Les forums offrent souvent des ressources supplémentaires telles que des
-											publications, des rapports et des études de cas qui peuvent être utiles pour son travail ou son
-											développement personnel.</p>
-									</div>
-									<div class="slide">
-										<h1>Opportunités de Mentorat et de Collaboration :</h1>
-										<p>Rencontrer des experts et des leaders peut ouvrir
-											des opportunités pour être mentoré par des personnes expérimentées ou pour collaborer sur des
-											projets innovants.</p>
-									</div>
-								</div>
-							</div>
-							<div class="tab-pane fade" id="pills-pro" role="tabpanel" aria-labelledby="pills-pro-tab" tabindex="0">
-								<div class="avantage-tab-content">sponsor</div>
-							</div>
-						</div>
-
-
-					</div>
-				</div>
-			</section> #}
+										<div class="w-100 px-0" style="max-width:100%">
+						
+											<div class="top">
+												<h2 class="ttl-1 text-center mb-4">Pourquoi participer à ce forum ?</h2>
+											</div>
+											<div class="bottom">
+												<ul class="nav nav-pills mb-4" id="pourquoi-tab" role="tablist">
+													<li class="nav-item" role="presentation">
+														<button class="nav-link active" id="pills-perso-tab" data-bs-toggle="pill" data-bs-target="#pills-perso" type="button" role="tab" aria-controls="pills-perso" aria-selected="true">Avantages personnels</button>
+													</li>
+													<li class="nav-item" role="presentation">
+														<button class="nav-link" id="pills-pro-tab" data-bs-toggle="pill" data-bs-target="#pills-pro" type="button" role="tab" aria-controls="pills-pro" aria-selected="false">Avantages professionels</button>
+													</li>
+													<li class="nav-item" role="presentation">
+														<button class="nav-link" id="pills-pro-tab" data-bs-toggle="pill" data-bs-target="#pills-pro" type="button" role="tab" aria-controls="pills-pro" aria-selected="false">Les avantages de nous sponsoriser</button>
+													</li>
+												</ul>
+												<div class="tab-content" id="pourquoi-tabContent">
+													<div class="tab-pane fade show active" id="pills-perso" role="tabpanel" aria-labelledby="pills-perso-tab" tabindex="0">
+														<div class="avantage-tab-content">
+															<div class="slide">
+																<h1>Développement de Réseaux Professionnels :</h1>
+																<p>Le CEO BUSINESS FORUM INDIAN OCEAN vous permettra de rencontrer des leaders de l'industrie, des
+																experts et des décideurs, ce qui peut être bénéfique pour élargir votre réseau professionnel et
+																créer des relations précieuses.</p>
+															</div>
+															<div class="slide">
+																<h1>Acquisition de Connaissances et de Compétences :</h1>
+																<p>Assister à nos conférences et des ateliers animés par des experts offre l'opportunité d'acquérir
+																de nouvelles connaissances, de comprendre les tendances du marché et d'apprendre des meilleures
+																pratiques.</p>
+															</div>
+															<div class="slide">
+																<h1>Visibilité Personnelle :</h1>
+																<p>Participer activement à ce prestigieux forum, en posant des questions ou en participant à des
+																discussions, peut augmenter la visibilité personnelle et établir une réputation de personne
+																engagée et informée dans son domaine.</p>
+															</div>
+															<div class="slide">
+																<h1>Développement de Carrière :</h1>
+																<p>Les interactions avec des leaders du secteur et la participation à des discussions de haut niveau
+																peuvent ouvrir des opportunités de carrière, que ce soit à travers des offres d'emploi, des
+																invitations à collaborer sur des projets ou des propositions de mentorat.</p>
+															</div>
+															<div class="slide">
+																<h1>Inspiration et Motivation :</h1>
+																<p>Écouter des intervenants inspirants et échanger avec des personnes partageant les mêmes idées
+																peut revitaliser sa motivation et inspirer de nouvelles idées et perspectives pour sa carrière
+																ou son entreprise.</p>
+															</div>
+															<div class="slide">
+																<h1>Accès à des Informations Exclusives :</h1>
+																<p>Les forums économiques peuvent offrir des informations
+																exclusives sur les tendances économiques, les innovations et les prévisions de marché, aidant
+																ainsi
+																à prendre des décisions éclairées dans son domaine professionnel.</p>
+															</div>
+															<div class="slide">
+																<h1>Amélioration des Compétences en Communication :</h1>
+																<p>Participer à des discussions, poser des questions
+																et interagir avec d'autres professionnels améliore les compétences en communication et en prise
+																de parole en public.</p>
+															</div>
+															<div class="slide">
+																<h1>Renforcement de l’Image Professionnelle :</h1>
+																<p>Être présent dans des événements de haut niveau démontre
+																	un engagement envers le développement professionnel continu, ce qui peut renforcer son image
+																	professionnelle auprès de ses pairs et employeurs.</p>
+															</div>
+															<div class="slide">
+																<h1>Accès à des Ressources :</h1>
+																<p>Les forums offrent souvent des ressources supplémentaires telles que des
+																	publications, des rapports et des études de cas qui peuvent être utiles pour son travail ou son
+																	développement personnel.</p>
+															</div>
+															<div class="slide">
+																<h1>Opportunités de Mentorat et de Collaboration :</h1>
+																<p>Rencontrer des experts et des leaders peut ouvrir
+																	des opportunités pour être mentoré par des personnes expérimentées ou pour collaborer sur des
+																	projets innovants.</p>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="pills-pro" role="tabpanel" aria-labelledby="pills-pro-tab" tabindex="0">
+														<div class="avantage-tab-content">
+															<div class="slide">
+																<h1>Développement de Réseaux Professionnels :</h1>
+																<p>Le CEO BUSINESS FORUM INDIAN OCEAN vous permettra de rencontrer des leaders de l'industrie, des
+																experts et des décideurs, ce qui peut être bénéfique pour élargir votre réseau professionnel et
+																créer des relations précieuses.</p>
+															</div>
+															<div class="slide">
+																<h1>Acquisition de Connaissances et de Compétences :</h1>
+																<p>Assister à nos conférences et des ateliers animés par des experts offre l'opportunité d'acquérir
+																de nouvelles connaissances, de comprendre les tendances du marché et d'apprendre des meilleures
+																pratiques.</p>
+															</div>
+															<div class="slide">
+																<h1>Visibilité Personnelle :</h1>
+																<p>Participer activement à ce prestigieux forum, en posant des questions ou en participant à des
+																discussions, peut augmenter la visibilité personnelle et établir une réputation de personne
+																engagée et informée dans son domaine.</p>
+															</div>
+															<div class="slide">
+																<h1>Développement de Carrière :</h1>
+																<p>Les interactions avec des leaders du secteur et la participation à des discussions de haut niveau
+																peuvent ouvrir des opportunités de carrière, que ce soit à travers des offres d'emploi, des
+																invitations à collaborer sur des projets ou des propositions de mentorat.</p>
+															</div>
+															<div class="slide">
+																<h1>Inspiration et Motivation :</h1>
+																<p>Écouter des intervenants inspirants et échanger avec des personnes partageant les mêmes idées
+																peut revitaliser sa motivation et inspirer de nouvelles idées et perspectives pour sa carrière
+																ou son entreprise.</p>
+															</div>
+															<div class="slide">
+																<h1>Accès à des Informations Exclusives :</h1>
+																<p>Les forums économiques peuvent offrir des informations
+																exclusives sur les tendances économiques, les innovations et les prévisions de marché, aidant
+																ainsi
+																à prendre des décisions éclairées dans son domaine professionnel.</p>
+															</div>
+															<div class="slide">
+																<h1>Amélioration des Compétences en Communication :</h1>
+																<p>Participer à des discussions, poser des questions
+																et interagir avec d'autres professionnels améliore les compétences en communication et en prise
+																de parole en public.</p>
+															</div>
+															<div class="slide">
+																<h1>Renforcement de l’Image Professionnelle :</h1>
+																<p>Être présent dans des événements de haut niveau démontre
+																	un engagement envers le développement professionnel continu, ce qui peut renforcer son image
+																	professionnelle auprès de ses pairs et employeurs.</p>
+															</div>
+															<div class="slide">
+																<h1>Accès à des Ressources :</h1>
+																<p>Les forums offrent souvent des ressources supplémentaires telles que des
+																	publications, des rapports et des études de cas qui peuvent être utiles pour son travail ou son
+																	développement personnel.</p>
+															</div>
+															<div class="slide">
+																<h1>Opportunités de Mentorat et de Collaboration :</h1>
+																<p>Rencontrer des experts et des leaders peut ouvrir
+																	des opportunités pour être mentoré par des personnes expérimentées ou pour collaborer sur des
+																	projets innovants.</p>
+															</div>
+														</div>
+													</div>
+													<div class="tab-pane fade" id="pills-pro" role="tabpanel" aria-labelledby="pills-pro-tab" tabindex="0">
+														<div class="avantage-tab-content">sponsor</div>
+													</div>
+												</div>
+						
+						
+											</div>
+										</div>
+									</section> #}
 		{% endblock %}
 
 		{% block scripts %}{% endblock %}
