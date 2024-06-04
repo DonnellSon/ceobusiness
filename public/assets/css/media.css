@@ -30,7 +30,7 @@
     header .menu .nav-btn{
         display: block;
         font-size: 20px;
-        margin: 20px;
+        margin: 15px !important;
         padding: 0 15px;
     }
     header .reg-btn{
