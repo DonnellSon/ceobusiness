@@ -29,8 +29,57 @@
 	</div>
 </section> #}
 <div id="acceuil" class="banner position-relative d-flex flex-md-row flex-sm-column flex-column">
-	<div class="flex-grow-1 d-flex flex-column align-items-center">
-		<div class="capt">
+	<div class="flex-grow-1 py-3 d-flex flex-column align-items-center">
+		<div class="parrain d-xl-none d-md-none d-sm-block d-block">
+			<small>{{ 'Organized by' | trans }}</small>
+	
+			<div class="o-logo" style="display:flex">
+				<div class="logo-organisme" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/gta.png') }}" style="height: 50px" alt="CEO Business Forum">
+				</div>
+				<div class="logo-organisme" style="text-align:center; justify-content:center">
+					<img src="{{ asset('assets/img/logo/LOGO-3.png') }}"
+						style="height: 50px; background-color: rgba(255, 255, 255, 0.582)" alt="CEO Business Forum">
+				</div>
+			</div>
+			<div class="o-logo" style="display:flex">
+				<div class="logo-organisme" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/gg-logo.jpg') }}" style="height: 50px" alt="CEO Business Forum">
+				</div>
+			</div>
+		</div>
+		<div class="organisme d-xl-none d-md-none d-sm-block d-block">
+			<small>{{ 'Under the high patronage of' | trans }}</small>
+			<div class="p-logo" style="display:flex">
+				<div class="logo-parrain" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/etrangere.jpg') }}" style="height: 50px"
+						alt="CEO Business Forum"><br>
+				</div>
+				<div class="logo-parrain" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/finance.jpg') }}" style="height: 50px" alt="CEO Business Forum"><br>
+				</div>
+				<div class="logo-parrain" style="justify-content:center">
+					<img src="{{ asset('assets/img/med.png') }}" style="height: 50px" alt="CEO Business Forum"><br>
+				</div>
+			</div>
+			<div class="p-logo" style="display:flex">
+				<div class="logo-parrain" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/culture.png') }}" style="height: 50px" alt="CEO Business Forum"
+						style="font-size: 10px"><br>
+				</div><br>
+				<div class="logo-parrain" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/LOGO-2.png') }}" alt="CEO Business Forum" style="height: 50px"><br>
+				</div>
+				<div class="logo-parrain" style="justify-content:center">
+					<img src="{{ asset('assets/img/logo/tourisme.png') }}" alt="CEO Business Forum"
+						style="height: 50px"><br>
+				</div>
+			</div>
+	
+		</div>
+		<img class="banner-logo animated d-xl-none d-md-none d-sm-block d-block" data-type="fadeInUp" data-duration="1" data-delay="0"
+			src="{{ asset('assets/img/ceowflag.png') }}" alt="ciel" id="ceo" srcset="">
+		<div class="capt mt-md-0 mt-sm-2 mt-2">
 			<span class="animated" data-type="fadeInUp" data-duration="1" data-delay="1"></b>
 				{{ 'Meeting in Madagascar' | trans }}</b>
 			</span>
@@ -68,7 +117,7 @@
 				<span>
 		</div>
 	</div>
-	<div class="h-100">
+	<div class="h-100 d-xl-block d-md-block d-sm-none d-none">
 		{% if app.request.locale == 'fr' %}
 		<img class="h-100" src="{{ asset('assets/img/banfr.jpg') }}" alt="ciel" id="ceo" srcset="">
 		{% elseif app.request.locale == 'en' %}
