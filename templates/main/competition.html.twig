@@ -3,51 +3,164 @@
 {% block title %}CEO BUSINESS FORUM IO
 {% endblock %}
 {% block links %}
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+	integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+	integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 {% endblock %}
 
 {% block head %}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="{{ asset('assets/js/doslider.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+	integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ asset('assets/js/doslider.js')}}"></script>
 {% endblock %}
 
 {% block body %}
-	<section id="startuper" class="py-5">
-		<div class="d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-30">
-			<div class="left flex-1">
-				<img class="d-block w-100" src="{{ asset('assets/img/startup.jpg') }}" alt=""/>
-			</div>
-			<div class="right flex-1">
-				<h1 class="ttl-1 text-center">Deviens le Meilleur Startuppeur de l'Année !</h1>
-				<p class="text-justify">Tu as une idée innovante ? Un projet qui pourrait révolutionner le monde ? Ne laisse pas ton potentiel inexploité ! Participe à ce concours pour jeunes startuppeurs et montre ce dont tu es capable. Concours rganisé par GateNews.africa et la FCCIM dans le cadre du projet CEO BUSINESS FORUM - INDIAN OCEAN
-				</p>
-				<div class="prix d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-15">
-					<div class="flex-1">
-						<h2>Prix et Récompenses</h2>
-						<ul>
-							<li>- Trophée meilleur startuppeur de l'année</li>
-							<li>- Invitation gratuite pendant le forum</li>
-							<li>- Possibilité de financement de votre projet</li>
-							<li>- Accès libre B2B avec les CEOs & Investisseurs</li>
-							<li>- Accompagnement de votre projet</li>
-						</ul>
+<section id="startuper" class="py-4">
+	<div class="simple-tabs">
+		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? '' : 'active' }}" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+					type="button" role="tab" aria-controls="pills-home" aria-selected="true">A propos</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? 'active' : '' }}" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+					type="button" role="tab" aria-controls="pills-profile" aria-selected="false">S'inscrire</button>
+			</li>
+		</ul>
+		<div class="tab-content" id="pills-tabContent">
+			<div class="tab-pane fade {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? '' : 'show active' }}" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+				<div
+					class="competition-about d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-30">
+					<div class="left flex-1">
+						<img class="d-block w-100" src="{{ asset('assets/img/startup.jpg') }}" alt="" />
 					</div>
-					<div class="flex-1">
-						<h2>Qui Peut Participer ?</h2>
-						<ul>
-							<li>- Les jeunes entre 18 et 30 ans.</li>
-							<li>- Ceux qui ont une idée innovante ou une startup en phase de développement. La participation des jeunes femmes et étudiants sont grandement sollicitée.</li>
-						</ul>
+					<div class="right flex-1">
+						<h1 class="ttl-1 text-center">Deviens le Meilleur Startuppeur de l'Année !</h1>
+						<p class="text-justify">Tu as une idée innovante ? Un projet qui pourrait révolutionner le monde
+							? Ne laisse
+							pas ton potentiel inexploité ! Participe à ce concours pour jeunes startuppeurs et montre ce
+							dont tu es
+							capable. Concours rganisé par GateNews.africa et la FCCIM dans le cadre du projet CEO
+							BUSINESS FORUM -
+							INDIAN OCEAN
+						</p>
+						<div class="prix d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-15">
+							<div class="flex-1">
+								<h2>Prix et Récompenses</h2>
+								<ul>
+									<li>- Trophée CEO STARTUPPER AWARDS</li>
+									<li>- Invitation gratuite pendant le forum</li>
+									<li>- Possibilité de financement de votre projet</li>
+									<li>- Accès libre B2B avec les CEOs & Investisseurs</li>
+									<li>- Accompagnement de votre projet</li>
+								</ul>
+							</div>
+							<div class="flex-1">
+								<h2>Qui Peut Participer ?</h2>
+								<ul>
+									<li>- Les jeunes entre 18 et 30 ans.</li>
+									<li>- Ceux qui ont une idée innovante ou une startup en phase de développement. La
+										participation
+										des jeunes femmes et étudiants sont grandement sollicitée.</li>
+								</ul>
+							</div>
+						</div>
+						<p class="text-justify">Venez assister à la session d’information qui se déroulera a la salle de
+							conférence
+							du Ministère des Affaires Étrangères Anosy Antananarivo. Accès libre mais sur invitation.
+							(Invitations à
+							retirer sur notre site : www.ceobusinessforum.io</p>
+						<p class="text-justify">Ne manque pas cette chance unique de transformer ton idée en réalité et
+							de marquer
+							l’histoire. Inscris-toi dès maintenant et prépare-toi à devenir le meilleur startuppeur de
+							l’année !</p>
+						<p class="text-justify">Pour plus d’informations et pour t’inscrire, rends-toi sur notre site :
+							www.ceobusinessforum.io</p>
 					</div>
 				</div>
-				<p class="text-justify">Venez assister à la session d’information qui se déroulera a la salle de conférence du Ministère des Affaires Étrangères Anosy Antananarivo. Accès libre mais sur invitation. (Invitations à retirer sur notre site : www.ceobusinessforum.io</p>
-				<p class="text-justify">Ne manque pas cette chance unique de transformer ton idée en réalité et de marquer l’histoire. Inscris-toi dès maintenant et prépare-toi à devenir le meilleur startuppeur de l’année !</p>
-				<p class="text-justify">Pour plus d’informations et pour t’inscrire, rends-toi sur notre site : www.ceobusinessforum.io</p>
+			</div>
+			<div class="tab-pane fade {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? 'show active' : '' }}" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+				<form class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5" id="competion-subscribe"
+					action="{{ path('competition') }}?tab=register" method="post">
+					<h1 class="mb-4">Formulaire d'inscription à la scéance d'information ce 15 Juin 2024</h1>
+					<div class="row g-2">
+						<div class="col-md mb-3">
+							<div class="form-floating">
+								<input type="text" name="firstName"
+									class="form-control {{ errors.firstName is defined ? 'is-invalid' : '' }}"
+									id="floatingInputGrid"
+									value="{{ compSubscriber.firstName is defined ? compSubscriber.firstName : "" }}">
+								<label for="floatingInputGrid">Votre nom</label>
+							</div>
+							{% if errors.firstName is defined %}
+							<div class="invalid-feedback d-block">{{ errors.firstName }}</div>
+							{% endif %}
+						</div>
+						<div class="col-md mb-3">
+							<div class="form-floating">
+								<input type="text" name="lastName"
+									class="form-control {{ errors.lastName is defined ? 'is-invalid' : '' }}"
+									id="floatingInputGrid"
+									value="{{ compSubscriber.lastName is defined ? compSubscriber.lastName : "" }}">
+								<label for="floatingInputGrid">Votre prénom</label>
+							</div>
+							{% if errors.lastName is defined %}
+							<div class="invalid-feedback d-block">{{ errors.lastName }}</div>
+							{% endif %}
+						</div>
+					</div>
+					<div class="col-md mb-3">
+						<div class="form-floating">
+							<input type="text" name="institution"
+								class="form-control{{ errors.institution is defined ? ' is-invalid' : '' }}"
+								id="floatingInputGrid"
+								value="{{ compSubscriber.institution is defined ? compSubscriber.institution : "" }}">
+							<label for="floatingInputGrid">Entreprise/Institution/Université</label>
+						</div>
+						{% if errors.institution is defined %}
+						<div class="invalid-feedback d-block">{{ errors.institution }}</div>
+						{% endif %}
+					</div>
+					<div class="row g-2">
+						<div class="col-md mb-3">
+							<div class="form-floating mb-3">
+								<input type="text" name="email"
+									class="form-control {{ errors.email is defined ? 'is-invalid' : '' }}"
+									id="floatingInputGrid"
+									value="{{ compSubscriber.email is defined ? compSubscriber.email : "" }}">
+								<label for="floatingInputGrid">Votre adresse email</label>
+							</div>
+							{% if errors.email is defined %}
+							<div class="invalid-feedback d-block">{{ errors.email }}</div>
+							{% endif %}
+						</div>
+						<div class="col-md mb-3">
+							<div class="form-floating mb-3">
+								<input type="text" name="number"
+									class="form-control {{ errors.number is defined ? 'is-invalid' : '' }}"
+									id="floatingInputGrid"
+									value="{{ compSubscriber.number is defined ? compSubscriber.number : "" }}">
+								<label for="floatingInputGrid">Votre numéro téléphone</label>
+							</div>
+							{% if errors.number is defined %}
+							<div class="invalid-feedback d-block">{{ errors.number }}</div>
+							{% endif %}
+						</div>
+					</div>
+					<div class="d-flex justify-content-end">
+						<button class="btn btn-primary">S'inscrire</button>
+					</div>
+				</form>
 			</div>
 		</div>
-	</section>
+	</div>
+
+</section>
 {% endblock %}
 
 {% block scripts %}{% endblock %}

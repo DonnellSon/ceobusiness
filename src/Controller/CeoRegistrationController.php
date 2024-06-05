@@ -6,6 +6,7 @@ use App\Entity\Photo;
 use App\Entity\ProInfos;
 use App\Entity\PersoInfos;
 use App\Entity\TravelInfos;
+use App\Service\Formatter;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -22,7 +23,7 @@ use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 class CeoRegistrationController extends AbstractController
 {
 
-    public function __construct(private EntityManagerInterface $em,private ValidatorInterface $validator)
+    public function __construct(private EntityManagerInterface $em,private ValidatorInterface $validator,private Formatter $formatter)
     {
     }
 

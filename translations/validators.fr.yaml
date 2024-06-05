@@ -194,3 +194,5 @@ Error: Erreur
 "L'email {{ value }} est invalide !": "__L'email {{ value }} est invalide !"
 'votre contact est requise !': '__votre contact est requise !'
 "Le type d'inscription est requis": "__Le type d'inscription est requis"
+"You must enter your email to subscribe to our newsletter.": "Vous devez entrer votre email pour vous inscrire à notre newsletter"
+"You must enter a valid email address to subscribe to our newsletter.": "Vous devez entrer une adresse email valide pour s'inscrire à notre News Letter"

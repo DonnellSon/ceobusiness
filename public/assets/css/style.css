@@ -122,10 +122,8 @@ html {
 .banner {
     background: rgb(63, 99, 149);
     background: linear-gradient(149deg, rgba(63, 99, 149, 1) 6%, rgba(26, 128, 168, 1) 100%);
-    padding: 30px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    height: calc(100vh - 60px);
 }
 
 .banner .capt h1 {
@@ -647,6 +645,28 @@ header a {
     color: var(--txt-white1);
     border-bottom: 3px solid white;
 }
+.simple-tabs .nav{
+    border: none;
+}
+.simple-tabs .nav button {
+    color: #b7ceec;
+    min-width: 200px;
+}
+
+.simple-tabs .nav button:hover {
+    color: var(--txt-white1);
+}
+
+.simple-tabs .nav button {
+    border-radius: 0;
+}
+
+.simple-tabs .nav button.active {
+    background: none;
+    font-weight: 600;
+    color: var(--txt-white1);
+    border-bottom: 3px solid white;
+}
 
 .avantage-tab-content .slide h1 {
     color: var(--txt-white1);
@@ -664,10 +684,21 @@ header a {
     margin: 0 20px;
 }
 
-#startuper>div>.left img {
+#startuper .competition-about img {
     border-radius: 8px;
     position: sticky;
+    height: auto;
     top: 0;
+}
+form#competion-subscribe{
+    background: white;
+    border-radius: 6px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+form#competion-subscribe h1{
+    font-size: 20px;
+    text-align: center;
 }
 
 .prix {
@@ -2017,6 +2048,42 @@ footer hr {
     align-items: center;
     color: rgba(255, 255, 255, 0.747) !important;
 }
+.global-messages{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    max-width: 800px;
+    z-index: 1000000000;
+    pointer-events: none;
+}
+.global-messages > .error-label,.global-messages > .success-label{
+    pointer-events: all;
+    background: rgb(255, 255, 255);
+    height: 60px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeInDown .8s forwards;
+}
+.global-messages > .error-label > p{
+    color: rgb(224, 29, 29);
+    margin: 0;
+}
+.global-messages > .success-label > p{
+    color: var(--blue1);
+    margin: 0;
+}
+.global-messages > :is(.error-label,.success-label) > .close-label{
+    position: absolute;
+    right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
 
 /*=============== responsive ==============*/
 @media (max-width:768px) {
