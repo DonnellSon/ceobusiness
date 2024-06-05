@@ -26,7 +26,7 @@ class CompetitionSubscriber
     #[Assert\NotBlank()]
     private ?string $institution = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255,unique:true)]
     #[Assert\NotBlank()]
     #[Assert\Email()]
     private ?string $email = null;
