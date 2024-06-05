@@ -33,7 +33,7 @@ class CompetitionController extends AbstractController
             if (count($errors) <= 0) {
                 $this->em->persist($compSubscriber);
                 $this->em->flush();
-                $this->addFlash('globalSuccess', 'Félicitation vous êtes inscrit à la scéance d\'information du 15 Juin 2024');
+                $this->addFlash('globalSuccess', 'Félicitation vous êtes inscrit à la séance d\'information du 15 Juin 2024');
                 // $this->redirectToRoute('home');
             }
         }
