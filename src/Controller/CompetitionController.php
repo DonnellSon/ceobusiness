@@ -34,7 +34,7 @@ class CompetitionController extends AbstractController
                 $this->em->persist($compSubscriber);
                 $this->em->flush();
                 $this->addFlash('globalSuccess', 'Félicitation vous êtes inscrit à la séance d\'information du 15 Juin 2024');
-                $this->redirectToRoute('home');
+                return $this->redirectToRoute('home');
             }
         }
 
