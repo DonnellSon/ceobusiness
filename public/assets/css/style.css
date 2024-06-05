@@ -1823,16 +1823,11 @@ section#program p {
 
 /* ====================== hote ================= */
 #hote {
-    padding: 30px 0 30px 0;
     background: var(--blue2);
 }
 
 #hote .top {
     margin-bottom: 30px;
-}
-
-#hote .top .logo img {
-    width: 300px;
 }
 
 #hote .top h1 {
@@ -1867,12 +1862,7 @@ section#program p {
     font-size: 30px;
 }
 
-#hote img {
-    border-radius: 8px;
-}
-
 #hote ul {
-    margin: 10px 30px 30px 30px;
     font-weight: 500;
 }
 
