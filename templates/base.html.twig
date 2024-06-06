@@ -136,48 +136,7 @@
 				</div>
 				<div class="mb-3 latest col-lg-3 col-md-6 col-sm-12 col-121">
 					<h2>{{ 'Latest News' | trans }}</h2>
-					<ul>
-						<li>
-							<div class="latest-news-link-preview d-flex">
-								<div class="img position-relative">
-									<img class="position-absolute"
-										src="https://midi-madagasikara.mg/wp-content/uploads/2024/05/BUSINESS.jpg.webp"
-										alt="">
-								</div>
-								<div class="capt">
-									<h4 class="ttl line-clamp-2">{{ 'Madagascar will host a major regional and international event titled CEO Business Forum Indian Ocean, which will take place on the 14th and 15th of November 2024 at CCI Ivato, Antananarivo' | trans }}</h4>
-									<small>{{ 'This economic forum is jointly organized by...' | trans }}</small>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="latest-news-link-preview d-flex">
-								<div class="img position-relative">
-									<img class="position-absolute"
-										src="https://www.gasigasy.mg/wp-content/uploads/2024/05/c95d578c45a5ad01d1a193f2118aeeba_S.jpg.webp"
-										alt="">
-								</div>
-								<div class="capt">
-									<h4 class="ttl line-clamp-2">{{ 'Economic Forum - Gathering of decision-makers from the Indian Ocean in progress.' | trans }}</h4>
-									<small>{{ 'Regional ambitions. Gatenews Africa...' | trans}}</small>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="latest-news-link-preview d-flex">
-								<div class="img position-relative">
-									<img class="position-absolute"
-										src="https://ledefi.mg/wp-content/uploads/2024/05/FB_IMG_1715745486806.jpg"
-										alt="">
-								</div>
-								<div class="capt">
-									<h4 class="ttl line-clamp-2">«
-										{{ 'CEO Business Forum Indian Ocean: MEETING ON NOVEMBER 14-15, 2024 AT CCI IVATO' | trans }}</h4>
-									<small>{{ 'Madagascar is preparing to host the \'CEO Business Forum...' | trans
-										}}</small>
-								</div>
-							</div>
-						</li>
+					<ul class="footer-news">
 					</ul>
 				</div>
 				<div class="mb-3 quicklinks col-lg-3 col-md-6 col-sm-12 col-121">
@@ -290,6 +249,7 @@
 	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="{{ asset('assets/js/animation.js')}}"></script>
 <script src="{{ asset('assets/js/flashes.js')}}"></script>
+<script src="{{ asset('assets/js/news.js')}}"></script>
 {% block scripts %}{% endblock %}{% block basefoot %}{% endblock %}</body>
 
 </html>

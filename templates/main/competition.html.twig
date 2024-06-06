@@ -32,66 +32,49 @@
 						<button
 							class="nav-link {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? '' : 'active' }}"
 							id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
-							role="tab" aria-controls="pills-home" aria-selected="true">A propos</button>
+							role="tab" aria-controls="pills-home" aria-selected="true">{{ "About" | trans }}</button>
 					</li>
 					<li class="nav-item" role="presentation">
 						<button
 							class="nav-link {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? 'active' : '' }}"
 							id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-							role="tab" aria-controls="pills-profile" aria-selected="false">S'inscrire</button>
+							role="tab" aria-controls="pills-profile" aria-selected="false">{{ "Register" | trans }}</button>
 					</li>
 				</ul>
 				<div class="tab-content" id="pills-tabContent">
 					<div class="tab-pane fade {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? '' : 'show active' }}"
 						id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-						<h1 class="ttl-1 text-center">Deviens le Meilleur Startuppeur de l'Année !</h1>
-						<p class="text-justify">Tu as une idée innovante ? Un projet qui pourrait révolutionner le monde
-							? Ne laisse
-							pas ton potentiel inexploité ! Participe à ce concours pour jeunes startuppeurs et montre ce
-							dont tu es
-							capable. Concours rganisé par GateNews.africa et la FCCIM dans le cadre du projet CEO
-							BUSINESS FORUM -
-							INDIAN OCEAN
-						</p>
+						<h1 class="ttl-1 text-center">{{ "Become the Best Startupper of the Year !" | trans }}</h1>
+						<p class="text-justify">{{ "Do you have an innovative idea? A project that could revolutionize the world? Don't let your potential go untapped! Participate in this competition for young startuppers and show what you are capable of. Competition organized by GateNews.africa and the FCCIM as part of the CEO BUSINESS FORUM - INDIAN OCEAN project." | trans }}</p>
 						<div class="prix d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-15">
 							<div class="flex-1">
-								<h2>Prix et Récompenses</h2>
+								<h2>{{ "Prizes and Awards" | trans }}</h2>
 								<ul>
-									<li>- Trophée CEO STARTUPPER AWARDS</li>
-									<li>- Invitation gratuite pendant le forum</li>
-									<li>- Possibilité de financement de votre projet</li>
-									<li>- Accès libre B2B avec les CEOs & Investisseurs</li>
-									<li>- Accompagnement de votre projet</li>
+									<li>- {{ "Free invitation during the forum" | trans }}</li>
+									<li>- {{ "Possibility of funding for your project" | trans }}</li>
+									<li>- {{ "Free access to B2B meetings with CEOs & Investors" | trans }}</li>
+									<li>- {{ "Project mentoring" | trans }}</li>
+									<li>- {{ "Who Can Participate" | trans }}</li>
 								</ul>
 							</div>
 							<div class="flex-1">
-								<h2>Qui Peut Participer ?</h2>
+								<h2>{{ "Who Can Participate" | trans }} ?</h2>
 								<ul>
-									<li>- Les jeunes entre 18 et 30 ans.</li>
-									<li>- Ceux qui ont une idée innovante ou une startup en phase de développement. La
-										participation
-										des jeunes femmes et étudiants sont grandement sollicitée.</li>
+									<li>- {{ "Young people aged 18 to 30." | trans }}</li>
+									<li>- {{ "Those with an innovative idea or a startup in the development phase. Participation of young women and students is highly encouraged." | trans }}</li>
 								</ul>
 							</div>
 						</div>
-						<p class="text-justify">Venez assister à la session d’information qui se déroulera a la salle de
-							conférence
-							du Ministère des Affaires Étrangères Anosy Antananarivo. Accès libre mais sur invitation.
-							(Invitations à
-							retirer sur notre site : www.ceobusinessforum.io</p>
-						<p class="text-justify">Ne manque pas cette chance unique de transformer ton idée en réalité et
-							de marquer
-							l’histoire. Inscris-toi dès maintenant et prépare-toi à devenir le meilleur startuppeur de
-							l’année !</p>
-						<p class="text-justify">Pour plus d’informations et pour t’inscrire, rends-toi sur notre site :
-							www.ceobusinessforum.io</p>
+						<p class="text-justify">{{ "Come attend the information session which will take place in the conference room of the Ministry of Foreign Affairs, Anosy, Antananarivo. Free access but by invitation only. (Invitations to be obtained from our website :" | trans }} www.ceobusinessforum.io</p>
+						<p class="text-justify">{{ "Don't miss this unique opportunity to turn your idea into reality and make history. Sign up now and get ready to become the best startupper of the year!" | trans }}</p>
+						<p class="text-justify">{{ "For more information and to sign up, visit our website:" | trans }}</p>
 					</div>
 					<div class="tab-pane fade {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? 'show active' : '' }}"
 						id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
 						<form class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5" id="competion-subscribe"
 							action="{{ path('competition') }}?tab=register" method="post">
-							<h1 class="mb-4">Formulaire d'inscription à la séance d'information ce 15 Juin 2024</h1>
+							<h1 class="mb-4">{{ "Information Session Registration Form for June 15, 2024" | trans }}</h1>
 							<div class="row g-2">
 								<div class="col-md mb-3">
 									<div class="form-floating">

@@ -278,6 +278,85 @@ html {
     font-size: 22px;
 }
 
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+
+.gatenews-sld{
+    height: 60px;
+    background: #fbd200;
+    display: flex;
+}
+.gatenews-sld > div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.gatenews-sld > div:last-child{
+    flex-grow: 1;
+    min-width: 0;
+}
+.gatenews-sld > .left h1{
+    color: #333;
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+}
+.gatenews-sld > .right{
+    overflow: hidden;
+    position: relative;
+}
+.gatenews-sld > .right::before{
+    width:70px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right,#fbd200,transparent);
+    pointer-events: none;
+    z-index: 100;
+}
+.gatenews-sld > .right::after{
+    width:70px;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left,#fbd200,transparent);
+    pointer-events: none;
+    z-index: 100;
+}
+.gatenews-sld:hover > .right > .sld-parent{
+    animation-play-state: paused;
+}
+.gatenews-sld > .right > .sld-parent{
+    animation: slide 35s linear infinite;
+    white-space: nowrap;
+    margin-right: 20px;
+}
+.gatenews-sld > .right > .sld-parent > .sld > h1{
+    font-size: 16px;
+    color: #222;
+}
+.gatenews-sld > .right > .sld-parent > .sld{
+    display: inline-flex !important;
+}
+.gatenews-sld > .right > .sld-parent > .sld > img{
+    object-fit: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+}
+
+
 .slick-prev::before,
 .slick-next::before {
     background: transparent !important;

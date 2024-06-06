@@ -394,6 +394,17 @@
 
 	</div>
 </section>
+<section class="gatenews-sld">
+	<div class="left">
+		<h1>News by GateNews</h1>
+	</div>
+	<div class="right">
+		<div class="sld-parent d-inline-flex gap-20">
+		</div>
+		<div class="sld-parent d-inline-flex gap-20">
+		</div>
+	</div>
+</section>
 
 <section class="objectifMaj py-5" id="objectifs">
 	<div>
@@ -433,9 +444,9 @@
 						</div>
 						<div class="text-obj col-lg-8 col-md-8 col-sm-12 px-lg-3">
 							<p>•
-								{{ 'Raise awareness among business leaders and policymakers about the economic potential of the region' | trans }}</p>
+								{{ 'Raise awareness among business leaders and policymakers register the economic potential of the region' | trans }}</p>
 							<p>•
-								{{ 'Encourage private sector investments and favorable public policies for development' | trans }}</p>
+								{{ 'Encourage collaboration between countries in the region and international partners' | trans }}</p>
 							<p>•
 								{{ 'Promote the creation of public-private partnerships for the implementation of large-scale projects' | trans }}</p>
 						</div>
@@ -736,13 +747,10 @@
 			{% endif %}
 		</div>
 		<div class="right flex-1 d-flex flex-column align-items-start">
-			<h1 class="ttl-1">Trophée CEO STARTUPPER AWARDS</h1>
-			<p class="text-justify">Concours meilleurs startuppeurs de l’année 2024 organisée par GateNews.africa et la
-				FCCIM « Fédération des Chambres de Commerce et d'Industrie de Madagascar » dans le cadre du projet CEO
-				BUSINESS FORUM - INDIAN OCEAN</p>
+			<h1 class="ttl-1">{{ "CEO STARTUPPER AWARDS Trophy" | trans }}</h1>
+			<p class="text-justify">{{ 'Competition for the best startups of the year 2024 organized by GateNews.africa and the FCCIM "Federation of Chambers of Commerce and Industry of Madagascar" as part of the CEO BUSINESS FORUM - INDIAN OCEAN project' | trans }}</p>
 
-			<a href="{{ path('competition') }}" target="_blank" class="comp-plus-btn btn btn-oultine-white">En savoir
-				plus</a>
+			<a href="{{ path('competition') }}" target="_blank" class="comp-plus-btn btn btn-oultine-white">{{ "Find out more" | trans }}</a>
 
 		</div>
 	</div>
@@ -751,7 +759,7 @@
 
 <section id="reportage">
 	<div class="top">
-		<h2 class="title ttl-1">{{ "Photo coverages" | trans }}</h2>
+		<h2 class="title ttl-1">{{ "Photo Reports" | trans }}</h2>
 		<p class="text-center">{{ "Memorable photos from the press conference and the official launch of the event, which took place at the CCI Ivato Antananarivo, Madagascar on May 14, 2024." | trans }}</p>
 		<p class="text-center">{{ "The presentation of the CEO BUSINESS FORUM INDIAN OCEAN has sparked enthusiastic reactions among the audience, composed of the national and international economic community, representatives of professional associations, government officials, international organizations, economic actors, as well as members of the diplomatic corps." | trans}}</p>
 	</div>
@@ -933,7 +941,7 @@
 		</div>
 		<div class="pavillon-item position-relative">
 			<div class="ico position-absolute">
-				<i class="fa-solid fa-business-time"></i>
+				<i class="fa-solid fa-tents"></i>
 			</div>
 			<h3>{{ "EXPOSITION" | trans }}</h3>
 			<p>
@@ -942,14 +950,14 @@
 		</div>
 		<div class="pavillon-item position-relative">
 			<div class="ico position-absolute">
-				<i class="fa-solid fa-business-time"></i>
+				<i class="fa-solid fa-martini-glass-citrus"></i>
 			</div>
 			<h3>{{ "ANIMATION" | trans }}</h3>
 			<p>{{ "Join our interactive animation sessions, including conferences, roundtable discussions, and debates, led by national and international economic experts, for an in-depth exploration of the economic challenges and opportunities in Madagascar." | trans }}</p>
 		</div>
 		<div class="pavillon-item position-relative">
 			<div class="ico position-absolute">
-				<i class="fa-solid fa-business-time"></i>
+				<i class="fa-solid fa-bullhorn"></i>
 			</div>
 			<h3>{{ "PROMOTION" | trans }}</h3>
 			<p>{{ "Take advantage of our exclusive promotions to discover investment opportunities and commercial partnerships in various sectors of the Malagasy economy, offering attractive incentives for entrepreneurs and investors." | trans }}
@@ -958,21 +966,17 @@
 		</div>
 		<div class="pavillon-item position-relative">
 			<div class="ico position-absolute">
-				<i class="fa-solid fa-shop"></i>
+				<i class="fa-solid fa-store"></i>
 			</div>
-			<h3>VENTES</h3>
-			<p>Visitez notre espace dédié aux ventes, offrant une gamme de publications spécialisées, de rapports
-				économiques et de ressources stratégiques pour les entreprises et les investisseurs intéressés par le
-				marché malgache.</p>
+			<h3>{{ "SALES" | trans }}</h3>
+			<p>{{ "Visit our dedicated sales area, offering a range of specialized publications, economic reports, and strategic resources for businesses and investors interested in the Malagasy market." | trans }}</p>
 		</div>
 		<div class="pavillon-item position-relative">
 			<div class="ico position-absolute">
-				<i class="fa-regular fa-building"></i>
+				<i class="fa-regular fa-handshake"></i>
 			</div>
-			<h3>B2C</h3>
-			<p>Bénéficiez d'une expérience B2C personnalisée et axée sur le networking, où les participants peuvent
-				établir des contacts professionnels, échanger des idées et explorer des opportunités de collaboration
-				avec des partenaires potentiels dans le cadre d'un environnement économique dynamique.
+			<h3>{{ "B2C" | trans}}</h3>
+			<p>{{ "Benefit from a personalized and networking-focused B2C experience, where participants can establish professional contacts, exchange ideas, and explore collaboration opportunities with potential partners in a dynamic economic environment." | trans }}
 			</p>
 		</div>
 	</div>
