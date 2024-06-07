@@ -1,7 +1,7 @@
 
 #form-banner {
     height: 200px;
-    background: linear-gradient(#152644ea, #152644ea), url(../img/fondmarin.jpg);
+    background: var(--blue2);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;

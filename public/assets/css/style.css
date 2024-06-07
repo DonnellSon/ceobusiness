@@ -304,7 +304,7 @@ html {
 }
 .gatenews-sld > .left h1{
     color: #333;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
     font-weight: 600;
 }
@@ -343,7 +343,7 @@ html {
     margin-right: 20px;
 }
 .gatenews-sld > .right > .sld-parent > .sld > h1{
-    font-size: 16px;
+    font-size: 14px;
     color: #222;
 }
 .gatenews-sld > .right > .sld-parent > .sld{
