@@ -1,5 +1,7 @@
 
 ###> symfony/framework-bundle ###
+/.env
+/credentials.json
 /.env.local
 /.env.local.php
 /.env.*.local

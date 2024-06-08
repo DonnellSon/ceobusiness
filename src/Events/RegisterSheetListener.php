@@ -7,7 +7,7 @@ use App\Event\UserRegisteredEvent;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
-class UserRegistrationListener implements EventSubscriberInterface
+class UserRegistrationListener
 {
     public static function getSubscribedEvents()
     {
