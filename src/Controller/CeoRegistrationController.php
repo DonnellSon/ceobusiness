@@ -7,6 +7,7 @@ use App\Entity\ProInfos;
 use App\Entity\PersoInfos;
 use App\Entity\TravelInfos;
 use App\Service\Formatter;
+use App\Service\GoogleSheetsService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,7 +24,7 @@ use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 class CeoRegistrationController extends AbstractController
 {
 
-    public function __construct(private EntityManagerInterface $em,private ValidatorInterface $validator,private Formatter $formatter)
+    public function __construct(private EntityManagerInterface $em,private ValidatorInterface $validator,private Formatter $formatter,private GoogleSheetsService $googleSheetsService)
     {
     }
 
@@ -250,6 +251,50 @@ class CeoRegistrationController extends AbstractController
                         'travelInfos'=>$user->getTravelInfos()
                     ]);
                     $mailer->send($adminEmail);
+                    
+                    foreach( $users as $user ) {
+                        $persoInfos=$user->getPersoInfos();
+                        $proInfos=$user->getProInfos();
+                        $travelInfos=$user->getTravelInfos();
+                        $confirmed[]=[
+                            $persoInfos->getFirstName(),
+                            $persoInfos->getLastName(),
+                            $persoInfos->getOtherName() ?? 'Aucun',
+                            $persoInfos->getGender(),
+                            $persoInfos->getCity(),
+                            $persoInfos->getAddress(),
+                            $persoInfos->getCountry(),
+                            $persoInfos->getPersoEmail() ?? 'Aucun',
+                            $persoInfos->getProEmail(),
+                            $persoInfos->getPersoNumber(),
+                            $persoInfos->getProNumber(),
+                            $persoInfos->getWhatsApp(),
+                            $proInfos->getEntrepriseName(),
+                            $proInfos->getEntrepriseTitle(),
+                            $proInfos->getEntrepriseSize(),
+                            $proInfos->getEntrepriseActivity(),
+                            $proInfos->getRegion(),
+                            $proInfos->getCity(),
+                            $travelInfos->getTravelAssistance(),
+                            $travelInfos->getHotelReservation(),
+                            $travelInfos->getAirportTransfer(),
+                            $travelInfos->getOtherTravelDetails() ?? 'Aucun'
+                        ];
+                    }
+            
+                    $spreadsheetId = '1lS3vh-scfY_xZvJGRJfYAiwRDt4_VUrc_xpbCnQQp7U';
+                    $range = 'Inscription CEO Business Forum IO';
+                   
+            
+                    $success = $this->googleSheetsService->appendToSpreadsheet($spreadsheetId, $range, $confirmed);
+            
+                    if (!$success) {
+                        throw new \RuntimeException('Erreur lors de l\'insertion des données dans le Google Sheet.');
+                    }
+                    $this->googleSheetsService->autoResizeColumns($spreadsheetId);
+
+
+
                 return $this->render('registersuccess.html.twig', [
                     'controller_name' => 'RegistrationController',
                 ]);

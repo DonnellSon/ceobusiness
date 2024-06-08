@@ -4,6 +4,7 @@ namespace App\Events;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
+use Symfony\Component\HttpKernel\Event\ViewEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 class LocalePrefixListener implements EventSubscriberInterface
@@ -11,7 +12,7 @@ class LocalePrefixListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return [
-            KernelEvents::REQUEST => 'onKernelRequest',
+            ViewEvent::class => 'onKernelRequest',
         ];
     }
 
