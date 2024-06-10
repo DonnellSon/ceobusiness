@@ -158,8 +158,7 @@
 	function isEmpty(obj) {
 		return Object.entries(obj).length === 0;
 	}
-	var strErrors=`{{ errors|json_encode|raw }}`.toString().replace(/'/g, "\'")
-	console.log(JSON.stringify(strErrors))
-	console.log(JSON.parse(JSON.stringify(strErrors)))
+	var strErrors=`{{ errors|json_encode|raw }}`.toString()
+	console.log(JSON.parse(strErrors))
 </script>
 {% endblock %}
