@@ -159,7 +159,7 @@
 		return Object.entries(obj).length === 0;
 	}
 	var strErrors=`{{ errors|json_encode|raw }}`.toString().replace(/'/g, "\\'")
-	var errors = JSON.parse(strErrors);
+	var errors = JSON.parse(''+strErrors+'');
 	if(!isEmpty(errors)){
         var myModal = new bootstrap.Modal(document.getElementById('compModal'));
         myModal.show();
