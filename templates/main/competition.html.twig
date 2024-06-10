@@ -156,6 +156,6 @@
 {% block scripts %}
 <script>
 	var errors = JSON.parse('{{ errors|json_encode|raw }}');
-	console.log(errors);
+	console.log(errors.length);
 </script>
 {% endblock %}
