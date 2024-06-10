@@ -21,145 +21,128 @@
 
 {% block body %}
 <section id="startuper" class="py-4 bg-danger">
-	<div style="max-width: unset;" class="competition-about d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-30">
+	<div style="max-width: unset;"
+		class="competition-about d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-30">
 		<div class="left flex-1">
 			<img class="d-block w-100" src="{{ asset('assets/img/startup.jpg') }}" alt="" />
+			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#compModal">
+				Launch demo modal
+			</button>
 		</div>
 		<div class="right flex-1">
-			<div class="simple-tabs">
-				<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-					<li class="nav-item" role="presentation">
-						<button
-							class="nav-link {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? '' : 'active' }}"
-							id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
-							role="tab" aria-controls="pills-home" aria-selected="true">{{ "About" | trans }}</button>
-					</li>
-					<li class="nav-item" role="presentation">
-						<button
-							class="nav-link {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? 'active' : '' }}"
-							id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button"
-							role="tab" aria-controls="pills-profile" aria-selected="false">{{ "Register" | trans }}</button>
-					</li>
-				</ul>
-				<div class="tab-content" id="pills-tabContent">
-					<div class="tab-pane fade {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? '' : 'show active' }}"
-						id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-						<h1 class="ttl-1 text-center">{{ "Become the Best Startupper of the Year !" | trans }}</h1>
-						<p class="text-justify">{{ "Do you have an innovative idea? A project that could revolutionize the world? Don't let your potential go untapped! Participate in this competition for young startuppers and show what you are capable of. Competition organized by GateNews.africa and the FCCIM as part of the CEO BUSINESS FORUM - INDIAN OCEAN project." | trans }}</p>
-						<div class="prix d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-15">
-							<div class="flex-1">
-								<h2>{{ "Prizes and Awards" | trans }}</h2>
-								<ul>
-									<li>- {{ "Free invitation during the forum" | trans }}</li>
-									<li>- {{ "Possibility of funding for your project" | trans }}</li>
-									<li>- {{ "Free access to B2B meetings with CEOs & Investors" | trans }}</li>
-									<li>- {{ "Project mentoring" | trans }}</li>
-									<li>- {{ "Who Can Participate" | trans }}</li>
-								</ul>
-							</div>
-							<div class="flex-1">
-								<h2>{{ "Who Can Participate" | trans }} ?</h2>
-								<ul>
-									<li>- {{ "Young people aged 18 to 30." | trans }}</li>
-									<li>- {{ "Those with an innovative idea or a startup in the development phase. Participation of young women and students is highly encouraged." | trans }}</li>
-								</ul>
-							</div>
-						</div>
-						<p class="text-justify">{{ "Come attend the information session which will take place in the conference room of the Ministry of Foreign Affairs, Anosy, Antananarivo. Free access but by invitation only. (Invitations to be obtained from our website :" | trans }} www.ceobusinessforum.io</p>
-						<p class="text-justify">{{ "Don't miss this unique opportunity to turn your idea into reality and make history. Sign up now and get ready to become the best startupper of the year!" | trans }}</p>
-						<p class="text-justify">{{ "For more information and to sign up, visit our website:" | trans }}</p>
-					</div>
-					<div class="tab-pane fade {{ app.request.query.get('tab') is defined and app.request.query.get('tab')=='register' ? 'show active' : '' }}"
-						id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+			<h1 class="ttl-1 text-center">{{ "Become the Best Startupper of the Year !" | trans }}</h1>
+			<p class="text-justify">{{ "Do you have an innovative idea? A project that could revolutionize the world? Don't let your potential go untapped! Participate in this competition for young startuppers and show what you are capable of. Competition organized by GateNews.africa and the FCCIM as part of the CEO BUSINESS FORUM - INDIAN OCEAN project." | trans }}</p>
+			<div class="prix d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-15">
+				<div class="flex-1">
+					<h2>{{ "Prizes and Awards" | trans }}</h2>
+					<ul>
+						<li>- {{ "Free invitation during the forum" | trans }}</li>
+						<li>- {{ "Possibility of funding for your project" | trans }}</li>
+						<li>- {{ "Free access to B2B meetings with CEOs & Investors" | trans }}</li>
+						<li>- {{ "Project mentoring" | trans }}</li>
+						<li>- {{ "Who Can Participate" | trans }}</li>
+					</ul>
+				</div>
+				<div class="flex-1">
+					<h2>{{ "Who Can Participate" | trans }} ?</h2>
+					<ul>
+						<li>- {{ "Young people aged 18 to 30." | trans }}</li>
+						<li>- {{ "Those with an innovative idea or a startup in the development phase.Participation of young women and students is highly encouraged." | trans }}</li>
+					</ul>
+				</div>
+			</div>
+			<p class="text-justify">{{ "Come attend the information session which will take place in the conference room of the Ministry of Foreign Affairs, Anosy, Antananarivo. Free access but by invitation only. (Invitations to be obtained from our website :" | trans }}
+				www.ceobusinessforum.io</p>
+			<p class="text-justify">{{ "Don't miss this unique opportunity to turn your idea into reality and make history. Sign up now and get ready to become the best startupper of the year!" | trans }}</p>
+			<p class="text-justify">{{ "For more information and to sign up, visit our website:" | trans }}
+			</p>
+		</div>
+	</div>
+</section>
 
-						<form class="p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5" id="competion-subscribe"
-							action="{{ path('competition') }}?tab=register" method="post">
-							<h1 class="mb-4">{{ "Information Session Registration Form for June 15, 2024" | trans }}</h1>
-							<div class="row g-2">
-								<div class="col-md mb-3">
-									<div class="form-floating">
-										<input type="text" name="firstName"
-											class="form-control {{ errors.firstName is defined ? 'is-invalid' : '' }}"
-											id="floatingInputGrid"
-											value="{{ compSubscriber.firstName is defined ? compSubscriber.firstName : "" }}">
-										<label for="floatingInputGrid">Votre nom</label>
-									</div>
-									{% if errors.firstName is defined %}
-									<div class="invalid-feedback d-block">{{ errors.firstName }}</div>
-									{% endif %}
-								</div>
-								<div class="col-md mb-3">
-									<div class="form-floating">
-										<input type="text" name="lastName"
-											class="form-control {{ errors.lastName is defined ? 'is-invalid' : '' }}"
-											id="floatingInputGrid"
-											value="{{ compSubscriber.lastName is defined ? compSubscriber.lastName : "" }}">
-										<label for="floatingInputGrid">Votre prénom</label>
-									</div>
-									{% if errors.lastName is defined %}
-									<div class="invalid-feedback d-block">{{ errors.lastName }}</div>
-									{% endif %}
-								</div>
-							</div>
-							<div class="col-md mb-3">
-								<div class="form-floating">
-									<input type="text" name="institution"
-										class="form-control{{ errors.institution is defined ? ' is-invalid' : '' }}"
-										id="floatingInputGrid"
-										value="{{ compSubscriber.institution is defined ? compSubscriber.institution : "" }}">
-									<label for="floatingInputGrid">Entreprise/Institution/Université</label>
-								</div>
-								{% if errors.institution is defined %}
-								<div class="invalid-feedback d-block">{{ errors.institution }}</div>
-								{% endif %}
-							</div>
-							<div class="row g-2">
-								<div class="col-md mb-3">
-									<div class="form-floating mb-3">
-										<input type="text" name="email"
-											class="form-control {{ errors.email is defined ? 'is-invalid' : '' }}"
-											id="floatingInputGrid"
-											value="{{ compSubscriber.email is defined ? compSubscriber.email : "" }}">
-										<label for="floatingInputGrid">Votre adresse email</label>
-									</div>
-									{% if errors.email is defined %}
-									<div class="invalid-feedback d-block">{{ errors.email }}</div>
-									{% endif %}
-								</div>
-								<div class="col-md mb-3">
-									<div class="form-floating mb-3">
-										<input type="text" name="number"
-											class="form-control {{ errors.number is defined ? 'is-invalid' : '' }}"
-											id="floatingInputGrid"
-											value="{{ compSubscriber.number is defined ? compSubscriber.number : "" }}">
-										<label for="floatingInputGrid">Votre numéro téléphone</label>
-									</div>
-									{% if errors.number is defined %}
-									<div class="invalid-feedback d-block">{{ errors.number }}</div>
-									{% endif %}
-								</div>
-							</div>
-							<div class="d-flex justify-content-end">
-								<button class="btn btn-primary">S'inscrire</button>
-							</div>
-						</form>
+
+<div class="modal fade" id="compModal" tabindex="-1" aria-labelledby="compModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<form class="modal-content" id="competion-subscribe" action="{{ path('competition') }}?tab=register"
+			method="post">
+			<div class="modal-header">
+				<h5 class="modal-title" id="compModalLabel">Modal title</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h1 class="mb-4">{{ "Information Session Registration Form for June 15, 2024" | trans }}
+				</h1>
+				<div class="row g-2">
+					<div class="col-md mb-3">
+						<div class="form-floating">
+							<input type="text" name="firstName"
+								class="form-control {{ errors.firstName is defined ? 'is-invalid' : '' }}"
+								id="floatingInputGrid"
+								value="{{ compSubscriber.firstName is defined ? compSubscriber.firstName : "" }}">
+							<label for="floatingInputGrid">Votre nom</label>
+						</div>
+						{% if errors.firstName is defined %}
+						<div class="invalid-feedback d-block">{{ errors.firstName }}</div>
+						{% endif %}
+					</div>
+					<div class="col-md mb-3">
+						<div class="form-floating">
+							<input type="text" name="lastName"
+								class="form-control {{ errors.lastName is defined ? 'is-invalid' : '' }}"
+								id="floatingInputGrid"
+								value="{{ compSubscriber.lastName is defined ? compSubscriber.lastName : "" }}">
+							<label for="floatingInputGrid">Votre prénom</label>
+						</div>
+						{% if errors.lastName is defined %}
+						<div class="invalid-feedback d-block">{{ errors.lastName }}</div>
+						{% endif %}
+					</div>
+				</div>
+				<div class="col-md mb-3">
+					<div class="form-floating">
+						<input type="text" name="institution"
+							class="form-control{{ errors.institution is defined ? ' is-invalid' : '' }}"
+							id="floatingInputGrid"
+							value="{{ compSubscriber.institution is defined ? compSubscriber.institution : "" }}">
+						<label for="floatingInputGrid">Entreprise/Institution/Université</label>
+					</div>
+					{% if errors.institution is defined %}
+					<div class="invalid-feedback d-block">{{ errors.institution }}</div>
+					{% endif %}
+				</div>
+				<div class="row g-2">
+					<div class="col-md mb-3">
+						<div class="form-floating mb-3">
+							<input type="text" name="email"
+								class="form-control {{ errors.email is defined ? 'is-invalid' : '' }}"
+								id="floatingInputGrid"
+								value="{{ compSubscriber.email is defined ? compSubscriber.email : "" }}">
+							<label for="floatingInputGrid">Votre adresse email</label>
+						</div>
+						{% if errors.email is defined %}
+						<div class="invalid-feedback d-block">{{ errors.email }}</div>
+						{% endif %}
+					</div>
+					<div class="col-md mb-3">
+						<div class="form-floating mb-3">
+							<input type="text" name="number"
+								class="form-control {{ errors.number is defined ? 'is-invalid' : '' }}"
+								id="floatingInputGrid"
+								value="{{ compSubscriber.number is defined ? compSubscriber.number : "" }}">
+							<label for="floatingInputGrid">Votre numéro téléphone</label>
+						</div>
+						{% if errors.number is defined %}
+						<div class="invalid-feedback d-block">{{ errors.number }}</div>
+						{% endif %}
 					</div>
 				</div>
 			</div>
-
-
-
-
-
-
-		</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary">S'inscrire</button>
+			</div>
+		</form>
 	</div>
-
-
-
-
-
-</section>
+</div>
 {% endblock %}
 
 {% block scripts %}{% endblock %}
