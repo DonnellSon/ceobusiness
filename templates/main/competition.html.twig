@@ -154,12 +154,11 @@
 {% endblock %}
 
 {% block scripts %}
-{% set strErrors = errors|json_encode %}
 <script>
 	function isEmpty(obj) {
 		return Object.entries(obj).length === 0;
 	}
-	var strErrors='{{ strErrors|raw }}'
+	var strErrors='{{ errors|raw }}'
 	console.log(strErrors)
 	
 </script>
