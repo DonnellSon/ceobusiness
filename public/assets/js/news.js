@@ -7,7 +7,7 @@
     gatenews.forEach(function(g){
         g.innerHTML=""
         news.forEach(function(n){
-            g.innerHTML+=`<a href="/" class="sld d-flex align-items-center gap-10">
+            g.innerHTML+=`<a href="${n.url}" class="sld d-flex align-items-center gap-10">
             <img class="d-block" src="${n.photoUrl}" alt="CEO Business Forum">
             <h1 class="m-0">${n.title}</h1>
         </a>`
