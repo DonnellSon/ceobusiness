@@ -160,11 +160,6 @@
 	}
 	var strErrors='{{ errors|json_encode|raw }}'
 	console.log(strErrors.replace(/'/g, "\\'"))
-	var errors = JSON.parse(strErrors.replace(/'/g, "\\'"));
 	
-	if(!isEmpty(errors)){
-        var myModal = new bootstrap.Modal(document.getElementById('compModal'));
-        myModal.show();
-	}
 </script>
 {% endblock %}
