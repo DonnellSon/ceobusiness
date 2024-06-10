@@ -153,4 +153,9 @@
 </div>
 {% endblock %}
 
-{% block scripts %}{% endblock %}
+{% block scripts %}
+<script>
+	var errors = JSON.parse('{{ errors|json_encode|raw }}');
+	console.log(errors);
+</script>
+{% endblock %}
