@@ -156,8 +156,7 @@
 {% block scripts %}
 <script>
 	function isEmpty(obj) {
-		console.log(typeof JSON.parse(JSON.stringify(obj)))
-		return (Object.entries(obj).length === 0 && obj.constructor === Object) || Array.isArray(obj);
+		return (Object.entries(obj).length === 0 && obj.constructor === Object) || typeof obj === "object";
 	}
 	var errors=JSON.parse(JSON.stringify(`{{ errors|json_encode|raw }}`.toString()))
 	
