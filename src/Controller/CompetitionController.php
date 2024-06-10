@@ -2,19 +2,20 @@
 
 namespace App\Controller;
 
-use App\Entity\CompetitionSubscriber;
 use App\Service\Formatter;
+use App\Service\GoogleSheetsService;
+use App\Entity\CompetitionSubscriber;
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CompetitionController extends AbstractController
 {
 
-    public function __construct(private EntityManagerInterface $em, private Formatter $formatter, private ValidatorInterface $validator)
+    public function __construct(private EntityManagerInterface $em, private Formatter $formatter, private ValidatorInterface $validator,private GoogleSheetsService $googleSheetsService)
     {
     }
 
@@ -34,6 +35,24 @@ class CompetitionController extends AbstractController
                 $this->em->persist($compSubscriber);
                 $this->em->flush();
                 $this->addFlash('globalSuccess', 'Félicitation vous êtes inscrit à la séance d\'information du 15 Juin 2024');
+                $list[] = [
+                    $s->getFirstName(),
+                    $s->getLastName(),
+                    $s->getInstitution(),
+                    $s->getEmail(),
+                    $s->getNumber(),
+                ];
+
+                $spreadsheetId = '1lS3vh-scfY_xZvJGRJfYAiwRDt4_VUrc_xpbCnQQp7U';
+                $range = 'Inscription CEO Startuppers Awards 2024';
+
+                $success = $this->googleSheetsService->appendToSpreadsheet($spreadsheetId, $range, $list);
+
+                if (!$success) {
+                    throw new \RuntimeException('Erreur lors de l\'insertion des données dans le Google Sheet.');
+                }
+                $this->googleSheetsService->autoResizeColumns($spreadsheetId);
+
                 return $this->redirectToRoute('home');
             }
         }
@@ -41,7 +60,7 @@ class CompetitionController extends AbstractController
         return $this->render('main/competition.html.twig', [
             'controller_name' => 'CompetitionController',
             'errors' => isset($errors) ? $this->formatter->formatErrors($errors) : [],
-            'compSubscriber'=>isset($compSubscriber) ? $compSubscriber : null
+            'compSubscriber' => isset($compSubscriber) ? $compSubscriber : null
         ]);
     }
 }
