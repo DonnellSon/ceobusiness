@@ -763,11 +763,13 @@ header a {
     margin: 0 20px;
 }
 
-#startuper .competition-about img {
-    border-radius: 8px;
+#startuper .competition-about > .left > div {
     position: sticky;
-    height: auto;
     top: 0;
+}
+#startuper .competition-about > .left > div > img {
+    border-radius: 8px;
+    height: auto;
 }
 form#competion-subscribe{
     background: white;
