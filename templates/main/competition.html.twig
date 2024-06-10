@@ -160,5 +160,6 @@
 	}
 	var strErrors=`{{ errors|json_encode|raw }}`.toString().replace(/'/g, "\'")
 	console.log(JSON.stringify(strErrors))
+	console.log(JSON.parse(JSON.stringify(strErrors)))
 </script>
 {% endblock %}
