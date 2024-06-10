@@ -159,8 +159,9 @@
 		return Object.entries(obj).length === 0;
 	}
 	var strErrors='{{ errors|json_encode|raw }}'
+	console.log(strErrors.replace(/'/g, "\\'"))
 	var errors = JSON.parse(strErrors.replace(/'/g, "\\'"));
-	console.log(errors)
+	
 	if(!isEmpty(errors)){
         var myModal = new bootstrap.Modal(document.getElementById('compModal'));
         myModal.show();
