@@ -251,8 +251,8 @@ class CeoRegistrationController extends AbstractController
                         'travelInfos'=>$user->getTravelInfos()
                     ]);
                     $mailer->send($adminEmail);
+
                     
-                    foreach( $users as $user ) {
                         $persoInfos=$user->getPersoInfos();
                         $proInfos=$user->getProInfos();
                         $travelInfos=$user->getTravelInfos();
@@ -280,7 +280,7 @@ class CeoRegistrationController extends AbstractController
                             $travelInfos->getAirportTransfer(),
                             $travelInfos->getOtherTravelDetails() ?? 'Aucun'
                         ];
-                    }
+                   
             
                     $spreadsheetId = '1lS3vh-scfY_xZvJGRJfYAiwRDt4_VUrc_xpbCnQQp7U';
                     $range = 'Inscription CEO Business Forum IO';
