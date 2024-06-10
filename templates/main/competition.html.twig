@@ -159,7 +159,7 @@
 		return Object.entries(obj).length === 0;
 	}
 	
-	var errors = JSON.parse("{{ errors|json_encode|raw }}");
+	var errors = JSON.parse('{{ errors|json_encode|raw }}'.replace(/'/g, "\\'"));
 	console.log(errors)
 	if(!isEmpty(errors)){
         var myModal = new bootstrap.Modal(document.getElementById('compModal'));
