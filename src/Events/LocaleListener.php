@@ -24,13 +24,13 @@ class LocaleListener
 
     public function onKernelRequest(RequestEvent $event)
     {
-        $request = $event->getRequest();
-        $locale = $request->attributes->get('_locale');
+        // $request = $event->getRequest();
+        // $locale = $request->attributes->get('_locale');
      
-        if (!$locale) {
-            $defaultUrl = $this->router->generate('home', ['_locale' => $this->defaultLocale]); // Change 'homepage' to the name of your default route
-            $response = new RedirectResponse($defaultUrl);
-            $event->setResponse($response);
-        }
+        // if (!$locale) {
+        //     $defaultUrl = $this->router->generate('home', ['_locale' => $this->defaultLocale]); // Change 'homepage' to the name of your default route
+        //     $response = new RedirectResponse($defaultUrl);
+        //     $event->setResponse($response);
+        // }
     }
 }

@@ -17,7 +17,7 @@
         g.innerHTML=""
         news.slice(0, -2).forEach(function(n){
             g.innerHTML+=`<li>
-            <div class="latest-news-link-preview d-flex">
+            <a href="${n.url}" class="latest-news-link-preview d-flex">
                 <div class="img position-relative">
                     <img class="position-absolute"
                         src="${n.photoUrl}"
@@ -27,7 +27,7 @@
                     <h4 class="ttl line-clamp-2">${n.title}</h4>
                     <small class="ttl line-clamp-2">${n.content}</small>
                 </div>
-            </div>
+            </a>
         </li>`
         })
     })
