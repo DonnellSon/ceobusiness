@@ -161,6 +161,7 @@
 	
 	
 	var errors = JSON.parse('{{ errors|json_encode|raw }}');
+	console.log(isEmpty(errors),'comperr')
 	if(!isEmpty(errors)){
         var myModal = new bootstrap.Modal(document.getElementById('compModal'));
         myModal.show();
