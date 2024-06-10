@@ -155,7 +155,12 @@
 
 {% block scripts %}
 <script>
+	function isEmpty(obj) {
+		return Object.entries(obj).length === 0;
+	}
+	
+	
 	var errors = JSON.parse('{{ errors|json_encode|raw }}');
-	console.log(errors.length);
+	console.log(isEmpty(errors));
 </script>
 {% endblock %}
