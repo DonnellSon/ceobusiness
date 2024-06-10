@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 #[ORM\Entity(repositoryClass: CompetitionSubscriberRepository::class)]
-#[UniqueEntity('email', message: "L'adresse email "{{ value }}" est déjà utilisée")]
+#[UniqueEntity('email', message: 'L\'adresse email "{{ value }}" est déjà utilisée')]
 class CompetitionSubscriber
 {
     #[ORM\Id]
