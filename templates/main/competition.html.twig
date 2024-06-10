@@ -154,12 +154,12 @@
 {% endblock %}
 
 {% block scripts %}
-{% set strErrors = errors|replace("'","\\'") %}
+{% set strErrors = errors|json_encode|replace("'","\\'") %}
 <script>
 	function isEmpty(obj) {
 		return Object.entries(obj).length === 0;
 	}
-	var strErrors='{{ strErrors|json_encode|raw }}'
+	var strErrors='{{ strErrors|raw }}'
 	console.log(strErrors)
 	
 </script>
