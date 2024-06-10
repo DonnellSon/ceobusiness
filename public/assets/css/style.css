@@ -2155,6 +2155,9 @@ footer hr {
     cursor: pointer;
 }
 
+.modal-dialog {
+    max-width: 700px !important;
+}
 
 /*=============== responsive ==============*/
 @media (max-width:768px) {
