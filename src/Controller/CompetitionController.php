@@ -36,11 +36,11 @@ class CompetitionController extends AbstractController
                 $this->em->flush();
                 $this->addFlash('globalSuccess', 'Félicitation vous êtes inscrit à la séance d\'information du 15 Juin 2024');
                 $list[] = [
-                    $s->getFirstName(),
-                    $s->getLastName(),
-                    $s->getInstitution(),
-                    $s->getEmail(),
-                    $s->getNumber(),
+                    $compSubscriber->getFirstName(),
+                    $compSubscriber->getLastName(),
+                    $compSubscriber->getInstitution(),
+                    $compSubscriber->getEmail(),
+                    $compSubscriber->getNumber(),
                 ];
 
                 $spreadsheetId = '1lS3vh-scfY_xZvJGRJfYAiwRDt4_VUrc_xpbCnQQp7U';
