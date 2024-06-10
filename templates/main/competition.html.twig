@@ -69,9 +69,9 @@
 </section>
 
 
-<div class="modal fade" id="compModal" tabindex="-1" aria-labelledby="compModalLabel" aria-hidden="true">
+<div class="modal fade{{ errors|length > 0 ? ' show' : '' }}" id="compModal" tabindex="-1" aria-labelledby="compModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
-		<form class="modal-content" id="competion-subscribe" action="{{ path('competition') }}?tab=register"
+		<form class="modal-content" id="competion-subscribe" action="{{ path('competition') }}"
 			method="post">
 			<div class="modal-header">
 				<h5 class="modal-title" id="compModalLabel">
