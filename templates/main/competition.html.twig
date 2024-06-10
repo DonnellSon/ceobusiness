@@ -154,7 +154,7 @@
 {% endblock %}
 
 {% block scripts %}
-{% set strErrors = errors|json_encode|replace("'","\\'") %}
+{% set strErrors = errors|json_encode %}
 <script>
 	function isEmpty(obj) {
 		return Object.entries(obj).length === 0;
