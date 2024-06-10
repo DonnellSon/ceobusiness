@@ -26,17 +26,16 @@
 		<div class="left flex-1">
 			<div>
 				<img class="d-block w-100" src="{{ asset('assets/img/startup.jpg') }}" alt="" />
-				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#compModal">
-					S'inscrire maintenant
-				</button>
+				<div class="d-flex align-items-center justify-content-end mt-3">
+					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#compModal">
+						S'inscrire maintenant
+					</button>
+				</div>
 			</div>
 		</div>
 		<div class="right flex-1">
 			<h1 class="ttl-1 text-center">{{ "Become the Best Startupper of the Year !" | trans }}</h1>
-			<p class="text-justify">{{ "Do you have an innovative idea? A project that could revolutionize the world?
-				Don't let your potential go untapped! Participate in this competition for young startuppers and show
-				what you are capable of. Competition organized by GateNews.africa and the FCCIM as part of the CEO
-				BUSINESS FORUM - INDIAN OCEAN project." | trans }}</p>
+			<p class="text-justify">{{ "Do you have an innovative idea? A project that could revolutionize the world? Don't let your potential go untapped! Participate in this competition for young startuppers and show what you are capable of. Competition organized by GateNews.africa and the FCCIM as part of the CEO BUSINESS FORUM - INDIAN OCEAN project." | trans }}</p>
 			<div class="prix d-flex flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column gap-15">
 				<div class="flex-1">
 					<h2>{{ "Prizes and Awards" | trans }}</h2>
@@ -75,12 +74,12 @@
 		<form class="modal-content" id="competion-subscribe" action="{{ path('competition') }}?tab=register"
 			method="post">
 			<div class="modal-header">
-				<h5 class="modal-title" id="compModalLabel">Modal title</h5>
+				<h5 class="modal-title" id="compModalLabel">
+					{{ "Information Session Registration Form for June 15, 2024" | trans }}
+				</h5>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
 			<div class="modal-body">
-				<h1 class="mb-4">{{ "Information Session Registration Form for June 15, 2024" | trans }}
-				</h1>
 				<div class="row g-2">
 					<div class="col-md mb-3">
 						<div class="form-floating">
