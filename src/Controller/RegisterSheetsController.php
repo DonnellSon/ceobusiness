@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\CompetitionSubscriber;
 use App\Entity\User;
 use App\Service\GoogleSheetsService;
 use Doctrine\ORM\EntityManagerInterface;
@@ -86,4 +87,50 @@ class RegisterSheetsController extends AbstractController
 
         return new JsonResponse($confirmed);
     }
+
+    #[Route('/competition/sheets', name: 'app_comp_sheets',methods: ['GET'])]
+    public function competition(): Response
+    {
+        $subscribed = $this->entityManager->getRepository(CompetitionSubscriber::class)->findAll();
+       
+        $list=[
+            ['Nom','Prénom','Institution','Email','Téléphone']
+        ];
+        foreach( $subscribed as $s ) {
+                $list[]=[
+                    $s->getFirstName(),
+                    $s->getLastName(),
+                    $s->getInstitution(),
+                    $s->getEmail(),
+                    $s->getNumber(),
+                ];
+        }
+      
+           
+        
+
+        $spreadsheetId = '1lS3vh-scfY_xZvJGRJfYAiwRDt4_VUrc_xpbCnQQp7U';
+        $range = 'Inscription CEO Startuppers Awards 2024'; // Ajustez selon votre structure de feuille de calcul
+
+        // Videz le feuille de calcul
+        $this->googleSheetsService->clearSheet($spreadsheetId, $range);
+
+        // Préparez les données à insérer dans le Google Sheet
+       
+            
+       
+
+        // Insérez les données dans le Google Sheet
+        $success = $this->googleSheetsService->appendToSpreadsheet($spreadsheetId, $range, $list);
+
+        if (!$success) {
+            throw new \RuntimeException('Erreur lors de l\'insertion des données dans le Google Sheet.');
+        }
+        $this->googleSheetsService->autoResizeColumns($spreadsheetId);
+        // Redirigez vers une page de confirmation ou renvoyez une réponse appropriée
+       
+
+        return new JsonResponse($list);
+    }
+
 }
