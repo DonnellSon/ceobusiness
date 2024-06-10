@@ -158,8 +158,11 @@
 	function isEmpty(obj) {
 		return Object.entries(obj).length === 0;
 	}
-	var strErrors=`{{ errors|json_encode|raw }}`.toString()
-	console.log(JSON.stringify(strErrors))
-	console.log(JSON.parse(JSON.stringify(strErrors)))
+	var errors=JSON.parse(JSON.stringify(`{{ errors|json_encode|raw }}`.toString()))
+	
+	if(!isEmpty(errors)){
+        var myModal = new bootstrap.Modal(document.getElementById('compModal'));
+        myModal.show();
+	}
 </script>
 {% endblock %}
