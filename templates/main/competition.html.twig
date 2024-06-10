@@ -159,6 +159,6 @@
 		return Object.entries(obj).length === 0;
 	}
 	var strErrors=`{{ errors|json_encode|raw }}`.toString().replace(/'/g, "\'")
-	console.log(strErrors)
+	console.log(JSON.stringify(strErrors))
 </script>
 {% endblock %}
