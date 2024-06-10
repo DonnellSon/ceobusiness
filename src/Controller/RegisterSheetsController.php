@@ -32,30 +32,32 @@ class RegisterSheetsController extends AbstractController
             $persoInfos=$user->getPersoInfos();
             $proInfos=$user->getProInfos();
             $travelInfos=$user->getTravelInfos();
-            $confirmed[]=[
-                $persoInfos->getFirstName(),
-                $persoInfos->getLastName(),
-                $persoInfos->getOtherName() ?? 'Aucun',
-                $persoInfos->getGender(),
-                $persoInfos->getCity(),
-                $persoInfos->getAddress(),
-                $persoInfos->getCountry(),
-                $persoInfos->getPersoEmail() ?? 'Aucun',
-                $persoInfos->getProEmail(),
-                $persoInfos->getPersoNumber(),
-                $persoInfos->getProNumber(),
-                $persoInfos->getWhatsApp(),
-                $proInfos->getEntrepriseName(),
-                $proInfos->getEntrepriseTitle(),
-                $proInfos->getEntrepriseSize(),
-                $proInfos->getEntrepriseActivity(),
-                $proInfos->getRegion(),
-                $proInfos->getCity(),
-                $travelInfos->getTravelAssistance(),
-                $travelInfos->getHotelReservation(),
-                $travelInfos->getAirportTransfer(),
-                $travelInfos->getOtherTravelDetails() ?? 'Aucun'
-            ];
+            if($persoInfos && $proInfos && $travelInfos){
+                $confirmed[]=[
+                    $persoInfos->getFirstName(),
+                    $persoInfos->getLastName(),
+                    $persoInfos->getOtherName() ?? 'Aucun',
+                    $persoInfos->getGender(),
+                    $persoInfos->getCity(),
+                    $persoInfos->getAddress(),
+                    $persoInfos->getCountry(),
+                    $persoInfos->getPersoEmail() ?? 'Aucun',
+                    $persoInfos->getProEmail(),
+                    $persoInfos->getPersoNumber(),
+                    $persoInfos->getProNumber(),
+                    $persoInfos->getWhatsApp(),
+                    $proInfos->getEntrepriseName(),
+                    $proInfos->getEntrepriseTitle(),
+                    $proInfos->getEntrepriseSize(),
+                    $proInfos->getEntrepriseActivity(),
+                    $proInfos->getRegion(),
+                    $proInfos->getCity(),
+                    $travelInfos->getTravelAssistance(),
+                    $travelInfos->getHotelReservation(),
+                    $travelInfos->getAirportTransfer(),
+                    $travelInfos->getOtherTravelDetails() ?? 'Aucun'
+                ];
+            }
         }
       
            
