@@ -158,7 +158,7 @@ class CeoRegistrationController extends AbstractController
         return $this->render('registration/professional.html.twig', [
             'controller_name' => 'RegistrationController',
             'proInfos'=>isset($proInfos) ? $proInfos : null,
-            'errors'=> (isset($errors) && count($errors)) > 0 ? $this->formatErrors($errors) : []
+            'errors'=> (isset($errors) && count($errors) > 0)  ? $this->formatErrors($errors) : []
         ]);
     }
     #[Route('/registration/voyage', name: 'travel_register')]
