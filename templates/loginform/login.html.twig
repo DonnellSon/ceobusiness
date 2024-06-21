@@ -5,7 +5,7 @@
 {% block body %}
 <form method="post" action="{{ path('app_login') }}" class="col-md-5 mx-auto bg-white p-lg-5 p-md-4 p-sm-3 p-3 pt-sm-5 pt-5 my-5" id="user_reg">
         {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            <div class="alert alert-danger">{{ error.message }}</div>
         {% endif %}
 
         <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
@@ -29,6 +29,10 @@
 
         <button class="btn btn-primary d-block w-100" type="submit">Se connecter</button>
         <p class="text-center my-1">Pas de compte ? pas de souçi !</p>
-        <a href="{{ path('user_registration') }}" class="btn btn-outline-secondary d-block w-100" type="submit">Créer un compte</a>
+        <a href="{{ path('user_registration') }}" class="btn btn-outline-secondary d-flex align-items-center justify-content-center w-100" type="submit">Créer un compte</a>
     </form>
+{% endblock %}
+
+{% block basefoot %}
+<script src="{{ asset('assets/js/captcha.js')}}"></script>
 {% endblock %}

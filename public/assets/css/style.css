@@ -2067,6 +2067,12 @@ footer .contact {
 footer hr {
     border: 1px solid rgba(255, 255, 255, 0.562) !important;
 }
+footer .info a{
+    color: #ffffffbe !important;
+}
+footer .info h6{
+    color: white !important;
+}
 
 .news-letter-form {
     gap: 10px;

@@ -166,9 +166,7 @@ Error: Erreur
 'The company address is required': "L'adresse de l'entreprise est requis"
 'The postal code is required': 'Le code postal est requis'
 'The email address is required': "L'adresse email est requise"
-"L'adresse est requise": "__L'adresse est requise"
-'Le pays est requis': '__Le pays est requis'
-"L'email '{{ value }}' n'est pas valide.": "__L'email '{{ value }}' n'est pas valide."
+"L'email '{{ value }}' n'est pas valide.": "L'email '{{ value }}' n'est pas valide."
 'Votre email professionel est requis': '__Votre email professionel est requis'
 "Le numéro de téléphone doit commencer par '+' suivi de 6 à 15 chiffres.": "__Le numéro de téléphone doit commencer par '+' suivi de 6 à 15 chiffres."
 'Votre numéro professionel est requis': '__Votre numéro professionel est requis'
@@ -194,5 +192,9 @@ Error: Erreur
 "L'email {{ value }} est invalide !": "__L'email {{ value }} est invalide !"
 'votre contact est requise !': '__votre contact est requise !'
 "Le type d'inscription est requis": "__Le type d'inscription est requis"
-"You must enter your email to subscribe to our newsletter.": "Vous devez entrer votre email pour vous inscrire à notre newsletter"
-"You must enter a valid email address to subscribe to our newsletter.": "Vous devez entrer une adresse email valide pour s'inscrire à notre News Letter"
+'You must enter your email to subscribe to our newsletter.': 'Vous devez entrer votre email pour vous inscrire à notre newsletter'
+'You must enter a valid email address to subscribe to our newsletter.': "Vous devez entrer une adresse email valide pour s'inscrire à notre News Letter"
+"L'adresse email {{ value }} est déjà utilisée": "__L'adresse email {{ value }} est déjà utilisée"
+'L''adresse email "{{ value }}" est déjà utilisée': '__L''adresse email "{{ value }}" est déjà utilisée'
+"L'adresse est requise": "__L'adresse est requise"
+'Le pays est requis': '__Le pays est requis'

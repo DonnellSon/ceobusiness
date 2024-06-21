@@ -27,9 +27,9 @@
 			<div>
 				<img class="d-block w-100" src="{{ asset('assets/img/startup.jpg') }}" alt="" />
 				<div class="d-flex align-items-center justify-content-end mt-3">
-					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#compModal">
+					{# <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#compModal">
 						S'inscrire maintenant
-					</button>
+					</button> #}
 				</div>
 			</div>
 		</div>
@@ -44,24 +44,19 @@
 						<li>- {{ "Possibility of funding for your project" | trans }}</li>
 						<li>- {{ "Free access to B2B meetings with CEOs & Investors" | trans }}</li>
 						<li>- {{ "Project mentoring" | trans }}</li>
-						<li>- {{ "Who Can Participate" | trans }}</li>
 					</ul>
 				</div>
 				<div class="flex-1">
 					<h2>{{ "Who Can Participate" | trans }} ?</h2>
 					<ul>
 						<li>- {{ "Young people aged 18 to 30." | trans }}</li>
-						<li>- {{ "Those with an innovative idea or a startup in the development phase.Participation of
-							young women and students is highly encouraged." | trans }}</li>
+						<li>- {{ "Those with an innovative idea or a startup in the development phase. Participation of young women and students is highly encouraged." | trans }}</li>
 					</ul>
 				</div>
 			</div>
-			<p class="text-justify">{{ "Come attend the information session which will take place in the conference room
-				of the Ministry of Foreign Affairs, Anosy, Antananarivo. Free access but by invitation only.
-				(Invitations to be obtained from our website :" | trans }}
+			<p class="text-justify">{{ "Come attend the information session which will take place in the conference room of the Ministry of Foreign Affairs, Anosy, Antananarivo. Free access but by invitation only. (Invitations to be obtained from our website :" | trans }}
 				www.ceobusinessforum.io</p>
-			<p class="text-justify">{{ "Don't miss this unique opportunity to turn your idea into reality and make
-				history. Sign up now and get ready to become the best startupper of the year!" | trans }}</p>
+			<p class="text-justify">{{ "Don't miss this unique opportunity to turn your idea into reality and make history. Sign up now and get ready to become the best startupper of the year!" | trans }}</p>
 			<p class="text-justify">{{ "For more information and to sign up, visit our website:" | trans }}
 			</p>
 		</div>
@@ -69,7 +64,7 @@
 </section>
 
 
-<div class="modal fade" id="compModal" tabindex="-1" aria-labelledby="compModalLabel" aria-hidden="true">
+{# <div class="modal fade" id="compModal" tabindex="-1" aria-labelledby="compModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<form class="modal-content" id="competion-subscribe" action="{{ path('competition') }}"
 			method="post">
@@ -150,7 +145,7 @@
 			</div>
 		</form>
 	</div>
-</div>
+</div> #}
 {% endblock %}
 
 {% block scripts %}

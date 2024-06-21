@@ -11,6 +11,7 @@
         "doctrine/doctrine-bundle": "^2.12",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.1",
+        "excelwebzone/recaptcha-bundle": "^1.5",
         "firebase/php-jwt": "*",
         "google/apiclient": "^2.16",
         "lexik/jwt-authentication-bundle": "*",
