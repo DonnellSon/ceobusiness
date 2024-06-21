@@ -47,7 +47,7 @@ class NewsLetterController extends AbstractController
     {
         extract($request->request->all());
         $dto = new EmailDto();
-        $dto->email = $email ?? null;
+        $dto->msg_email = $msg_email ?? null;
         $dto->object = $object ?? null;
         $dto->message = $message ?? null;
         $errors = $this->validator->validate($dto);
@@ -56,7 +56,7 @@ class NewsLetterController extends AbstractController
             try {
 
                 $email = (new Email())
-                ->from($dto->email)
+                ->from($dto->msg_email)
                 ->to('register@ceobusinessforum.io')
                 ->subject($dto->object)
                 ->text('Nouveau message.')

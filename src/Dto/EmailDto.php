@@ -8,7 +8,7 @@ class EmailDto
 {
     #[Assert\NotBlank()]
     #[Assert\Email()]
-    public string $email;
+    public string $msg_email;
 
     #[Assert\NotBlank()]
     public string $object;

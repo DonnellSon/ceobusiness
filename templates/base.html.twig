@@ -203,7 +203,7 @@
 	</footer>
 
 	<div class="msg-style">
-		<form class="box{{ errors.email is defined or errors.object is defined or errors.message is defined ? ' opened' }}" method="post" action="{{ path('email') }}">
+		<form class="box{{ errors.msg_email is defined or errors.object is defined or errors.message is defined ? ' opened' }}" method="post" action="{{ path('email') }}">
 			<div class="top d-flex align-items-center justify-content-between">
 				<div class="left d-flex align-items-center gap-10">
 					<i class="fa-regular fa-envelope"></i><h3>Envoyer un message</h3>
@@ -213,9 +213,9 @@
 				</div>
 			</div>
 			<div class="body d-flex flex-column">
-				<input type="text" name="email" placeholder="Votre email">
+				<input type="text" name="msg_email" placeholder="Votre email">
 				{% if errors.email is defined %}
-					<small class="invalid-feedback d-block text-danger">{{ errors.email }}</small>
+					<small class="invalid-feedback d-block text-danger">{{ errors.msg_email }}</small>
 				{% endif %}
 				<input type="text" name="object" placeholder="Objet">
 				{% if errors.object is defined %}
